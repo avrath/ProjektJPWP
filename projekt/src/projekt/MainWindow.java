@@ -27,6 +27,7 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -281,8 +282,10 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel17.setText("Decyzja podmiotu leczniczego:");
 
+        buttonGroup1.add(jCheckBox1);
         jCheckBox1.setText("Przyjęcie pacjenta");
 
+        buttonGroup1.add(jCheckBox2);
         jCheckBox2.setText("Odmowa przyjęcia");
 
         jLabel18.setText("Przekazanie pacjenta w IP/SOR / innym:");
@@ -538,6 +541,7 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
