@@ -153,10 +153,6 @@ public class LoginWindow extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_okButtonActionPerformed
 
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        doClose(RET_CANCEL);
-    }//GEN-LAST:event_cancelButtonActionPerformed
-
     /**
      * Closes the dialog
      */
@@ -167,6 +163,10 @@ public class LoginWindow extends javax.swing.JDialog {
     private void LoginFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginFieldActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        doClose(RET_CANCEL);
+    }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void doClose(int retStatus) {
         returnStatus = retStatus;
