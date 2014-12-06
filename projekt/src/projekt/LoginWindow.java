@@ -165,7 +165,8 @@ public class LoginWindow extends javax.swing.JDialog {
     }//GEN-LAST:event_LoginFieldActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        doClose(RET_CANCEL);
+        //doClose(RET_CANCEL);
+        System.exit(0);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void doClose(int retStatus) {
