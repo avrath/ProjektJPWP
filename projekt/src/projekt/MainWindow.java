@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package projekt;
+import javax.swing.JCheckBox;
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
 
 /**
  *
@@ -123,6 +126,11 @@ public class MainWindow extends javax.swing.JFrame {
         setTitle("Karta Pacjenta");
 
         jButton1.setText("OK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Oznaczenie dysponenta zespołu ratownictwa medycznego (ZRM):");
 
@@ -144,6 +152,7 @@ public class MainWindow extends javax.swing.JFrame {
         jCheckBox3.setText("w domu");
         jCheckBox3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jCheckBox3.setIconTextGap(68);
+        jCheckBox3.setName("1"); // NOI18N
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox3ActionPerformed(evt);
@@ -153,6 +162,7 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup2.add(jCheckBox4);
         jCheckBox4.setText("w miejscu publicznym");
         jCheckBox4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jCheckBox4.setName("2"); // NOI18N
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -163,11 +173,13 @@ public class MainWindow extends javax.swing.JFrame {
         jCheckBox5.setText("w ruchu uliczno-drog");
         jCheckBox5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jCheckBox5.setIconTextGap(6);
+        jCheckBox5.setName("3"); // NOI18N
 
         buttonGroup2.add(jCheckBox7);
         jCheckBox7.setText("w rolnictwie");
         jCheckBox7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jCheckBox7.setIconTextGap(49);
+        jCheckBox7.setName("6"); // NOI18N
         jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox7ActionPerformed(evt);
@@ -177,11 +189,13 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup2.add(jCheckBox8);
         jCheckBox8.setText("w szkole");
         jCheckBox8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jCheckBox8.setName("5"); // NOI18N
 
         buttonGroup2.add(jCheckBox10);
         jCheckBox10.setText("w pracy");
         jCheckBox10.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jCheckBox10.setIconTextGap(67);
+        jCheckBox10.setName("4"); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -545,6 +559,11 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel27.setText("OTWIERANIE OCZU");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "niewybrane", "brak 1", "na ból 2", "na głos 3", "spontanicznie 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -814,6 +833,24 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Enumeration<AbstractButton> ab = buttonGroup2.getElements();
+        JCheckBox box = null;
+        while(ab.hasMoreElements()){
+            box = (JCheckBox) ab.nextElement();
+            if (box.isSelected()){
+                break;
+            }
+        }
+        System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -841,11 +878,13 @@ public class MainWindow extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainWindow().setVisible(true);
-                LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
+                /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
+                /*LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
                 
                 //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 
@@ -855,10 +894,12 @@ public class MainWindow extends javax.swing.JFrame {
                         System.exit(0);
                     }
                 });
-                dialog.setVisible(true);
+                dialog.setVisible(true);        */////do tego miejsca jest logowanie
             }
         });
+            
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
