@@ -7,6 +7,7 @@ package projekt;
 import javax.swing.JCheckBox;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
+import javax.swing.ButtonModel;
 
 /**
  *
@@ -839,15 +840,19 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Enumeration<AbstractButton> ab = buttonGroup2.getElements();
-        JCheckBox box = null;
-        while(ab.hasMoreElements()){
-            box = (JCheckBox) ab.nextElement();
-            if (box.isSelected()){
-                break;
+        ButtonModel butmod = buttonGroup2.getSelection();
+        if(butmod != null){
+            Enumeration<AbstractButton> ab = buttonGroup2.getElements();
+            JCheckBox box = null;
+            while(ab.hasMoreElements()){
+                box = (JCheckBox) ab.nextElement();
+                if (box.isSelected()){
+                    break;
+                }
             }
-        }
-        System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
+            System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
+        }else
+            System.out.println("Nie wybrano przycisku");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -883,6 +888,9 @@ public class MainWindow extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainWindow().setVisible(true);
+                boolean b=false;
+                
+                
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 /*LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
                 
