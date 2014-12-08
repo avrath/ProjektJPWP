@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package projekt;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JCheckBox;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
@@ -116,6 +121,7 @@ public class MainWindow extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -770,6 +776,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("Rozpoznanie i postępowanie", jPanel5);
 
+        jButton2.setText("szukaj");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -784,15 +797,21 @@ public class MainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(50, 50, 50)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap())
         );
 
@@ -823,20 +842,69 @@ public class MainWindow extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         ButtonModel butmod = buttonGroup2.getSelection();
-        if(butmod != null){
+        if (butmod != null) {
             Enumeration<AbstractButton> ab = buttonGroup2.getElements();
             JCheckBox box = null;
-            while(ab.hasMoreElements()){
+            while (ab.hasMoreElements()) {
                 box = (JCheckBox) ab.nextElement();
-                if (box.isSelected()){
+                if (box.isSelected()) {
                     break;
                 }
             }
-            System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
-        }else
+            try {
+                String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
+                String uName = "sevik";
+                String uPass = "s919o7ER";
+                Connection con = DriverManager.getConnection(host, uName, uPass);
+                //System.out.println("Udało się!");
+                Statement stmt = con.createStatement();
+                String sql = "insert into pacients (fname,lname,miejsce) values ('"+jTextField4.getText()+"','"+jTextField5.getText()
+                        +"',"+Integer.parseInt(box.getName())+")";
+                stmt.execute(sql);
+                
+            } catch (SQLException err) {
+                System.out.println("We have occured an error: " + err);
+            }
+            //System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
+        } else
             System.out.println("Nie wybrano przycisku");
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
+            String uName = "sevik";
+            String uPass = "s919o7ER";
+            Connection con = DriverManager.getConnection(host, uName, uPass);
+            //System.out.println("Udało się!");
+            Statement stmt = con.createStatement();
+            String sql = "select * from pacients where fname=\""+jTextField4.getText()+"\"";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                String imie = rs.getString("fname");
+                String nazwisko = rs.getString("lname");
+                int place = rs.getInt("miejsce");
+                String p = imie + " " + nazwisko + " " + place;
+                //System.out.println(p);
+                jTextField5.setText(nazwisko);
+                Enumeration<AbstractButton> ab = buttonGroup2.getElements();
+                JCheckBox box = null;
+                while (ab.hasMoreElements()) {
+                    box = (JCheckBox) ab.nextElement();
+                    if (Integer.parseInt(box.getName()) == place) {
+                        box.setSelected(Boolean.TRUE);
+                        break;
+                    }
+                }
+            }
+        } catch (SQLException err) {
+            System.out.println(err.getMessage());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -870,24 +938,22 @@ public class MainWindow extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainWindow().setVisible(true);
-                boolean b=false;
-                
-                
+
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 /*LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
                 
-                //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
+                 //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);        */////do tego miejsca jest logowanie
+                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                 @Override
+                 public void windowClosing(java.awt.event.WindowEvent e) {
+                 System.exit(0);
+                 }
+                 });
+                 dialog.setVisible(true);        */////do tego miejsca jest logowanie
             }
         });
-            
+
     }
 
 
@@ -896,6 +962,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
