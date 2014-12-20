@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JCheckBox;
 import java.util.Enumeration;
+import java.util.Vector;
 import javax.swing.AbstractButton;
+import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 
 /**
@@ -1417,6 +1419,11 @@ public class MainWindow extends javax.swing.JFrame {
                 String p = imie + " " + nazwisko + " " + place;
                 //System.out.println(p);
                 jTextField5.setText(nazwisko);
+                Vector<ButtonGroup> groups = null;
+                groups.add(buttonGroup1);
+                groups.add(buttonGroup2);
+                groups.add(buttonGroup3);
+                System.out.println(groups);
                 //jButtonGroup baza=null;
                /* javax.swing.ButtonGroup[] baza=null;
                 baza[1]=buttonGroup1;

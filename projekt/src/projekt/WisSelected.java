@@ -10,6 +10,10 @@ import java.sql.SQLException;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.JCheckBox;
+import java.util.Vector;
+import java.util.AbstractCollection;
+import java.util.AbstractList;
+import javax.swing.ButtonGroup;
 
 /**
  *
@@ -54,4 +58,7 @@ public class WisSelected {
                     }
                 }
     }*/
+    public static void choice(){
+
+    }
 }
