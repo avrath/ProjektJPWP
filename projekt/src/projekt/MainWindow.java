@@ -1423,7 +1423,7 @@ public class MainWindow extends javax.swing.JFrame {
                 groups.add(buttonGroup1);
                 groups.add(buttonGroup2);
                 groups.add(buttonGroup3);
-                System.out.println(groups);
+             //   System.out.println(groups(1,1));
                 //jButtonGroup baza=null;
                /* javax.swing.ButtonGroup[] baza=null;
                 baza[1]=buttonGroup1;
