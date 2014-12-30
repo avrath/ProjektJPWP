@@ -144,7 +144,7 @@ public class LoginWindow extends javax.swing.JDialog {
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
         //doClose(RET_OK);
-        if (Authentication.authenticate(getUsername(), getPassword())) {
+        if (Authentication.connect(getUsername(), getPassword())!=null) {
             JOptionPane.showMessageDialog(LoginWindow.this, "Użytkownik " + getUsername() + " został poprawnie zalogowany", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
             dispose();
         } else {
