@@ -18,6 +18,7 @@ import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 
+
 /**
  *
  * @author M
@@ -1378,10 +1379,10 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jMenu1.setText("File");
+        jMenu1.setText("Menu");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Pomoc");
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -1548,6 +1549,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
         // TODO add your handling code here:
         try{
+            
             Connection con = WisSelected.conn();
             Statement stmt = con.createStatement();
             String sql = "Select * from pacients where fname='"+jTextField4.getText()+"'";
@@ -1602,7 +1604,7 @@ public class MainWindow extends javax.swing.JFrame {
                 new MainWindow().setVisible(true);
 
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
-                /*LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
+                LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
                 
                  //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 
@@ -1612,7 +1614,7 @@ public class MainWindow extends javax.swing.JFrame {
                  System.exit(0);
                  }
                  });
-                 dialog.setVisible(true);        */////do tego miejsca jest logowanie
+                 dialog.setVisible(true);        ///do tego miejsca jest logowanie
             }
         });
 

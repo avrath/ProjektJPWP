@@ -8,7 +8,9 @@ package projekt;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -18,10 +20,27 @@ public class Authentication {
  
     private final String password, username;
     private Connection con = null;
+
     
     public Authentication(String username, String password){
         this.password = password;
         this.username = username;
+        con = WisSelected.conn();
+        try{
+            Statement stmt = con.createStatement();
+            String sql = "select * from login where login='"+username+"' and pass='"+password+"';";
+            ResultSet rs = stmt.executeQuery(sql);
+            if(!rs.isBeforeFirst()){
+                //System.out.println("no data");
+                con=null;
+            }
+            
+            
+        }catch(SQLException err){
+            System.out.println(err.getMessage());
+         
+        }
+        /*
         //Connection con = null;
         try {
                 String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
@@ -34,8 +53,9 @@ public class Authentication {
         }catch(SQLException err){
             System.out.println("An error occured: " + err);
         }
+                */
     }
-    
+    /*
     public static Connection connect(String username, String password){
         Connection con = null;
         try {
@@ -54,7 +74,7 @@ public class Authentication {
         else
             return null;
     }
-    
+    */
     
     public boolean authenticate() {
         
@@ -62,6 +82,10 @@ public class Authentication {
             return true;
         }
         return false;
+    }
+    
+    public Connection getCon() {
+        return con;
     }
     
 }
