@@ -1520,15 +1520,15 @@ public class MainWindow extends javax.swing.JFrame {
             Calendar data_ur = jDateChooser1.getCalendar();
             
             String pesel = jTextField11.getText();
-            String miejsce = pacjent.wybor(buttonGroup2);
-            String o_oczu = pacjent.wybor(buttonGroup3);
-            String r_slowna = pacjent.wybor(buttonGroup4);
+            String miejsce = pacjent.wyszukaj(buttonGroup2);
+            String o_oczu = pacjent.wyszukaj(buttonGroup3);
+            String r_slowna = pacjent.wyszukaj(buttonGroup4);
             
             pacjent a = new pacjent();
             a.create(imie,nazwisko,miejsce,o_oczu,r_slowna,data_ur,pesel);
             String sql = a.add();
             System.out.println(sql);
-//            stmt.execute(sql);
+            stmt.execute(sql);
 //            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
 
         }catch(SQLException err){
@@ -1550,12 +1550,16 @@ public class MainWindow extends javax.swing.JFrame {
         try{
             Connection con = WisSelected.conn();
             Statement stmt = con.createStatement();
-            String sql = "Select * from pacients where fname='Ignacy'";
+            String sql = "Select * from pacients where fname='"+jTextField4.getText()+"'";
+            System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
-                Date data = rs.getDate("bdate");
-                System.out.println(data);
-                jDateChooser1.setDate(data);
+                jTextField5.setText(rs.getString("lname"));
+                jTextField11.setText(rs.getString("pesel"));
+                jDateChooser1.setDate(rs.getDate("bdate"));
+                pacjent.zaznacz(rs.getString("place"),buttonGroup2);
+                pacjent.zaznacz(rs.getString("o_oczu"),buttonGroup3);
+                pacjent.zaznacz(rs.getString("r_slowna"),buttonGroup4);
             }
             
         }catch(SQLException err){

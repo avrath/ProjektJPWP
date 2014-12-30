@@ -43,7 +43,7 @@ public class pacjent {
      return sql;
     }
     
-    public static String wybor(javax.swing.ButtonGroup group){
+    public static String wyszukaj(javax.swing.ButtonGroup group){
          ButtonModel butmod = group.getSelection();
          String wybor = new String();
             if (butmod != null) {
@@ -60,6 +60,39 @@ public class pacjent {
             }
         return wybor; 
     }
+    
+    public static void zaznacz(String name, javax.swing.ButtonGroup group) {
+
+            Enumeration<AbstractButton> ab = group.getElements();
+            JCheckBox box = null;
+            while (ab.hasMoreElements()) {
+                box = (JCheckBox) ab.nextElement();
+                if (box.getText().equals(name)) {
+                    box.setSelected(Boolean.TRUE);
+//                        System.out.println("did it");
+                    break;
+                } else {
+                    box.setSelected(Boolean.FALSE);
+//                        System.out.println(i);
+//                        i++;
+                }
+            }
+        
+    }
+    public static void wyczysc(String name, javax.swing.ButtonGroup group){
+                Enumeration<AbstractButton> ab = group.getElements();
+                JCheckBox box = null;
+                while (ab.hasMoreElements()) {
+                    box = (JCheckBox) ab.nextElement();
+                    if (box.getText().equals(name)) {
+                        box.setSelected(Boolean.FALSE);
+//                        System.out.println("did it");
+                        break;
+                    }
+                }
+    }        
+        
+    
     
     ///////////////////setery i getery
     public String getImie() {
