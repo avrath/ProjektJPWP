@@ -4,14 +4,16 @@
  * and open the template in the editor.
  */
 package projekt;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JCheckBox;
 import java.util.Enumeration;
-import java.util.Vector;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
@@ -41,7 +43,13 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
-        jButton1 = new javax.swing.JButton();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        zapisz = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -203,6 +211,8 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        testowy = new javax.swing.JButton();
+        test2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -210,10 +220,10 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Karta Pacjenta");
 
-        jButton1.setText("OK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        zapisz.setText("Zapisz");
+        zapisz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                zapiszActionPerformed(evt);
             }
         });
 
@@ -673,32 +683,48 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel26.setText("REAKCJA SŁOWNA");
 
+        buttonGroup4.add(jCheckBox13);
         jCheckBox13.setText("[5] zorientowany");
         jCheckBox13.setToolTipText("");
 
+        buttonGroup4.add(jCheckBox14);
         jCheckBox14.setText("[4] splątany");
 
+        buttonGroup4.add(jCheckBox15);
         jCheckBox15.setText("[3] niewłaściwe słowa");
+        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox15ActionPerformed(evt);
+            }
+        });
 
+        buttonGroup4.add(jCheckBox16);
         jCheckBox16.setText("[1] brak");
 
+        buttonGroup5.add(jCheckBox17);
         jCheckBox17.setText("[6] wykonuje polecenia");
 
+        buttonGroup5.add(jCheckBox18);
         jCheckBox18.setText("[5] lokalizacja bólu");
 
         jLabel31.setText("REAKCJA RUCHOWA");
 
+        buttonGroup5.add(jCheckBox19);
         jCheckBox19.setText("[4] ucieczka od bólu");
 
+        buttonGroup5.add(jCheckBox20);
         jCheckBox20.setText("[3] zgięciowa");
 
+        buttonGroup5.add(jCheckBox21);
         jCheckBox21.setText("[2] wyprostna");
 
+        buttonGroup5.add(jCheckBox22);
         jCheckBox22.setText("[1] brak");
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel32.setText("SUMA");
 
+        buttonGroup4.add(jCheckBox38);
         jCheckBox38.setText("[2] niezrozumiałe dźwięki");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -788,38 +814,58 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel33.setText("CZ. ODDECHÓW");
 
+        buttonGroup6.add(jCheckBox23);
         jCheckBox23.setText("[1] 10-29");
+        jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox23ActionPerformed(evt);
+            }
+        });
 
+        buttonGroup7.add(jCheckBox24);
         jCheckBox24.setText("[3] >29");
 
+        buttonGroup6.add(jCheckBox25);
         jCheckBox25.setText("[2] 6-9");
 
+        buttonGroup6.add(jCheckBox26);
         jCheckBox26.setText("[1] 1-5");
 
+        buttonGroup6.add(jCheckBox27);
         jCheckBox27.setText("[0] brak");
 
+        buttonGroup7.add(jCheckBox28);
         jCheckBox28.setText("[4] >89");
 
+        buttonGroup7.add(jCheckBox29);
         jCheckBox29.setText("[3] 76-89");
 
         jLabel34.setText("RR SKURCZOWE");
 
+        buttonGroup7.add(jCheckBox30);
         jCheckBox30.setText("[2] 50-75");
 
+        buttonGroup7.add(jCheckBox31);
         jCheckBox31.setText("[1] 1-49");
 
+        buttonGroup7.add(jCheckBox32);
         jCheckBox32.setText("[0] 0");
 
         jLabel35.setText("GCS");
 
+        buttonGroup8.add(jCheckBox33);
         jCheckBox33.setText("[4] 13-15");
 
+        buttonGroup8.add(jCheckBox34);
         jCheckBox34.setText("[3] 9-12");
 
+        buttonGroup8.add(jCheckBox35);
         jCheckBox35.setText("[2] 6-8");
 
+        buttonGroup8.add(jCheckBox36);
         jCheckBox36.setText("[1] 4-5");
 
+        buttonGroup8.add(jCheckBox37);
         jCheckBox37.setText("[0] 3");
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -1318,6 +1364,20 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        testowy.setText("testowy");
+        testowy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                testowyActionPerformed(evt);
+            }
+        });
+
+        test2.setText("test2");
+        test2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test2ActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -1332,9 +1392,13 @@ public class MainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(test2)
+                .addGap(31, 31, 31)
+                .addComponent(testowy)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(zapisz, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1346,8 +1410,11 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(zapisz)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton2)
+                        .addComponent(testowy)
+                        .addComponent(test2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1371,7 +1438,7 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
         ButtonModel butmod = buttonGroup2.getSelection();
         if (butmod != null) {
@@ -1401,7 +1468,7 @@ public class MainWindow extends javax.swing.JFrame {
         } else
             System.out.println("Nie wybrano przycisku");
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_zapiszActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -1419,10 +1486,7 @@ public class MainWindow extends javax.swing.JFrame {
                 String p = imie + " " + nazwisko + " " + place;
                 //System.out.println(p);
                 jTextField5.setText(nazwisko);
-                Vector<ButtonGroup> groups = null;
-                groups.add(buttonGroup1);
-                groups.add(buttonGroup2);
-                groups.add(buttonGroup3);
+
              //   System.out.println(groups(1,1));
                 //jButtonGroup baza=null;
                /* javax.swing.ButtonGroup[] baza=null;
@@ -1445,6 +1509,60 @@ public class MainWindow extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
+        // TODO add your handling code here:
+        try{
+            Connection con = WisSelected.conn();
+            Statement stmt = con.createStatement();
+            String imie = jTextField4.getText();
+            String nazwisko = jTextField5.getText();
+            Calendar data_ur = jDateChooser1.getCalendar();
+            
+            String pesel = jTextField11.getText();
+            String miejsce = pacjent.wybor(buttonGroup2);
+            String o_oczu = pacjent.wybor(buttonGroup3);
+            String r_slowna = pacjent.wybor(buttonGroup4);
+            
+            pacjent a = new pacjent();
+            a.create(imie,nazwisko,miejsce,o_oczu,r_slowna,data_ur,pesel);
+            String sql = a.add();
+            System.out.println(sql);
+//            stmt.execute(sql);
+//            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
+
+        }catch(SQLException err){
+            System.out.println("We have occured an error: " + err.getMessage());
+        }
+        
+    }//GEN-LAST:event_testowyActionPerformed
+
+    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox15ActionPerformed
+
+    private void jCheckBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox23ActionPerformed
+
+    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
+        // TODO add your handling code here:
+        try{
+            Connection con = WisSelected.conn();
+            Statement stmt = con.createStatement();
+            String sql = "Select * from pacients where fname='Ignacy'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                Date data = rs.getDate("bdate");
+                System.out.println(data);
+                jDateChooser1.setDate(data);
+            }
+            
+        }catch(SQLException err){
+            System.out.println(err.getMessage());
+        }
+        
+    }//GEN-LAST:event_test2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1501,7 +1619,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JButton jButton1;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
@@ -1666,5 +1789,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton test2;
+    private javax.swing.JButton testowy;
+    private javax.swing.JButton zapisz;
     // End of variables declaration//GEN-END:variables
 }

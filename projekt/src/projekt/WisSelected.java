@@ -24,6 +24,7 @@ public class WisSelected {
         Connection con = null;
         try {
                 String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
+                //String host = "jdbc:mysql://localhost:3306/sevik";
                 String uName = "sevik";
                 String uPass = "s919o7ER";
                 con = DriverManager.getConnection(host, uName, uPass);

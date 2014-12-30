@@ -8,6 +8,18 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup5">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup6">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup7">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup8">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup9">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -49,9 +61,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="test2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="testowy" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="93" max="-2" attributes="0"/>
+              <Component id="zapisz" min="-2" pref="93" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -66,8 +82,12 @@
               <Component id="jTabbedPane7" min="-2" pref="655" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="zapisz" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="testowy" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="test2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -75,12 +95,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="zapisz">
       <Properties>
-        <Property name="text" type="java.lang.String" value="OK"/>
+        <Property name="text" type="java.lang.String" value="Zapisz"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zapiszActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane7">
@@ -1027,32 +1047,53 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox13">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[5] zorientowany"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox14">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[4] spl&#x105;tany"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox15">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[3] niew&#x142;a&#x15b;ciwe s&#x142;owa"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox15ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox16">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] brak"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox17">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[6] wykonuje polecenia"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox18">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[5] lokalizacja b&#xf3;lu"/>
                   </Properties>
                 </Component>
@@ -1063,21 +1104,33 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox19">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[4] ucieczka od b&#xf3;lu"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox20">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[3] zgi&#x119;ciowa"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox21">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[2] wyprostna"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox22">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] brak"/>
                   </Properties>
                 </Component>
@@ -1093,6 +1146,9 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox38">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[2] niezrozumia&#x142;e d&#x17a;wi&#x119;ki"/>
                   </Properties>
                 </Component>
@@ -1203,36 +1259,60 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox23">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] 10-29"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox23ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox24">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[3] &gt;29"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox25">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[2] 6-9"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox26">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] 1-5"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox27">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[0] brak"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox28">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[4] &gt;89"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox29">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[3] 76-89"/>
                   </Properties>
                 </Component>
@@ -1243,16 +1323,25 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox30">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[2] 50-75"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox31">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] 1-49"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox32">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup7"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[0] 0"/>
                   </Properties>
                 </Component>
@@ -1263,26 +1352,41 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox33">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[4] 13-15"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox34">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[3] 9-12"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox35">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[2] 6-8"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox36">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[1] 4-5"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox37">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup8"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="[0] 3"/>
                   </Properties>
                 </Component>
@@ -2001,6 +2105,22 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="testowy">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="testowy"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testowyActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="test2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="test2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="test2ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
