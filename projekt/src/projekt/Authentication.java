@@ -16,7 +16,25 @@ import java.sql.SQLException;
  */
 public class Authentication {
  
+    private final String password, username;
+    private Connection con = null;
     
+    public Authentication(String username, String password){
+        this.password = password;
+        this.username = username;
+        //Connection con = null;
+        try {
+                String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
+                //String host = "jdbc:mysql://localhost:3306/sevik";
+                //String uName = "sevik";
+                //String uPass = "s919o7ER";
+                
+                con = DriverManager.getConnection(host, username, password);
+                
+        }catch(SQLException err){
+            System.out.println("An error occured: " + err);
+        }
+    }
     
     public static Connection connect(String username, String password){
         Connection con = null;
@@ -38,10 +56,9 @@ public class Authentication {
     }
     
     
-    public static boolean authenticate(String username, String password) {
-        // na razie na sztywno, potem bedzie sie bawic z prawdziwym zalogowaniem do bazy
+    public boolean authenticate() {
         
-        if (username.equals("admin1") && password.equals("admin1")) {
+        if (con!=null) {
             return true;
         }
         return false;
