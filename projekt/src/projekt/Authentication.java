@@ -18,6 +18,7 @@ public class Authentication {
  
     private final String password, username;
     private Connection con = null;
+
     
     public Authentication(String username, String password){
         this.password = password;
@@ -62,6 +63,10 @@ public class Authentication {
             return true;
         }
         return false;
+    }
+    
+    public Connection getCon() {
+        return con;
     }
     
 }
