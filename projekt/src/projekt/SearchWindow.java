@@ -180,19 +180,19 @@ public class SearchWindow extends javax.swing.JDialog {
 
         try {
             int rowIndex = jTable1.getSelectedRow();
-            Object ID = jTable1.getValueAt(rowIndex, 0).toString();
+            String ID = jTable1.getValueAt(rowIndex, 0).toString();
 
-            //doClose(RET_OK);
-            System.out.println(ID);
+            doClose(RET_OK);
+            //System.out.println(ID);
         } catch (ArrayIndexOutOfBoundsException e) {
             JOptionPane.showMessageDialog(SearchWindow.this, "Nic nie zostało zaznaczone", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_okButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        //doClose(RET_CANCEL);
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.addRow(new Object[]{jTextField1.getText(), "asdas", "asdadss", "asdasdsad"});
+        doClose(RET_CANCEL);
+        //DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        //model.addRow(new Object[]{jTextField1.getText(), "asdas", "asdadss", "asdasdsad"});
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     /**
