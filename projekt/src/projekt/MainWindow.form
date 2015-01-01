@@ -20,6 +20,20 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup9">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup10">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup11">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup12">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup13">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup14">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup15">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup16">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -2370,6 +2384,9 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox112">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup9"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;penetruj&#x105;ce rany g&#x142;owy i tu&#x142;owia lub urazy&lt;br/&gt; t&#x119;pe z objawami uszkodzenia narz&#x105;d&#xf3;w&lt;br/&gt; wewn&#x119;trznych g&#x142;owy, klatki piersiowej i brzucha&lt;/html&gt;"/>
                   </Properties>
                 </Component>

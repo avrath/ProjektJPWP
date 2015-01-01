@@ -51,6 +51,13 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup7 = new javax.swing.ButtonGroup();
         buttonGroup8 = new javax.swing.ButtonGroup();
         buttonGroup9 = new javax.swing.ButtonGroup();
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        buttonGroup11 = new javax.swing.ButtonGroup();
+        buttonGroup12 = new javax.swing.ButtonGroup();
+        buttonGroup13 = new javax.swing.ButtonGroup();
+        buttonGroup14 = new javax.swing.ButtonGroup();
+        buttonGroup15 = new javax.swing.ButtonGroup();
+        buttonGroup16 = new javax.swing.ButtonGroup();
         zapisz = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -1617,6 +1624,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Obrażenia anatomiczne kwalifikujące do centrum urazowego", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        buttonGroup9.add(jCheckBox112);
         jCheckBox112.setText("<html>penetrujące rany głowy i tułowia lub urazy<br/> tępe z objawami uszkodzenia narządów<br/> wewnętrznych głowy, klatki piersiowej i brzucha</html>");
 
         jCheckBox113.setText("amputacja kończyny powyżej kolana lub łokcia");
@@ -2692,9 +2700,10 @@ public class MainWindow extends javax.swing.JFrame {
             String miejsce = pacjent.wyszukaj(buttonGroup2);
             String o_oczu = pacjent.wyszukaj(buttonGroup3);
             String r_slowna = pacjent.wyszukaj(buttonGroup4);
+            String obr_anat_1 = pacjent.wyszukaj(buttonGroup9);
 
             pacjent a = new pacjent();
-            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel);
+            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
             String sql = a.add();
             System.out.println(sql);
             stmt.execute(sql);
@@ -2729,6 +2738,7 @@ public class MainWindow extends javax.swing.JFrame {
                 pacjent.zaznacz(rs.getString("place"), buttonGroup2);
                 pacjent.zaznacz(rs.getString("o_oczu"), buttonGroup3);
                 pacjent.zaznacz(rs.getString("r_slowna"), buttonGroup4);
+                pacjent.zaznacz(rs.getString("obr_anat_1"), buttonGroup9);
             }
 
         } catch (SQLException err) {
@@ -2851,6 +2861,13 @@ public class MainWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
+    private javax.swing.ButtonGroup buttonGroup11;
+    private javax.swing.ButtonGroup buttonGroup12;
+    private javax.swing.ButtonGroup buttonGroup13;
+    private javax.swing.ButtonGroup buttonGroup14;
+    private javax.swing.ButtonGroup buttonGroup15;
+    private javax.swing.ButtonGroup buttonGroup16;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;

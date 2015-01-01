@@ -29,8 +29,9 @@ public class pacjent {
     private Calendar data_ur;
     private String pesel;
     private String miasto;
+    private String obr_anat_1;
 
-    public pacjent create(String imie, String nazwisko, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel) {
+    public pacjent create(String imie, String nazwisko, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel, String obr_anat_1) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.miasto = miasto;
@@ -39,12 +40,13 @@ public class pacjent {
         this.reakcja_slowna = reakcja_slowna;
         this.data_ur = data_ur;
         this.pesel = pesel;
+        this.obr_anat_1 = obr_anat_1;
         return this;
     }
 
     public String add() {
         String bdata = this.data_ur.get(this.data_ur.YEAR) + "-" + (this.data_ur.get(this.data_ur.MONTH) + 1) + "-" + this.data_ur.get(this.data_ur.DATE);
-        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`address_city`,`place`,`pesel`,`o_oczu`,`r_slowna`) values ('" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.miasto + "','" + this.miejsce_zdarzenia + "','" + this.pesel + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "');";
+        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`address_city`,`place`,`pesel`,`o_oczu`,`r_slowna`,`obr_anat_1`) values ('" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.miasto + "','" + this.miejsce_zdarzenia + "','" + this.pesel + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "','" + this.obr_anat_1 + "');";
         return sql;
     }
 
@@ -115,6 +117,14 @@ public class pacjent {
         this.nazwisko = nazwisko;
     }
 
+    public String getObr_anat_1(){
+        return obr_anat_1;
+    }
+    
+    public void setObr_Anat__1(String obr_anat_1){
+        this.obr_anat_1 = obr_anat_1;
+    }
+    
     public String getMiasto(){
         return miasto;
     }
