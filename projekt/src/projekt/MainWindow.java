@@ -14,6 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JCheckBox;
 import java.util.Enumeration;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
@@ -85,6 +87,7 @@ public class MainWindow extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
+        jTextField25 = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
@@ -421,7 +424,6 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel6)
                         .addComponent(jLabel5)
-                        .addComponent(jLabel8)
                         .addComponent(jLabel12)
                         .addGroup(jPanel9Layout.createSequentialGroup()
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,12 +438,17 @@ public class MainWindow extends javax.swing.JFrame {
                                     .addComponent(jLabel11)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(jTextField8))))
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField4)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField4)
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))))))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -458,7 +465,9 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1751,7 +1760,6 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\M\\Documents\\GitHub\\ProjektJPWP\\projekt\\search-icon-small-233.png")); // NOI18N
         jMenuItem1.setText("Szukaj...");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1904,15 +1912,18 @@ public class MainWindow extends javax.swing.JFrame {
             Statement stmt = con.createStatement();
             String imie = jTextField4.getText();
             String nazwisko = jTextField5.getText();
-            Calendar data_ur = jDateChooser1.getCalendar();
-
+            Calendar data_ur = new GregorianCalendar(1, 0, 1);
+            if (jDateChooser1.getDate() != null){
+                data_ur = jDateChooser1.getCalendar();
+            }
+            String miasto = jTextField25.getText();
             String pesel = jTextField11.getText();
             String miejsce = pacjent.wyszukaj(buttonGroup2);
             String o_oczu = pacjent.wyszukaj(buttonGroup3);
             String r_slowna = pacjent.wyszukaj(buttonGroup4);
 
             pacjent a = new pacjent();
-            a.create(imie, nazwisko, miejsce, o_oczu, r_slowna, data_ur, pesel);
+            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel);
             String sql = a.add();
             System.out.println(sql);
             stmt.execute(sql);
@@ -2239,6 +2250,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
