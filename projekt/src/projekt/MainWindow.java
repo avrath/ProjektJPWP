@@ -1851,11 +1851,7 @@ public class MainWindow extends javax.swing.JFrame {
                 }
             }
             try {
-                String host = "jdbc:mysql://mysql.agh.edu.pl:3306/sevik";
-                String uName = "sevik";
-                String uPass = "s919o7ER";
-                Connection con = DriverManager.getConnection(host, uName, uPass);
-                //System.out.println("Udało się!");
+                Connection con = Authentication.getCon();
                 Statement stmt = con.createStatement();
                 String sql = "insert into pacients (fname,lname,miejsce) values ('"+jTextField4.getText()+"','"+jTextField5.getText()
                         +"',"+Integer.parseInt(box.getName())+")";
@@ -1864,7 +1860,6 @@ public class MainWindow extends javax.swing.JFrame {
             } catch (SQLException err) {
                 System.out.println("We have occured an error: " + err);
             }
-            //System.out.println("Tekst: " + box.getText() + " Nazwa(numer) = " + box.getName());
         } else
             System.out.println("Nie wybrano przycisku");
         
@@ -1873,7 +1868,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{    
-            Connection con = WisSelected.conn();
+            Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
             String sql = "select * from pacients where fname=\""+jTextField4.getText()+"\"";
             ResultSet rs = stmt.executeQuery(sql);
@@ -1884,16 +1879,8 @@ public class MainWindow extends javax.swing.JFrame {
                 String nazwisko = rs.getString("lname");
                 int place = rs.getInt("miejsce");
                 String p = imie + " " + nazwisko + " " + place;
-                //System.out.println(p);
                 jTextField5.setText(nazwisko);
 
-             //   System.out.println(groups(1,1));
-                //jButtonGroup baza=null;
-               /* javax.swing.ButtonGroup[] baza=null;
-                baza[1]=buttonGroup1;
-                baza[2]=buttonGroup2;
-                baza[3]=buttonGroup3;
-                WisSelected.choice(baza,2);*/
                 Enumeration<AbstractButton> ab = buttonGroup2.getElements();
                 JCheckBox box = null;
                 while (ab.hasMoreElements()) {
@@ -1913,7 +1900,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
         // TODO add your handling code here:
         try{
-            Connection con = WisSelected.conn();
+            Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
             String imie = jTextField4.getText();
             String nazwisko = jTextField5.getText();
@@ -1948,8 +1935,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
         // TODO add your handling code here:
         try{
-            
-            Connection con = WisSelected.conn();
+            Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
             String sql = "Select * from pacients where fname='"+jTextField4.getText()+"'";
             System.out.println(sql);

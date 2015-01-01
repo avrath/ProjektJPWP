@@ -212,16 +212,16 @@ public class SearchWindow extends javax.swing.JDialog {
         try {
             //Connection con = DriverManager.getConnection(host, uName, uPass);
             
-            Connection con = WisSelected.conn(); // na razie roboczo to nieszczęsne WisSelected xD
+            Connection con = Authentication.getCon(); // na razie roboczo to nieszczęsne WisSelected xD
             Statement stmt = con.createStatement();
-            String SQL = "SELECT * FROM NaszaTabela where nazwisko=" + nazwisko;
+            String SQL = "SELECT * FROM pacients where lname='"+nazwisko+"';";
             ResultSet rs = stmt.executeQuery(SQL);
             while(rs.next()){
             //rs.next();
-            int id_col = rs.getInt("ID");
-            String first_name = rs.getString("First_Name");
-            String last_name = rs.getString("Last_Name");
-            String job = rs.getString("Pesel");
+            int id_col = rs.getInt("id");
+            String first_name = rs.getString("fname");
+            String last_name = rs.getString("lname");
+            String job = rs.getString("pesel");
             
             //System.out.println( id_col + " " + first_name + " " + last_name + " " + job );
             model.addRow(new Object[]{Integer.toString(id_col), first_name, last_name, job});
