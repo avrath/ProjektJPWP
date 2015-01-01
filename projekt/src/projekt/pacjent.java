@@ -28,10 +28,12 @@ public class pacjent {
     private String reakcja_slowna;
     private Calendar data_ur;
     private String pesel;
+    private String miasto;
 
-    public pacjent create(String imie, String nazwisko, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel) {
+    public pacjent create(String imie, String nazwisko, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel) {
         this.imie = imie;
         this.nazwisko = nazwisko;
+        this.miasto = miasto;
         this.miejsce_zdarzenia = miejsce_zdarzenia;
         this.otwieranie_oczu = otwieranie_oczu;
         this.reakcja_slowna = reakcja_slowna;
@@ -42,7 +44,7 @@ public class pacjent {
 
     public String add() {
         String bdata = this.data_ur.get(this.data_ur.YEAR) + "-" + (this.data_ur.get(this.data_ur.MONTH) + 1) + "-" + this.data_ur.get(this.data_ur.DATE);
-        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`place`,`pesel`,`o_oczu`,`r_slowna`) values ('" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.miejsce_zdarzenia + "','" + this.pesel + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "');";
+        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`address_city`,`place`,`pesel`,`o_oczu`,`r_slowna`) values ('" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.miasto + "','" + this.miejsce_zdarzenia + "','" + this.pesel + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "');";
         return sql;
     }
 
@@ -113,6 +115,14 @@ public class pacjent {
         this.nazwisko = nazwisko;
     }
 
+    public String getMiasto(){
+        return miasto;
+    }
+    
+    public void setMiasto(String miasto){
+        this.miasto = miasto;
+    }
+    
     public String getMiejsce_zdarzenia() {
         return miejsce_zdarzenia;
     }
