@@ -18,7 +18,9 @@ import javax.swing.JCheckBox;
  * @author p
  */
 public class pacjent {
+
     /////elementy składowe klasy
+
     private String imie;
     private String nazwisko;
     private String miejsce_zdarzenia;
@@ -28,7 +30,7 @@ public class pacjent {
     private String pesel;
 
     public pacjent create(String imie, String nazwisko, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel) {
-        this.imie=imie;
+        this.imie = imie;
         this.nazwisko = nazwisko;
         this.miejsce_zdarzenia = miejsce_zdarzenia;
         this.otwieranie_oczu = otwieranie_oczu;
@@ -37,63 +39,63 @@ public class pacjent {
         this.pesel = pesel;
         return this;
     }
-    public String add(){
-        String bdata = this.data_ur.get(this.data_ur.YEAR)+"-"+(this.data_ur.get(this.data_ur.MONTH)+1)+"-"+this.data_ur.get(this.data_ur.DATE);
-        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`place`,`pesel`,`o_oczu`,`r_slowna`) values ('"+this.imie+"','"+this.nazwisko+"','"+bdata+"','"+this.miejsce_zdarzenia+"','"+this.pesel+"','"+this.otwieranie_oczu+"','"+this.reakcja_slowna+"');";
-     return sql;
-    }
-    
-    public static String wyszukaj(javax.swing.ButtonGroup group){
-         ButtonModel butmod = group.getSelection();
-         String wybor = new String();
-            if (butmod != null) {
-                Enumeration<AbstractButton> ab = group.getElements();
-                JCheckBox box = null;
-                while (ab.hasMoreElements()) {
-                    box = (JCheckBox) ab.nextElement();
-                    if (box.isSelected()) {
-                        break;
-                    }
-                    
-                }
-                wybor=box.getText();
-            }
-        return wybor; 
-    }
-    
-    public static void zaznacz(String name, javax.swing.ButtonGroup group) {
 
+    public String add() {
+        String bdata = this.data_ur.get(this.data_ur.YEAR) + "-" + (this.data_ur.get(this.data_ur.MONTH) + 1) + "-" + this.data_ur.get(this.data_ur.DATE);
+        String sql = "INSERT INTO `pacients`(`fname`,`lname`,`bdate`,`place`,`pesel`,`o_oczu`,`r_slowna`) values ('" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.miejsce_zdarzenia + "','" + this.pesel + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "');";
+        return sql;
+    }
+
+    public static String wyszukaj(javax.swing.ButtonGroup group) {
+        ButtonModel butmod = group.getSelection();
+        String wybor = new String();
+        if (butmod != null) {
             Enumeration<AbstractButton> ab = group.getElements();
             JCheckBox box = null;
             while (ab.hasMoreElements()) {
                 box = (JCheckBox) ab.nextElement();
-                if (box.getText().equals(name)) {
-                    box.setSelected(Boolean.TRUE);
-//                        System.out.println("did it");
+                if (box.isSelected()) {
                     break;
-                } else {
-                    box.setSelected(Boolean.FALSE);
+                }
+
+            }
+            wybor = box.getText();
+        }
+        return wybor;
+    }
+
+    public static void zaznacz(String name, javax.swing.ButtonGroup group) {
+
+        Enumeration<AbstractButton> ab = group.getElements();
+        JCheckBox box = null;
+        while (ab.hasMoreElements()) {
+            box = (JCheckBox) ab.nextElement();
+            if (box.getText().equals(name)) {
+                box.setSelected(Boolean.TRUE);
+//                        System.out.println("did it");
+                break;
+            } else {
+                box.setSelected(Boolean.FALSE);
 //                        System.out.println(i);
 //                        i++;
-                }
             }
-        
+        }
+
     }
-    public static void wyczysc(String name, javax.swing.ButtonGroup group){
-                Enumeration<AbstractButton> ab = group.getElements();
-                JCheckBox box = null;
-                while (ab.hasMoreElements()) {
-                    box = (JCheckBox) ab.nextElement();
-                    if (box.getText().equals(name)) {
-                        box.setSelected(Boolean.FALSE);
+
+    public static void wyczysc(String name, javax.swing.ButtonGroup group) {
+        Enumeration<AbstractButton> ab = group.getElements();
+        JCheckBox box = null;
+        while (ab.hasMoreElements()) {
+            box = (JCheckBox) ab.nextElement();
+            if (box.getText().equals(name)) {
+                box.setSelected(Boolean.FALSE);
 //                        System.out.println("did it");
-                        break;
-                    }
-                }
-    }        
-        
-    
-    
+                break;
+            }
+        }
+    }
+
     ///////////////////setery i getery
     public String getImie() {
         return imie;
@@ -150,6 +152,5 @@ public class pacjent {
     public void setPesel(String pesel) {
         this.pesel = pesel;
     }
-    
-    
+
 }

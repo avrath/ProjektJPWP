@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package projekt;
 
 import java.awt.event.ActionEvent;
@@ -178,14 +177,14 @@ public class SearchWindow extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
-        
-        try{
-        int rowIndex = jTable1.getSelectedRow();
-        Object ID = jTable1.getValueAt(rowIndex, 0).toString();
-        
-        //doClose(RET_OK);
-        System.out.println(ID);
-        }catch(ArrayIndexOutOfBoundsException e){
+
+        try {
+            int rowIndex = jTable1.getSelectedRow();
+            Object ID = jTable1.getValueAt(rowIndex, 0).toString();
+
+            //doClose(RET_OK);
+            System.out.println(ID);
+        } catch (ArrayIndexOutOfBoundsException e) {
             JOptionPane.showMessageDialog(SearchWindow.this, "Nic nie zostało zaznaczone", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_okButtonActionPerformed
@@ -208,31 +207,32 @@ public class SearchWindow extends javax.swing.JDialog {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         //model.addRow(new Object[]{jTextField1.getText(), "2", "2", "4"});
         String nazwisko = jTextField1.getText();
-        
+
         try {
-            //Connection con = DriverManager.getConnection(host, uName, uPass);
-            
-            Connection con = Authentication.getCon(); // na razie roboczo to nieszczęsne WisSelected xD
+            if (model.getRowCount() > 0) {
+                while (model.getRowCount() > 0) {
+                    model.removeRow(0);
+                }
+            }
+            Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
-            String SQL = "SELECT * FROM pacients where lname='"+nazwisko+"';";
+            String SQL = "SELECT * FROM pacients where lname='" + nazwisko + "';";
             ResultSet rs = stmt.executeQuery(SQL);
-            while(rs.next()){
-            //rs.next();
-            int id_col = rs.getInt("id");
-            String first_name = rs.getString("fname");
-            String last_name = rs.getString("lname");
-            String job = rs.getString("pesel");
-            
-            //System.out.println( id_col + " " + first_name + " " + last_name + " " + job );
-            model.addRow(new Object[]{Integer.toString(id_col), first_name, last_name, job});
-            
-            } 
+            while (rs.next()) {
+                int id_col = rs.getInt("id");
+                String first_name = rs.getString("fname");
+                String last_name = rs.getString("lname");
+                String job = rs.getString("pesel");
+
+                //System.out.println( id_col + " " + first_name + " " + last_name + " " + job );
+                model.addRow(new Object[]{Integer.toString(id_col), first_name, last_name, job});
+            }
         } catch (SQLException err) {
             System.out.println(err.getMessage());
         }
-                                            
+
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
     private void doClose(int retStatus) {
         returnStatus = retStatus;
         setVisible(false);
@@ -242,8 +242,6 @@ public class SearchWindow extends javax.swing.JDialog {
     /**
      * @param args the command line arguments
      */
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;

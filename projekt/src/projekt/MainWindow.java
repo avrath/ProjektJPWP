@@ -18,7 +18,6 @@ import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 
-
 /**
  *
  * @author M
@@ -1853,28 +1852,29 @@ public class MainWindow extends javax.swing.JFrame {
             try {
                 Connection con = Authentication.getCon();
                 Statement stmt = con.createStatement();
-                String sql = "insert into pacients (fname,lname,miejsce) values ('"+jTextField4.getText()+"','"+jTextField5.getText()
-                        +"',"+Integer.parseInt(box.getName())+")";
+                String sql = "insert into pacients (fname,lname,miejsce) values ('" + jTextField4.getText() + "','" + jTextField5.getText()
+                        + "'," + Integer.parseInt(box.getName()) + ")";
                 stmt.execute(sql);
-                
+
             } catch (SQLException err) {
                 System.out.println("We have occured an error: " + err);
             }
-        } else
+        } else {
             System.out.println("Nie wybrano przycisku");
-        
+        }
+
     }//GEN-LAST:event_zapiszActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        try{    
+        try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
-            String sql = "select * from pacients where fname=\""+jTextField4.getText()+"\"";
+            String sql = "select * from pacients where fname=\"" + jTextField4.getText() + "\"";
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                
+
                 String imie = rs.getString("fname");
                 String nazwisko = rs.getString("lname");
                 int place = rs.getInt("miejsce");
@@ -1891,7 +1891,7 @@ public class MainWindow extends javax.swing.JFrame {
                     }
                 }
             }
-        }catch(SQLException err){
+        } catch (SQLException err) {
             System.out.println("We have error: " + err);
         }
 
@@ -1899,29 +1899,29 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
             String imie = jTextField4.getText();
             String nazwisko = jTextField5.getText();
             Calendar data_ur = jDateChooser1.getCalendar();
-            
+
             String pesel = jTextField11.getText();
             String miejsce = pacjent.wyszukaj(buttonGroup2);
             String o_oczu = pacjent.wyszukaj(buttonGroup3);
             String r_slowna = pacjent.wyszukaj(buttonGroup4);
-            
+
             pacjent a = new pacjent();
-            a.create(imie,nazwisko,miejsce,o_oczu,r_slowna,data_ur,pesel);
+            a.create(imie, nazwisko, miejsce, o_oczu, r_slowna, data_ur, pesel);
             String sql = a.add();
             System.out.println(sql);
             stmt.execute(sql);
 //            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
 
-        }catch(SQLException err){
+        } catch (SQLException err) {
             System.out.println("We have occured an error: " + err.getMessage());
         }
-        
+
     }//GEN-LAST:event_testowyActionPerformed
 
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
@@ -1934,46 +1934,46 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
-            String sql = "Select * from pacients where fname='"+jTextField4.getText()+"'";
+            String sql = "Select * from pacients where fname='" + jTextField4.getText() + "'";
             System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 jTextField5.setText(rs.getString("lname"));
                 jTextField11.setText(rs.getString("pesel"));
                 jDateChooser1.setDate(rs.getDate("bdate"));
-                pacjent.zaznacz(rs.getString("place"),buttonGroup2);
-                pacjent.zaznacz(rs.getString("o_oczu"),buttonGroup3);
-                pacjent.zaznacz(rs.getString("r_slowna"),buttonGroup4);
+                pacjent.zaznacz(rs.getString("place"), buttonGroup2);
+                pacjent.zaznacz(rs.getString("o_oczu"), buttonGroup3);
+                pacjent.zaznacz(rs.getString("r_slowna"), buttonGroup4);
             }
-            
-        }catch(SQLException err){
+
+        } catch (SQLException err) {
             System.out.println(err.getMessage());
         }
-        
+
     }//GEN-LAST:event_test2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         SearchWindow dialog = new SearchWindow(new javax.swing.JFrame(), true);
-                /*
-        dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-        */
-                dialog.setVisible(true);
-        
-        
+        /*
+         dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+         @Override
+         public void windowClosing(java.awt.event.WindowEvent e) {
+         System.exit(0);
+         }
+         });
+         */
+        dialog.setVisible(true);
+
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -2020,16 +2020,15 @@ public class MainWindow extends javax.swing.JFrame {
 
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
-                
+
                  //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
-                
-                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                 @Override
-                 public void windowClosing(java.awt.event.WindowEvent e) {
-                 System.exit(0);
-                 }
-                 });
-                 dialog.setVisible(true);        ///do tego miejsca jest logowanie
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);        ///do tego miejsca jest logowanie
             }
         });
 
