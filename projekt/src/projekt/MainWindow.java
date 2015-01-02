@@ -76,9 +76,21 @@ public class MainWindow extends javax.swing.JFrame {
         bg_obr_anat_4 = new javax.swing.ButtonGroup();
         bg_obr_anat_5 = new javax.swing.ButtonGroup();
         bg_obr_anat_6 = new javax.swing.ButtonGroup();
-        bg_skora = new javax.swing.ButtonGroup();
+        bg_wyglad = new javax.swing.ButtonGroup();
         bg_wilgotnosc = new javax.swing.ButtonGroup();
         bg_temp = new javax.swing.ButtonGroup();
+        bg_brzuch = new javax.swing.ButtonGroup();
+        bg_ocena_psych = new javax.swing.ButtonGroup();
+        bg_tony_serca = new javax.swing.ButtonGroup();
+        bg_zapach = new javax.swing.ButtonGroup();
+        bg_niedowlad = new javax.swing.ButtonGroup();
+        bg_konczyna_g = new javax.swing.ButtonGroup();
+        bg_konczyna_d = new javax.swing.ButtonGroup();
+        bg_ekg = new javax.swing.ButtonGroup();
+        bg_czynn_1 = new javax.swing.ButtonGroup();
+        bg_czynn_2 = new javax.swing.ButtonGroup();
+        bg_czynn_3 = new javax.swing.ButtonGroup();
+        bg_czynn_4 = new javax.swing.ButtonGroup();
         zapisz = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -344,8 +356,8 @@ public class MainWindow extends javax.swing.JFrame {
         jCheckBox161 = new javax.swing.JCheckBox();
         jCheckBox162 = new javax.swing.JCheckBox();
         jCheckBox163 = new javax.swing.JCheckBox();
-        jLabel71 = new javax.swing.JLabel();
         jTextField29 = new javax.swing.JTextField();
+        jCheckBox164 = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
@@ -1304,12 +1316,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel52.setText("Saturacja");
 
+        bg_sinica.add(jCheckBox64);
         jCheckBox64.setText("L");
 
+        bg_dusznosc.add(jCheckBox65);
         jCheckBox65.setText("L");
 
+        bg_bezdech.add(jCheckBox66);
         jCheckBox66.setText("L");
 
+        bg_szmer.add(jCheckBox67);
         jCheckBox67.setText("L");
         jCheckBox67.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1317,40 +1333,58 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_furczenie.add(jCheckBox68);
         jCheckBox68.setText("L");
 
+        bg_swisty.add(jCheckBox69);
         jCheckBox69.setText("L");
 
+        bg_trzeszczenie.add(jCheckBox70);
         jCheckBox70.setText("L");
 
+        bg_rzezenie.add(jCheckBox71);
         jCheckBox71.setText("L");
 
+        bg_brak_szmeru.add(jCheckBox72);
         jCheckBox72.setText("L");
 
+        bg_dusznosc.add(jCheckBox73);
         jCheckBox73.setText("P");
 
+        bg_sinica.add(jCheckBox74);
         jCheckBox74.setText("P");
 
+        bg_bezdech.add(jCheckBox75);
         jCheckBox75.setText("P");
 
+        bg_szmer.add(jCheckBox76);
         jCheckBox76.setText("P");
 
+        bg_furczenie.add(jCheckBox77);
         jCheckBox77.setText("P");
 
+        bg_swisty.add(jCheckBox78);
         jCheckBox78.setText("P");
 
+        bg_trzeszczenie.add(jCheckBox79);
         jCheckBox79.setText("P");
 
+        bg_rzezenie.add(jCheckBox80);
         jCheckBox80.setText("P");
 
+        bg_brak_szmeru.add(jCheckBox81);
         jCheckBox81.setText("P");
 
+        bg_dusznosc.add(jCheckBox82);
         jCheckBox82.setText("LP");
 
+        bg_sinica.add(jCheckBox83);
         jCheckBox83.setText("LP");
 
+        bg_bezdech.add(jCheckBox84);
         jCheckBox84.setText("LP");
 
+        bg_szmer.add(jCheckBox85);
         jCheckBox85.setText("LP");
         jCheckBox85.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1358,8 +1392,10 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_furczenie.add(jCheckBox86);
         jCheckBox86.setText("LP");
 
+        bg_swisty.add(jCheckBox87);
         jCheckBox87.setText("LP");
         jCheckBox87.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1367,16 +1403,22 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_trzeszczenie.add(jCheckBox88);
         jCheckBox88.setText("LP");
 
+        bg_rzezenie.add(jCheckBox89);
         jCheckBox89.setText("LP");
 
+        bg_brak_szmeru.add(jCheckBox90);
         jCheckBox90.setText("LP");
 
+        bg_inne.add(jCheckBox91);
         jCheckBox91.setText("L");
 
+        bg_inne.add(jCheckBox92);
         jCheckBox92.setText("P");
 
+        bg_inne.add(jCheckBox93);
         jCheckBox93.setText("LP");
 
         jLabel63.setText("%");
@@ -1552,10 +1594,13 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel60.setText("Szerokość");
 
+        bg_reakcja_1.add(jCheckBox94);
         jCheckBox94.setText("L");
 
+        bg_reakcja_1.add(jCheckBox95);
         jCheckBox95.setText("P");
 
+        bg_reakcja_1.add(jCheckBox96);
         jCheckBox96.setText("LP");
         jCheckBox96.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1563,10 +1608,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_reakcja_2.add(jCheckBox97);
         jCheckBox97.setText("L");
 
+        bg_reakcja_2.add(jCheckBox98);
         jCheckBox98.setText("P");
 
+        bg_reakcja_2.add(jCheckBox99);
         jCheckBox99.setText("LP");
         jCheckBox99.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1574,8 +1622,10 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_reakcja_3.add(jCheckBox100);
         jCheckBox100.setText("L");
 
+        bg_reakcja_3.add(jCheckBox101);
         jCheckBox101.setText("P");
         jCheckBox101.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1583,24 +1633,34 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        bg_reakcja_3.add(jCheckBox102);
         jCheckBox102.setText("LP");
 
+        bg_szer_1.add(jCheckBox103);
         jCheckBox103.setText("L");
 
+        bg_szer_1.add(jCheckBox104);
         jCheckBox104.setText("P");
 
+        bg_szer_1.add(jCheckBox105);
         jCheckBox105.setText("LP");
 
+        bg_szer_2.add(jCheckBox106);
         jCheckBox106.setText("L");
 
+        bg_szer_2.add(jCheckBox107);
         jCheckBox107.setText("P");
 
+        bg_szer_2.add(jCheckBox108);
         jCheckBox108.setText("LP");
 
+        bg_szer_3.add(jCheckBox109);
         jCheckBox109.setText("L");
 
+        bg_szer_3.add(jCheckBox110);
         jCheckBox110.setText("P");
 
+        bg_szer_3.add(jCheckBox111);
         jCheckBox111.setText("LP");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -1749,8 +1809,10 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel41.setText("/min");
 
+        bg_tetno.add(jCheckBox39);
         jCheckBox39.setText("miarowe");
 
+        bg_tetno.add(jCheckBox40);
         jCheckBox40.setText("niemiar.");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
@@ -1785,16 +1847,22 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Obrażenia anatomiczne kwalifikujące do centrum urazowego", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_obr_anat_1.add(jCheckBox112);
         jCheckBox112.setText("<html>penetrujące rany głowy i tułowia lub urazy<br/> tępe z objawami uszkodzenia narządów<br/> wewnętrznych głowy, klatki piersiowej i brzucha</html>");
 
+        bg_obr_anat_2.add(jCheckBox113);
         jCheckBox113.setText("amputacja kończyny powyżej kolana lub łokcia");
 
+        bg_obr_anat_5.add(jCheckBox114);
         jCheckBox114.setText("rozległe zmiażdżenia kończyn");
 
+        bg_obr_anat_3.add(jCheckBox115);
         jCheckBox115.setText("uszkodzienie rdzenia kręgowego");
 
+        bg_obr_anat_6.add(jCheckBox116);
         jCheckBox116.setText("<html>złamanie kończyny z <br/>uszkodzeniem naczyń i nerwów</html>");
 
+        bg_obr_anat_4.add(jCheckBox117);
         jCheckBox117.setText("<html>złamanie co najmniej<br/> dwóch proksymalnych<br/> kości długich kończyn lub miednicy</html>");
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
@@ -1821,7 +1889,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox114)
                     .addComponent(jCheckBox113))
@@ -1914,28 +1982,40 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel66.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel66.setText("Temperatura:");
 
+        bg_wyglad.add(jCheckBox118);
         jCheckBox118.setText("w normie");
 
+        bg_wyglad.add(jCheckBox119);
         jCheckBox119.setText("blada");
 
+        bg_wyglad.add(jCheckBox120);
         jCheckBox120.setText("rumień");
 
+        bg_wyglad.add(jCheckBox121);
         jCheckBox121.setText("zażółcenie");
 
+        bg_wyglad.add(jCheckBox122);
         jCheckBox122.setText("sinica obw");
 
+        bg_wyglad.add(jCheckBox123);
         jCheckBox123.setText("sinica centr");
 
+        bg_wilgotnosc.add(jCheckBox124);
         jCheckBox124.setText("w normie");
 
+        bg_wilgotnosc.add(jCheckBox125);
         jCheckBox125.setText("wilgotna");
 
+        bg_wilgotnosc.add(jCheckBox126);
         jCheckBox126.setText("sucha");
 
+        bg_temp.add(jCheckBox127);
         jCheckBox127.setText("w normie");
 
+        bg_temp.add(jCheckBox128);
         jCheckBox128.setText("chłodna");
 
+        bg_temp.add(jCheckBox129);
         jCheckBox129.setText("ciepła");
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
@@ -2000,12 +2080,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel23.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "JAMA BRZUSZNA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_brzuch.add(jCheckBox130);
         jCheckBox130.setText("w normie");
 
+        bg_brzuch.add(jCheckBox131);
         jCheckBox131.setText("bolesność paplacyjna");
 
+        bg_brzuch.add(jCheckBox132);
         jCheckBox132.setText("brak perystaltyki");
 
+        bg_brzuch.add(jCheckBox133);
         jCheckBox133.setText("objawy otrzewnowe");
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
@@ -2037,12 +2121,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "OCENA PSYCHO-RUCH.", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_ocena_psych.add(jCheckBox134);
         jCheckBox134.setText("w normie");
 
+        bg_ocena_psych.add(jCheckBox135);
         jCheckBox135.setText("spowolniały");
 
+        bg_ocena_psych.add(jCheckBox136);
         jCheckBox136.setText("pobudzony");
 
+        bg_ocena_psych.add(jCheckBox137);
         jCheckBox137.setText("agresywny");
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
@@ -2069,15 +2157,18 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(jCheckBox136)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox137)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "TONY SERCA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_tony_serca.add(jCheckBox138);
         jCheckBox138.setText("czyste/głośne");
 
+        bg_tony_serca.add(jCheckBox139);
         jCheckBox139.setText("stłumione");
 
+        bg_tony_serca.add(jCheckBox140);
         jCheckBox140.setText("inne");
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
@@ -2106,22 +2197,29 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        bg_niedowlad.add(jCheckBox141);
         jCheckBox141.setText("NIEDOWŁAD / PORAŻENIE");
 
         jLabel67.setText("Kończyna górna");
 
         jLabel68.setText("Kończyna dolna");
 
+        bg_konczyna_g.add(jCheckBox142);
         jCheckBox142.setText("L");
 
+        bg_konczyna_g.add(jCheckBox143);
         jCheckBox143.setText("P");
 
+        bg_konczyna_g.add(jCheckBox144);
         jCheckBox144.setText("LP");
 
+        bg_konczyna_d.add(jCheckBox145);
         jCheckBox145.setText("L");
 
+        bg_konczyna_d.add(jCheckBox146);
         jCheckBox146.setText("P");
 
+        bg_konczyna_d.add(jCheckBox147);
         jCheckBox147.setText("LP");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
@@ -2172,10 +2270,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Zapach z ust", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_zapach.add(jCheckBox148);
         jCheckBox148.setText("rozpuszczalnik org");
 
+        bg_zapach.add(jCheckBox149);
         jCheckBox149.setText("alkohol");
 
+        bg_zapach.add(jCheckBox150);
         jCheckBox150.setText("inne");
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
@@ -2258,44 +2359,63 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EKG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bg_ekg.add(jCheckBox151);
         jCheckBox151.setText("Rytm zatokowy");
 
+        bg_ekg.add(jCheckBox152);
         jCheckBox152.setText("Tachykardia nadkomorowa");
 
+        bg_ekg.add(jCheckBox153);
         jCheckBox153.setText("Tachykardia komorowa");
 
+        bg_ekg.add(jCheckBox154);
         jCheckBox154.setText("Migotanie/trzepotanie przedsionków");
 
+        bg_ekg.add(jCheckBox155);
         jCheckBox155.setText("AV blok");
 
+        bg_ekg.add(jCheckBox156);
         jCheckBox156.setText("aVES");
 
+        bg_ekg.add(jCheckBox157);
         jCheckBox157.setText("VES");
 
+        bg_ekg.add(jCheckBox158);
         jCheckBox158.setText("VF/VT");
 
+        bg_ekg.add(jCheckBox159);
         jCheckBox159.setText("Asystolia");
 
+        bg_ekg.add(jCheckBox160);
         jCheckBox160.setText("PEA");
 
+        bg_ekg.add(jCheckBox161);
         jCheckBox161.setText("Rozrusznik");
 
+        bg_ekg.add(jCheckBox162);
         jCheckBox162.setText("OZW");
 
+        bg_ekg.add(jCheckBox163);
         jCheckBox163.setText("Zawał");
 
-        jLabel71.setText("Inne:");
+        bg_ekg.add(jCheckBox164);
+        jCheckBox164.setText("Inne:");
+        jCheckBox164.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox164ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addComponent(jLabel71)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField29))
+                        .addComponent(jCheckBox164)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jCheckBox151)
                     .addComponent(jCheckBox152)
                     .addComponent(jCheckBox153)
@@ -2307,9 +2427,10 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jCheckBox159)
                     .addComponent(jCheckBox160)
                     .addComponent(jCheckBox161)
-                    .addComponent(jCheckBox162)
-                    .addComponent(jCheckBox163))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBox162)
+                        .addComponent(jCheckBox163)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2340,9 +2461,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(jCheckBox162)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox163)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel71)
+                    .addComponent(jCheckBox164)
                     .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2385,7 +2506,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 1, Short.MAX_VALUE)))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -2484,50 +2605,73 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CZYNNOŚCI"));
 
+        bg_czynn_1.add(jCheckBox41);
         jCheckBox41.setText("odsysanie");
 
+        bg_czynn_1.add(jCheckBox42);
         jCheckBox42.setText("went. workiem");
 
+        bg_czynn_1.add(jCheckBox43);
         jCheckBox43.setText("rurka UG");
 
+        bg_czynn_1.add(jCheckBox44);
         jCheckBox44.setText("intubacja");
 
+        bg_czynn_1.add(jCheckBox45);
         jCheckBox45.setText("respirator");
 
+        bg_czynn_1.add(jCheckBox46);
         jCheckBox46.setText("tlenoter. bierna");
 
+        bg_czynn_2.add(jCheckBox47);
         jCheckBox47.setText("defibrylacja");
 
+        bg_czynn_3.add(jCheckBox48);
         jCheckBox48.setText("kołnierz");
 
+        bg_czynn_4.add(jCheckBox49);
         jCheckBox49.setText("linia żyl. obw.");
 
+        bg_czynn_2.add(jCheckBox50);
         jCheckBox50.setText("stymulacja zew.");
 
+        bg_czynn_2.add(jCheckBox51);
         jCheckBox51.setText("kardiowersja");
 
+        bg_czynn_2.add(jCheckBox52);
         jCheckBox52.setText("masaż serca");
 
+        bg_czynn_2.add(jCheckBox53);
         jCheckBox53.setText("EKG");
 
+        bg_czynn_2.add(jCheckBox54);
         jCheckBox54.setText("teletransmisja");
 
+        bg_czynn_3.add(jCheckBox55);
         jCheckBox55.setText("deska ortoped");
 
+        bg_czynn_3.add(jCheckBox56);
         jCheckBox56.setText("materac próż");
 
+        bg_czynn_3.add(jCheckBox57);
         jCheckBox57.setText("unieruchomienie");
 
+        bg_czynn_3.add(jCheckBox58);
         jCheckBox58.setText("opatrunek");
 
+        bg_czynn_3.add(jCheckBox59);
         jCheckBox59.setText("inne");
 
+        bg_czynn_4.add(jCheckBox60);
         jCheckBox60.setText("linia żyl. cent.");
 
+        bg_czynn_4.add(jCheckBox61);
         jCheckBox61.setText("cewnikowanie");
 
+        bg_czynn_4.add(jCheckBox62);
         jCheckBox62.setText("sonda żołąd.");
 
+        bg_czynn_4.add(jCheckBox63);
         jCheckBox63.setText("monitorowanie");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -3191,6 +3335,10 @@ public class MainWindow extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jCheckBox37ActionPerformed
 
+    private void jCheckBox164ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox164ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox164ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3248,13 +3396,22 @@ public class MainWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bg_bezdech;
     private javax.swing.ButtonGroup bg_brak_szmeru;
+    private javax.swing.ButtonGroup bg_brzuch;
     private javax.swing.ButtonGroup bg_cz_oddech;
+    private javax.swing.ButtonGroup bg_czynn_1;
+    private javax.swing.ButtonGroup bg_czynn_2;
+    private javax.swing.ButtonGroup bg_czynn_3;
+    private javax.swing.ButtonGroup bg_czynn_4;
     private javax.swing.ButtonGroup bg_decyzja;
     private javax.swing.ButtonGroup bg_dusznosc;
+    private javax.swing.ButtonGroup bg_ekg;
     private javax.swing.ButtonGroup bg_furczenie;
     private javax.swing.ButtonGroup bg_gcs;
     private javax.swing.ButtonGroup bg_inne;
+    private javax.swing.ButtonGroup bg_konczyna_d;
+    private javax.swing.ButtonGroup bg_konczyna_g;
     private javax.swing.ButtonGroup bg_miejsce;
+    private javax.swing.ButtonGroup bg_niedowlad;
     private javax.swing.ButtonGroup bg_o_oczu;
     private javax.swing.ButtonGroup bg_obr_anat_1;
     private javax.swing.ButtonGroup bg_obr_anat_2;
@@ -3262,6 +3419,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_obr_anat_4;
     private javax.swing.ButtonGroup bg_obr_anat_5;
     private javax.swing.ButtonGroup bg_obr_anat_6;
+    private javax.swing.ButtonGroup bg_ocena_psych;
     private javax.swing.ButtonGroup bg_r_ruchowa;
     private javax.swing.ButtonGroup bg_r_slowna;
     private javax.swing.ButtonGroup bg_reakcja_1;
@@ -3270,7 +3428,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_rr_skurcz;
     private javax.swing.ButtonGroup bg_rzezenie;
     private javax.swing.ButtonGroup bg_sinica;
-    private javax.swing.ButtonGroup bg_skora;
     private javax.swing.ButtonGroup bg_swisty;
     private javax.swing.ButtonGroup bg_szer_1;
     private javax.swing.ButtonGroup bg_szer_2;
@@ -3278,8 +3435,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_szmer;
     private javax.swing.ButtonGroup bg_temp;
     private javax.swing.ButtonGroup bg_tetno;
+    private javax.swing.ButtonGroup bg_tony_serca;
     private javax.swing.ButtonGroup bg_trzeszczenie;
     private javax.swing.ButtonGroup bg_wilgotnosc;
+    private javax.swing.ButtonGroup bg_wyglad;
+    private javax.swing.ButtonGroup bg_zapach;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
@@ -3353,6 +3513,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox161;
     private javax.swing.JCheckBox jCheckBox162;
     private javax.swing.JCheckBox jCheckBox163;
+    private javax.swing.JCheckBox jCheckBox164;
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox19;
@@ -3516,7 +3677,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

@@ -64,11 +64,35 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="bg_obr_anat_6">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="bg_skora">
+    <Component class="javax.swing.ButtonGroup" name="bg_wyglad">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="bg_wilgotnosc">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="bg_temp">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_brzuch">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_ocena_psych">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_tony_serca">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_zapach">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_niedowlad">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_konczyna_g">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_konczyna_d">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_ekg">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_czynn_1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_czynn_2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_czynn_3">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bg_czynn_4">
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
@@ -1851,21 +1875,33 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox64">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_sinica"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox65">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_dusznosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox66">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_bezdech"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox67">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szmer"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                   <Events>
@@ -1874,91 +1910,145 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox68">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_furczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox69">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_swisty"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox70">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_trzeszczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox71">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_rzezenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox72">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brak_szmeru"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox73">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_dusznosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox74">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_sinica"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox75">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_bezdech"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox76">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szmer"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox77">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_furczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox78">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_swisty"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox79">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_trzeszczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox80">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_rzezenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox81">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brak_szmeru"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox82">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_dusznosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox83">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_sinica"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox84">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_bezdech"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox85">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szmer"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                   <Events>
@@ -1967,11 +2057,17 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox86">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_furczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox87">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_swisty"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                   <Events>
@@ -1980,31 +2076,49 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox88">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_trzeszczenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox89">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_rzezenie"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox90">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brak_szmeru"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox91">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_inne"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox92">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_inne"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox93">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_inne"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
@@ -2214,16 +2328,25 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox94">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox95">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox96">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                   <Events>
@@ -2232,16 +2355,25 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox97">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox98">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox99">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                   <Events>
@@ -2250,11 +2382,17 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox100">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox101">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                   <Events>
@@ -2263,51 +2401,81 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox102">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_reakcja_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox103">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox104">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox105">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox106">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox107">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox108">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox109">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox110">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox111">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_szer_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
@@ -2435,11 +2603,17 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox39">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_tetno"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="miarowe"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox40">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_tetno"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="niemiar."/>
                   </Properties>
                 </Component>
@@ -2487,7 +2661,7 @@
                               <Component id="jCheckBox112" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox117" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                          <EmptySpace pref="33" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jCheckBox114" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox113" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2507,31 +2681,49 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox112">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;penetruj&#x105;ce rany g&#x142;owy i tu&#x142;owia lub urazy&lt;br/&gt; t&#x119;pe z objawami uszkodzenia narz&#x105;d&#xf3;w&lt;br/&gt; wewn&#x119;trznych g&#x142;owy, klatki piersiowej i brzucha&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox113">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_2"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="amputacja ko&#x144;czyny powy&#x17c;ej kolana lub &#x142;okcia"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox114">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_5"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="rozleg&#x142;e zmia&#x17c;d&#x17c;enia ko&#x144;czyn"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox115">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_3"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="uszkodzienie rdzenia kr&#x119;gowego"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox116">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_6"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;z&#x142;amanie ko&#x144;czyny z &lt;br/&gt;uszkodzeniem naczy&#x144; i nerw&#xf3;w&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox117">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_obr_anat_4"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;z&#x142;amanie co najmniej&lt;br/&gt; dw&#xf3;ch proksymalnych&lt;br/&gt; ko&#x15b;ci d&#x142;ugich ko&#x144;czyn lub miednicy&lt;/html&gt;"/>
                   </Properties>
                 </Component>
@@ -2586,7 +2778,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2803,61 +2995,97 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox118">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="w normie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox119">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="blada"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox120">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="rumie&#x144;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox121">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="za&#x17c;&#xf3;&#x142;cenie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox122">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="sinica obw"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox123">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wyglad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="sinica centr"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox124">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wilgotnosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="w normie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox125">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wilgotnosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="wilgotna"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox126">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_wilgotnosc"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="sucha"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox127">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_temp"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="w normie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox128">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_temp"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="ch&#x142;odna"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox129">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_temp"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="ciep&#x142;a"/>
                   </Properties>
                 </Component>
@@ -2911,21 +3139,33 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox130">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brzuch"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="w normie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox131">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brzuch"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="bolesno&#x15b;&#x107; paplacyjna"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox132">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brzuch"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="brak perystaltyki"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox133">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_brzuch"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="objawy otrzewnowe"/>
                   </Properties>
                 </Component>
@@ -2971,7 +3211,7 @@
                           <Component id="jCheckBox136" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jCheckBox137" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="10" max="32767" attributes="0"/>
+                          <EmptySpace pref="27" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2979,21 +3219,33 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox134">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ocena_psych"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="w normie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox135">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ocena_psych"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="spowolnia&#x142;y"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox136">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ocena_psych"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="pobudzony"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox137">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ocena_psych"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="agresywny"/>
                   </Properties>
                 </Component>
@@ -3044,16 +3296,25 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox138">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_tony_serca"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="czyste/g&#x142;o&#x15b;ne"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox139">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_tony_serca"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="st&#x142;umione"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox140">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_tony_serca"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="inne"/>
                   </Properties>
                 </Component>
@@ -3125,6 +3386,9 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox141">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_niedowlad"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="NIEDOW&#x141;AD / PORA&#x17b;ENIE"/>
                   </Properties>
                 </Component>
@@ -3140,31 +3404,49 @@
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox142">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_g"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox143">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_g"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox144">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_g"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox145">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_d"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="L"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox146">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_d"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox147">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_konczyna_d"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="LP"/>
                   </Properties>
                 </Component>
@@ -3215,16 +3497,25 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox148">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_zapach"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="rozpuszczalnik org"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox149">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_zapach"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="alkohol"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox150">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_zapach"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="inne"/>
                   </Properties>
                 </Component>
@@ -3328,11 +3619,11 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField29" max="32767" attributes="0"/>
+                                  <Component id="jCheckBox164" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField29" min="-2" pref="163" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jCheckBox151" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox152" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -3345,10 +3636,12 @@
                               <Component id="jCheckBox159" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox160" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox161" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox162" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox163" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jCheckBox162" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox163" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace pref="42" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3381,9 +3674,9 @@
                           <Component id="jCheckBox162" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jCheckBox163" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox164" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -3394,75 +3687,120 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox151">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Rytm zatokowy"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox152">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Tachykardia nadkomorowa"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox153">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Tachykardia komorowa"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox154">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Migotanie/trzepotanie przedsionk&#xf3;w"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox155">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="AV blok"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox156">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="aVES"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox157">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="VES"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox158">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="VF/VT"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox159">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Asystolia"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox160">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="PEA"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox161">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Rozrusznik"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox162">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="OZW"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox163">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Zawa&#x142;"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel71">
+                <Component class="javax.swing.JTextField" name="jTextField29">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox164">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bg_ekg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Inne:"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField29">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox164ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -3786,116 +4124,185 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox41">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="odsysanie"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox42">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="went. workiem"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox43">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="rurka UG"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox44">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="intubacja"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox45">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="respirator"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox46">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_1"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="tlenoter. bierna"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox47">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="defibrylacja"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox48">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="ko&#x142;nierz"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox49">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_4"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="linia &#x17c;yl. obw."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox50">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="stymulacja zew."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox51">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="kardiowersja"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox52">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="masa&#x17c; serca"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox53">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="EKG"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox54">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_2"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="teletransmisja"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox55">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="deska ortoped"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox56">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="materac pr&#xf3;&#x17c;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox57">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="unieruchomienie"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox58">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="opatrunek"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox59">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_3"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="inne"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox60">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_4"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="linia &#x17c;yl. cent."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox61">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_4"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="cewnikowanie"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox62">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_4"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="sonda &#x17c;o&#x142;&#x105;d."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox63">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bg_czynn_4"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="monitorowanie"/>
                       </Properties>
                     </Component>
