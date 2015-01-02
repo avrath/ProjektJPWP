@@ -2571,6 +2571,11 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu2.setText("Pomoc");
 
         jMenuItem4.setText("O programie");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -2812,6 +2817,17 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField28ActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(MainWindow.this, "<html>Program został napisany w ramach projektu z przedmiotu Języki Programowania Wysokiego Poziomu.<br/>"
+                + "Autorzy: Paweł Nogieć, Michał Janecki<br/>Teleinformatyka rok III<br/><br/><div align=\"center\"><b>Zasada działania:</b></div><br/>"
+                + "Po zalogowaniu użytkownik programu wypełnia informacje o pacjencie przełączając się między czterema<br/> "
+                + "dostępnymi kartami. Naciśniecie przycisku 'Zapisz' spowoduje zapisanie obecnie wypełnionych danych<br/>"
+                + "ze wszystkich kart. W programie zaimplementowana została też opcja wyszukiwania pacjentów już znajdujących<br/>"
+                + "się w bazie oraz wyczyszczenia częściowo uzupełnionej karty pacjenta. Aby wykonac którąś z tych czynności<br/>"
+                + "należy wybrać odpowiednią opcję z menu.</html>", "O programie", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2847,7 +2863,7 @@ public class MainWindow extends javax.swing.JFrame {
 
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
-                dialog.setFocusable(true);
+                
                  //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
@@ -2856,19 +2872,7 @@ public class MainWindow extends javax.swing.JFrame {
                         
                     }
                 });
-                /*
-                dialog.addKeyListener(new java.awt.event.KeyAdapter() {
-                    @Override
-                    public void keyPressed(java.awt.event.KeyEvent e) {
-                        if (e.getKeyCode() == java.awt.event.KeyEvent.VK_1) {
-                            System.exit(0);
-                            
-                        }
-                    }
-
-                   
-                });
-                */
+               
                 
                 
                 dialog.setVisible(true);        ///do tego miejsca jest logowanie

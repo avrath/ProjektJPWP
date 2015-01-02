@@ -32,6 +32,7 @@ public class LoginWindow extends javax.swing.JDialog {
         initComponents();
         
         // Close the dialog when Esc is pressed
+        /*
         String cancelName = "cancel";
         InputMap inputMap = getRootPane().getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), cancelName);
@@ -40,9 +41,9 @@ public class LoginWindow extends javax.swing.JDialog {
             public void actionPerformed(ActionEvent e) {
                 doClose(RET_CANCEL);
             }
-        });
+        });*/
     }
-
+     
     /**
      * @return the return status of this dialog - one of RET_OK or RET_CANCEL
      */
