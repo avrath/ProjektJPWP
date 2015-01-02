@@ -3636,10 +3636,8 @@
                               <Component id="jCheckBox159" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox160" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox161" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jCheckBox162" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox163" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jCheckBox162" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox163" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="42" max="32767" attributes="0"/>
                       </Group>
@@ -4124,49 +4122,31 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox41">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="odsysanie"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox42">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="went. workiem"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox43">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="rurka UG"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox44">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="intubacja"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox45">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="respirator"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox46">
                       <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="bg_czynn_1"/>
-                        </Property>
                         <Property name="text" type="java.lang.String" value="tlenoter. bierna"/>
                       </Properties>
                     </Component>

@@ -21,6 +21,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -2427,9 +2428,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jCheckBox159)
                     .addComponent(jCheckBox160)
                     .addComponent(jCheckBox161)
-                    .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCheckBox162)
-                        .addComponent(jCheckBox163)))
+                    .addComponent(jCheckBox162)
+                    .addComponent(jCheckBox163))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
@@ -2605,22 +2605,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CZYNNOŚCI"));
 
-        bg_czynn_1.add(jCheckBox41);
         jCheckBox41.setText("odsysanie");
 
-        bg_czynn_1.add(jCheckBox42);
         jCheckBox42.setText("went. workiem");
 
-        bg_czynn_1.add(jCheckBox43);
         jCheckBox43.setText("rurka UG");
 
-        bg_czynn_1.add(jCheckBox44);
         jCheckBox44.setText("intubacja");
 
-        bg_czynn_1.add(jCheckBox45);
         jCheckBox45.setText("respirator");
 
-        bg_czynn_1.add(jCheckBox46);
         jCheckBox46.setText("tlenoter. bierna");
 
         bg_czynn_2.add(jCheckBox47);
@@ -2938,28 +2932,33 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
-        ButtonModel butmod = bg_miejsce.getSelection();
-        if (butmod != null) {
-            Enumeration<AbstractButton> ab = bg_miejsce.getElements();
-            JCheckBox box = null;
-            while (ab.hasMoreElements()) {
-                box = (JCheckBox) ab.nextElement();
-                if (box.isSelected()) {
-                    break;
-                }
+        try {
+            Connection con = Authentication.getCon();
+            Statement stmt = con.createStatement();
+            String imie = jTextField4.getText();
+            String nazwisko = jTextField5.getText();
+            Calendar data_ur = new GregorianCalendar(1, 0, 1);
+            if (jDateChooser1.getDate() != null){
+                data_ur = jDateChooser1.getCalendar();
             }
-            try {
-                Connection con = Authentication.getCon();
-                Statement stmt = con.createStatement();
-                String sql = "insert into pacients (fname,lname,miejsce) values ('" + jTextField4.getText() + "','" + jTextField5.getText()
-                        + "'," + Integer.parseInt(box.getName()) + ")";
-                stmt.execute(sql);
+            String miasto = jTextField25.getText();
+            String pesel = jTextField11.getText();
+            String miejsce = Patient.wyszukaj(bg_miejsce);
+            String o_oczu = Patient.wyszukaj(bg_o_oczu);
+            String r_slowna = Patient.wyszukaj(bg_r_slowna);
+            String obr_anat_1 = Patient.wyszukaj(bg_dusznosc);
+            
 
-            } catch (SQLException err) {
-                System.out.println("We have occured an error: " + err);
-            }
-        } else {
-            System.out.println("Nie wybrano przycisku");
+
+            Patient a = new Patient();
+            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
+            String sql = a.add();
+            System.out.println(sql);
+            stmt.execute(sql);
+//            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
+
+        } catch (SQLException err) {
+            System.out.println("We have occured an error: " + err.getMessage());
         }
 
     }//GEN-LAST:event_zapiszActionPerformed
@@ -2998,32 +2997,22 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
         // TODO add your handling code here:
-        try {
-            Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();
-            String imie = jTextField4.getText();
-            String nazwisko = jTextField5.getText();
-            Calendar data_ur = new GregorianCalendar(1, 0, 1);
-            if (jDateChooser1.getDate() != null){
-                data_ur = jDateChooser1.getCalendar();
+            ArrayList<JCheckBox> buttons = new ArrayList<JCheckBox>();
+            buttons.add(jCheckBox40);
+            buttons.add(jCheckBox41);
+            buttons.add(jCheckBox42);
+            buttons.add(jCheckBox43);
+            buttons.add(jCheckBox44);
+            buttons.add(jCheckBox45);
+            buttons.add(jCheckBox46);
+            String nacisniete = new String();
+            for (JCheckBox checkbox : buttons) {
+                if (checkbox.isSelected()){
+                    nacisniete += checkbox.getText() + ", ";
+                }
+                
             }
-            String miasto = jTextField25.getText();
-            String pesel = jTextField11.getText();
-            String miejsce = Patient.wyszukaj(bg_miejsce);
-            String o_oczu = Patient.wyszukaj(bg_o_oczu);
-            String r_slowna = Patient.wyszukaj(bg_r_slowna);
-            String obr_anat_1 = Patient.wyszukaj(bg_dusznosc);
-
-            Patient a = new Patient();
-            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
-            String sql = a.add();
-            System.out.println(sql);
-            stmt.execute(sql);
-//            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
-
-        } catch (SQLException err) {
-            System.out.println("We have occured an error: " + err.getMessage());
-        }
+            System.out.println(nacisniete);
 
     }//GEN-LAST:event_testowyActionPerformed
 
