@@ -145,8 +145,8 @@ public class MainWindow extends javax.swing.JFrame {
         jCheckBox21 = new javax.swing.JCheckBox();
         jCheckBox22 = new javax.swing.JCheckBox();
         jLabel32 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
         jCheckBox38 = new javax.swing.JCheckBox();
+        jLabel61 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jCheckBox23 = new javax.swing.JCheckBox();
@@ -167,7 +167,7 @@ public class MainWindow extends javax.swing.JFrame {
         jCheckBox36 = new javax.swing.JCheckBox();
         jCheckBox37 = new javax.swing.JCheckBox();
         jLabel36 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        jLabel72 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jTextField17 = new javax.swing.JTextField();
@@ -836,18 +836,38 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup3.add(jCheckBox12);
         jCheckBox12.setText("[1] brak");
         jCheckBox12.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox12ActionPerformed(evt);
+            }
+        });
 
         buttonGroup3.add(jCheckBox11);
         jCheckBox11.setText("[2] na ból");
         jCheckBox11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
 
         buttonGroup3.add(jCheckBox6);
         jCheckBox6.setText("[3] na głos");
         jCheckBox6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
 
         buttonGroup3.add(jCheckBox9);
         jCheckBox9.setText("[4] spontanicznie");
         jCheckBox9.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
 
         jLabel27.setText("OTWIERANIE OCZU");
 
@@ -856,9 +876,19 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup4.add(jCheckBox13);
         jCheckBox13.setText("[5] zorientowany");
         jCheckBox13.setToolTipText("");
+        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox13ActionPerformed(evt);
+            }
+        });
 
         buttonGroup4.add(jCheckBox14);
         jCheckBox14.setText("[4] splątany");
+        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox14ActionPerformed(evt);
+            }
+        });
 
         buttonGroup4.add(jCheckBox15);
         jCheckBox15.setText("[3] niewłaściwe słowa");
@@ -870,32 +900,72 @@ public class MainWindow extends javax.swing.JFrame {
 
         buttonGroup4.add(jCheckBox16);
         jCheckBox16.setText("[1] brak");
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jCheckBox17);
         jCheckBox17.setText("[6] wykonuje polecenia");
+        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox17ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jCheckBox18);
         jCheckBox18.setText("[5] lokalizacja bólu");
+        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox18ActionPerformed(evt);
+            }
+        });
 
         jLabel31.setText("REAKCJA RUCHOWA");
 
         buttonGroup5.add(jCheckBox19);
         jCheckBox19.setText("[4] ucieczka od bólu");
+        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox19ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jCheckBox20);
         jCheckBox20.setText("[3] zgięciowa");
+        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox20ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jCheckBox21);
         jCheckBox21.setText("[2] wyprostna");
+        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox21ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jCheckBox22);
         jCheckBox22.setText("[1] brak");
+        jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox22ActionPerformed(evt);
+            }
+        });
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel32.setText("SUMA");
+        jLabel32.setText("SUMA:");
 
         buttonGroup4.add(jCheckBox38);
         jCheckBox38.setText("[2] niezrozumiałe dźwięki");
+        jCheckBox38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox38ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -920,8 +990,8 @@ public class MainWindow extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                     .addComponent(jLabel32)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel61))
                                 .addComponent(jCheckBox21))
                             .addComponent(jCheckBox16)
                             .addComponent(jCheckBox20)
@@ -976,7 +1046,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel61))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -985,61 +1055,131 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel33.setText("CZ. ODDECHÓW");
 
         buttonGroup6.add(jCheckBox23);
-        jCheckBox23.setText("[1] 10-29");
+        jCheckBox23.setText("[4] 10-29");
         jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox23ActionPerformed(evt);
             }
         });
 
-        buttonGroup7.add(jCheckBox24);
+        buttonGroup6.add(jCheckBox24);
         jCheckBox24.setText("[3] >29");
+        jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox24ActionPerformed(evt);
+            }
+        });
 
         buttonGroup6.add(jCheckBox25);
         jCheckBox25.setText("[2] 6-9");
+        jCheckBox25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox25ActionPerformed(evt);
+            }
+        });
 
         buttonGroup6.add(jCheckBox26);
         jCheckBox26.setText("[1] 1-5");
+        jCheckBox26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox26ActionPerformed(evt);
+            }
+        });
 
         buttonGroup6.add(jCheckBox27);
         jCheckBox27.setText("[0] brak");
+        jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox27ActionPerformed(evt);
+            }
+        });
 
         buttonGroup7.add(jCheckBox28);
         jCheckBox28.setText("[4] >89");
+        jCheckBox28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox28ActionPerformed(evt);
+            }
+        });
 
         buttonGroup7.add(jCheckBox29);
         jCheckBox29.setText("[3] 76-89");
+        jCheckBox29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox29ActionPerformed(evt);
+            }
+        });
 
         jLabel34.setText("RR SKURCZOWE");
 
         buttonGroup7.add(jCheckBox30);
         jCheckBox30.setText("[2] 50-75");
+        jCheckBox30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox30ActionPerformed(evt);
+            }
+        });
 
         buttonGroup7.add(jCheckBox31);
         jCheckBox31.setText("[1] 1-49");
+        jCheckBox31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox31ActionPerformed(evt);
+            }
+        });
 
         buttonGroup7.add(jCheckBox32);
         jCheckBox32.setText("[0] 0");
+        jCheckBox32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox32ActionPerformed(evt);
+            }
+        });
 
         jLabel35.setText("GCS");
 
         buttonGroup8.add(jCheckBox33);
         jCheckBox33.setText("[4] 13-15");
+        jCheckBox33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox33ActionPerformed(evt);
+            }
+        });
 
         buttonGroup8.add(jCheckBox34);
         jCheckBox34.setText("[3] 9-12");
+        jCheckBox34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox34ActionPerformed(evt);
+            }
+        });
 
         buttonGroup8.add(jCheckBox35);
         jCheckBox35.setText("[2] 6-8");
+        jCheckBox35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox35ActionPerformed(evt);
+            }
+        });
 
         buttonGroup8.add(jCheckBox36);
         jCheckBox36.setText("[1] 4-5");
+        jCheckBox36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox36ActionPerformed(evt);
+            }
+        });
 
         buttonGroup8.add(jCheckBox37);
         jCheckBox37.setText("[0] 3");
+        jCheckBox37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox37ActionPerformed(evt);
+            }
+        });
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel36.setText("SUMA");
+        jLabel36.setText("SUMA:");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -1068,9 +1208,9 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jCheckBox33)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(jLabel36)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel72)))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1114,8 +1254,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                    .addComponent(jLabel72))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "UKŁAD ODDECHOWY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
@@ -1506,7 +1646,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(jCheckBox110)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBox111)))))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1655,7 +1795,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jCheckBox114)
                     .addComponent(jCheckBox117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1664,7 +1804,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox114)
                     .addComponent(jCheckBox113))
@@ -2616,6 +2756,9 @@ public class MainWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private int suma1 = 0, suma2 = 0, suma3 = 0, suma4 = 0, suma5 = 0, suma6 = 0, sumaGCS = 0, sumaRTS = 0; 
+    
+    
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
@@ -2705,12 +2848,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
             String miasto = jTextField25.getText();
             String pesel = jTextField11.getText();
-            String miejsce = pacjent.wyszukaj(buttonGroup2);
-            String o_oczu = pacjent.wyszukaj(buttonGroup3);
-            String r_slowna = pacjent.wyszukaj(buttonGroup4);
-            String obr_anat_1 = pacjent.wyszukaj(buttonGroup9);
+            String miejsce = Patient.wyszukaj(buttonGroup2);
+            String o_oczu = Patient.wyszukaj(buttonGroup3);
+            String r_slowna = Patient.wyszukaj(buttonGroup4);
+            String obr_anat_1 = Patient.wyszukaj(buttonGroup9);
 
-            pacjent a = new pacjent();
+            Patient a = new Patient();
             a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
             String sql = a.add();
             System.out.println(sql);
@@ -2725,10 +2868,16 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
         // TODO add your handling code here:
+        suma2=3;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox15ActionPerformed
 
     private void jCheckBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox23ActionPerformed
         // TODO add your handling code here:
+        suma4=4;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox23ActionPerformed
 
     private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
@@ -2743,10 +2892,10 @@ public class MainWindow extends javax.swing.JFrame {
                 jTextField5.setText(rs.getString("lname"));
                 jTextField11.setText(rs.getString("pesel"));
                 jDateChooser1.setDate(rs.getDate("bdate"));
-                pacjent.zaznacz(rs.getString("place"), buttonGroup2);
-                pacjent.zaznacz(rs.getString("o_oczu"), buttonGroup3);
-                pacjent.zaznacz(rs.getString("r_slowna"), buttonGroup4);
-                pacjent.zaznacz(rs.getString("obr_anat_1"), buttonGroup9);
+                Patient.zaznacz(rs.getString("place"), buttonGroup2);
+                Patient.zaznacz(rs.getString("o_oczu"), buttonGroup3);
+                Patient.zaznacz(rs.getString("r_slowna"), buttonGroup4);
+                Patient.zaznacz(rs.getString("obr_anat_1"), buttonGroup9);
             }
 
         } catch (SQLException err) {
@@ -2827,6 +2976,203 @@ public class MainWindow extends javax.swing.JFrame {
                 + "się w bazie oraz wyczyszczenia częściowo uzupełnionej karty pacjenta. Aby wykonac którąś z tych czynności<br/>"
                 + "należy wybrać odpowiednią opcję z menu.</html>", "O programie", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
+        // TODO add your handling code here:
+        suma1=4;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox9ActionPerformed
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        // TODO add your handling code here:
+        suma1=3;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
+        // TODO add your handling code here:
+        suma1=2;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox11ActionPerformed
+
+    private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
+        // TODO add your handling code here:
+        suma1=1;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox12ActionPerformed
+
+    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
+        // TODO add your handling code here:
+        suma2=5;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox13ActionPerformed
+
+    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
+        // TODO add your handling code here:
+        suma2=4;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox14ActionPerformed
+
+    private void jCheckBox38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox38ActionPerformed
+        // TODO add your handling code here:
+        suma2=2;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox38ActionPerformed
+
+    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
+        // TODO add your handling code here:
+        suma2=1;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox16ActionPerformed
+
+    private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
+        // TODO add your handling code here:
+        suma3=6;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox17ActionPerformed
+
+    private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
+        // TODO add your handling code here:
+        suma3=5;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox18ActionPerformed
+
+    private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
+        // TODO add your handling code here:
+        suma3=4;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox19ActionPerformed
+
+    private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
+        // TODO add your handling code here:
+        suma3=3;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox20ActionPerformed
+
+    private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
+        // TODO add your handling code here:
+        suma2=5;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox21ActionPerformed
+
+    private void jCheckBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox22ActionPerformed
+        // TODO add your handling code here:
+        suma3=1;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox22ActionPerformed
+
+    private void jCheckBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox24ActionPerformed
+        // TODO add your handling code here:
+        suma4=3;
+       sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox24ActionPerformed
+
+    private void jCheckBox25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox25ActionPerformed
+        // TODO add your handling code here:
+        suma4=2;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox25ActionPerformed
+
+    private void jCheckBox26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox26ActionPerformed
+        // TODO add your handling code here:
+        suma4=1;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox26ActionPerformed
+
+    private void jCheckBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox27ActionPerformed
+        // TODO add your handling code here:
+        suma4=0;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox27ActionPerformed
+
+    private void jCheckBox28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox28ActionPerformed
+        // TODO add your handling code here:
+        suma5=4;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox28ActionPerformed
+
+    private void jCheckBox29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox29ActionPerformed
+        // TODO add your handling code here:
+        suma5=3;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox29ActionPerformed
+
+    private void jCheckBox30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox30ActionPerformed
+        // TODO add your handling code here:
+        suma5=2;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox30ActionPerformed
+
+    private void jCheckBox31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox31ActionPerformed
+        // TODO add your handling code here:
+        suma5=1;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox31ActionPerformed
+
+    private void jCheckBox32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox32ActionPerformed
+        // TODO add your handling code here:
+        suma5=0;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox32ActionPerformed
+
+    private void jCheckBox33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox33ActionPerformed
+        // TODO add your handling code here:
+        suma6=4;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox33ActionPerformed
+
+    private void jCheckBox34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox34ActionPerformed
+        // TODO add your handling code here:
+        suma6=3;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox34ActionPerformed
+
+    private void jCheckBox35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox35ActionPerformed
+        // TODO add your handling code here:
+        suma6=2;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox35ActionPerformed
+
+    private void jCheckBox36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox36ActionPerformed
+        // TODO add your handling code here:
+        suma6=1;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox36ActionPerformed
+
+    private void jCheckBox37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox37ActionPerformed
+        // TODO add your handling code here:
+        suma6=0;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+        
+    }//GEN-LAST:event_jCheckBox37ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3124,6 +3470,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
@@ -3135,6 +3482,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -3188,11 +3536,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;

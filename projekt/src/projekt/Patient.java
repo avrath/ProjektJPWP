@@ -17,7 +17,7 @@ import javax.swing.JCheckBox;
  *
  * @author p
  */
-public class pacjent {
+public class Patient {
 
     /////elementy składowe klasy
 
@@ -31,7 +31,7 @@ public class pacjent {
     private String miasto;
     private String obr_anat_1;
 
-    public pacjent create(String imie, String nazwisko, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel, String obr_anat_1) {
+    public Patient create(String imie, String nazwisko, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, Calendar data_ur, String pesel, String obr_anat_1) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.miasto = miasto;
