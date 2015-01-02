@@ -5,6 +5,7 @@
  */
 package projekt;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
@@ -68,8 +69,19 @@ public class Patient {
         return wybor;
     }
 
-    public static void zaznacz(String name, javax.swing.ButtonGroup group) {
-
+    public static String wyszukaj2(ArrayList<JCheckBox> list){
+        String wybor = new String();
+        for (JCheckBox checkbox : list) {
+            if (checkbox.isSelected()) {
+                wybor += checkbox.getText() + ", ";
+                checkbox.setSelected(false);
+            }
+        }
+        return wybor;
+    }
+    
+    public static void zaznacz(String name, ButtonGroup group) {
+        
         Enumeration<AbstractButton> ab = group.getElements();
         JCheckBox box = null;
         while (ab.hasMoreElements()) {
@@ -86,14 +98,24 @@ public class Patient {
         }
 
     }
-
-    public static void wyczysc(String name, javax.swing.ButtonGroup group) {
+    
+    public static void zaznacz2(ArrayList<JCheckBox> buttons, String[] lista){
+                    for (JCheckBox checkbox : buttons) {
+                        for (String lista1 : lista) {
+                            if (checkbox.getText().equals(lista1)) {
+                                checkbox.setSelected(true);
+                            }
+                        }                
+                }    
+    }
+    
+    public static void wyczysc(String name, ButtonGroup group) {
         Enumeration<AbstractButton> ab = group.getElements();
-        JCheckBox box = null;
+        JCheckBox box = new JCheckBox();
         while (ab.hasMoreElements()) {
             box = (JCheckBox) ab.nextElement();
             if (box.getText().equals(name)) {
-                box.setSelected(Boolean.FALSE);
+                box.setSelected(false);
 //                        System.out.println("did it");
                 break;
             }

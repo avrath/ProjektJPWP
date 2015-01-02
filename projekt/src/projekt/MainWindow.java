@@ -35,6 +35,44 @@ public class MainWindow extends javax.swing.JFrame {
      */
     public MainWindow() {
         initComponents();
+        list_czynnosci.add(jCheckBox41);
+        list_czynnosci.add(jCheckBox42);
+        list_czynnosci.add(jCheckBox43);
+        list_czynnosci.add(jCheckBox44);
+        list_czynnosci.add(jCheckBox45);
+        list_czynnosci.add(jCheckBox46);
+        list_czynnosci.add(jCheckBox47);
+        list_czynnosci.add(jCheckBox48);
+        list_czynnosci.add(jCheckBox49);
+        list_czynnosci.add(jCheckBox50);
+        list_czynnosci.add(jCheckBox51);
+        list_czynnosci.add(jCheckBox52);
+        list_czynnosci.add(jCheckBox53);
+        list_czynnosci.add(jCheckBox54);
+        list_czynnosci.add(jCheckBox55);
+        list_czynnosci.add(jCheckBox56);
+        list_czynnosci.add(jCheckBox57);
+        list_czynnosci.add(jCheckBox58);
+        list_czynnosci.add(jCheckBox59);
+        list_czynnosci.add(jCheckBox60);
+        list_czynnosci.add(jCheckBox61);
+        list_czynnosci.add(jCheckBox62);
+        list_czynnosci.add(jCheckBox63);
+        
+        list_ekg.add(jCheckBox151);
+        list_ekg.add(jCheckBox152);
+        list_ekg.add(jCheckBox153);
+        list_ekg.add(jCheckBox154);
+        list_ekg.add(jCheckBox155);
+        list_ekg.add(jCheckBox156);
+        list_ekg.add(jCheckBox157);
+        list_ekg.add(jCheckBox158);
+        list_ekg.add(jCheckBox159);
+        list_ekg.add(jCheckBox160);
+        list_ekg.add(jCheckBox161);
+        list_ekg.add(jCheckBox162);
+        list_ekg.add(jCheckBox163);
+        list_ekg.add(jCheckBox164);
     }
 
     /**
@@ -2360,46 +2398,32 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "EKG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        bg_ekg.add(jCheckBox151);
         jCheckBox151.setText("Rytm zatokowy");
 
-        bg_ekg.add(jCheckBox152);
         jCheckBox152.setText("Tachykardia nadkomorowa");
 
-        bg_ekg.add(jCheckBox153);
         jCheckBox153.setText("Tachykardia komorowa");
 
-        bg_ekg.add(jCheckBox154);
         jCheckBox154.setText("Migotanie/trzepotanie przedsionków");
 
-        bg_ekg.add(jCheckBox155);
         jCheckBox155.setText("AV blok");
 
-        bg_ekg.add(jCheckBox156);
         jCheckBox156.setText("aVES");
 
-        bg_ekg.add(jCheckBox157);
         jCheckBox157.setText("VES");
 
-        bg_ekg.add(jCheckBox158);
         jCheckBox158.setText("VF/VT");
 
-        bg_ekg.add(jCheckBox159);
         jCheckBox159.setText("Asystolia");
 
-        bg_ekg.add(jCheckBox160);
         jCheckBox160.setText("PEA");
 
-        bg_ekg.add(jCheckBox161);
         jCheckBox161.setText("Rozrusznik");
 
-        bg_ekg.add(jCheckBox162);
         jCheckBox162.setText("OZW");
 
-        bg_ekg.add(jCheckBox163);
         jCheckBox163.setText("Zawał");
 
-        bg_ekg.add(jCheckBox164);
         jCheckBox164.setText("Inne:");
         jCheckBox164.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2617,55 +2641,38 @@ public class MainWindow extends javax.swing.JFrame {
 
         jCheckBox46.setText("tlenoter. bierna");
 
-        bg_czynn_2.add(jCheckBox47);
         jCheckBox47.setText("defibrylacja");
 
-        bg_czynn_3.add(jCheckBox48);
         jCheckBox48.setText("kołnierz");
 
-        bg_czynn_4.add(jCheckBox49);
         jCheckBox49.setText("linia żyl. obw.");
 
-        bg_czynn_2.add(jCheckBox50);
         jCheckBox50.setText("stymulacja zew.");
 
-        bg_czynn_2.add(jCheckBox51);
         jCheckBox51.setText("kardiowersja");
 
-        bg_czynn_2.add(jCheckBox52);
         jCheckBox52.setText("masaż serca");
 
-        bg_czynn_2.add(jCheckBox53);
         jCheckBox53.setText("EKG");
 
-        bg_czynn_2.add(jCheckBox54);
         jCheckBox54.setText("teletransmisja");
 
-        bg_czynn_3.add(jCheckBox55);
         jCheckBox55.setText("deska ortoped");
 
-        bg_czynn_3.add(jCheckBox56);
         jCheckBox56.setText("materac próż");
 
-        bg_czynn_3.add(jCheckBox57);
         jCheckBox57.setText("unieruchomienie");
 
-        bg_czynn_3.add(jCheckBox58);
         jCheckBox58.setText("opatrunek");
 
-        bg_czynn_3.add(jCheckBox59);
         jCheckBox59.setText("inne");
 
-        bg_czynn_4.add(jCheckBox60);
         jCheckBox60.setText("linia żyl. cent.");
 
-        bg_czynn_4.add(jCheckBox61);
         jCheckBox61.setText("cewnikowanie");
 
-        bg_czynn_4.add(jCheckBox62);
         jCheckBox62.setText("sonda żołąd.");
 
-        bg_czynn_4.add(jCheckBox63);
         jCheckBox63.setText("monitorowanie");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -2911,9 +2918,12 @@ public class MainWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private int suma1 = 0, suma2 = 0, suma3 = 0, suma4 = 0, suma5 = 0, suma6 = 0, sumaGCS = 0, sumaRTS = 0; 
-    
-    
+    private int suma1 = 0, suma2 = 0, suma3 = 0, suma4 = 0, suma5 = 0, suma6 = 0, sumaGCS = 0, sumaRTS = 0;
+    private final ArrayList<JCheckBox> list_czynnosci = new ArrayList<>();
+    private final ArrayList<JCheckBox> list_ekg = new ArrayList<>();
+
+
+
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
@@ -2938,7 +2948,7 @@ public class MainWindow extends javax.swing.JFrame {
             String imie = jTextField4.getText();
             String nazwisko = jTextField5.getText();
             Calendar data_ur = new GregorianCalendar(1, 0, 1);
-            if (jDateChooser1.getDate() != null){
+            if (jDateChooser1.getDate() != null) {
                 data_ur = jDateChooser1.getCalendar();
             }
             String miasto = jTextField25.getText();
@@ -2947,8 +2957,6 @@ public class MainWindow extends javax.swing.JFrame {
             String o_oczu = Patient.wyszukaj(bg_o_oczu);
             String r_slowna = Patient.wyszukaj(bg_r_slowna);
             String obr_anat_1 = Patient.wyszukaj(bg_dusznosc);
-            
-
 
             Patient a = new Patient();
             a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
@@ -2964,73 +2972,6 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_zapiszActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();
-            String sql = "select * from pacients where fname=\"" + jTextField4.getText() + "\"";
-            ResultSet rs = stmt.executeQuery(sql);
-
-            while (rs.next()) {
-
-                String imie = rs.getString("fname");
-                String nazwisko = rs.getString("lname");
-                int place = rs.getInt("miejsce");
-                String p = imie + " " + nazwisko + " " + place;
-                jTextField5.setText(nazwisko);
-
-                Enumeration<AbstractButton> ab = bg_miejsce.getElements();
-                JCheckBox box = null;
-                while (ab.hasMoreElements()) {
-                    box = (JCheckBox) ab.nextElement();
-                    if (Integer.parseInt(box.getName()) == place) {
-                        box.setSelected(Boolean.TRUE);
-                        break;
-                    }
-                }
-            }
-        } catch (SQLException err) {
-            System.out.println("We have error: " + err);
-        }
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
-        // TODO add your handling code here:
-            ArrayList<JCheckBox> buttons = new ArrayList<JCheckBox>();
-            buttons.add(jCheckBox40);
-            buttons.add(jCheckBox41);
-            buttons.add(jCheckBox42);
-            buttons.add(jCheckBox43);
-            buttons.add(jCheckBox44);
-            buttons.add(jCheckBox45);
-            buttons.add(jCheckBox46);
-            String nacisniete = new String();
-            for (JCheckBox checkbox : buttons) {
-                if (checkbox.isSelected()){
-                    nacisniete += checkbox.getText() + ", ";
-                }
-                
-            }
-            System.out.println(nacisniete);
-
-    }//GEN-LAST:event_testowyActionPerformed
-
-    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
-        // TODO add your handling code here:
-        suma2=3;
-        sumaGCS = suma1 + suma2 + suma3;
-        jLabel61.setText(Integer.toString(sumaGCS));
-    }//GEN-LAST:event_jCheckBox15ActionPerformed
-
-    private void jCheckBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox23ActionPerformed
-        // TODO add your handling code here:
-        suma4=4;
-        sumaRTS = suma4 + suma5 + suma6;
-        jLabel72.setText(Integer.toString(sumaRTS));
-    }//GEN-LAST:event_jCheckBox23ActionPerformed
-
-    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
         // TODO add your handling code here:
         try {
             Connection con = Authentication.getCon();
@@ -3051,6 +2992,55 @@ public class MainWindow extends javax.swing.JFrame {
         } catch (SQLException err) {
             System.out.println(err.getMessage());
         }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
+        // TODO add your handling code here:
+        String ekg = new String();
+        String czynnosci = new String();
+        czynnosci = Patient.wyszukaj2(list_czynnosci);
+        ekg = Patient.wyszukaj2(list_ekg);
+        
+        String[] lista1 = ekg.split(",");
+        String[] lista2 = czynnosci.split(",");
+        System.out.println("ekg:");
+        for (int i = 0; i < lista1.length; i++) {
+            lista1[i] = lista1[i].trim();
+            System.out.println(lista1[i]);
+        }
+        System.out.println("czynnosci:");
+        for (int i = 0; i < lista2.length; i++) {
+            lista2[i] = lista2[i].trim();
+            System.out.println(lista2[i]);
+        }
+        
+        JOptionPane.showMessageDialog(MainWindow.this, "Przed zaznaczeniem", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
+        Patient.zaznacz2(list_czynnosci, lista1);
+        Patient.zaznacz2(list_ekg,lista2);
+
+        System.out.println("Wyswietlenie nacisnietych: " + ekg);
+        System.out.println("Wyswietlenie nacisnietych: " + czynnosci);
+
+    }//GEN-LAST:event_testowyActionPerformed
+
+    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+        // TODO add your handling code here:
+        suma2 = 3;
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+    }//GEN-LAST:event_jCheckBox15ActionPerformed
+
+    private void jCheckBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox23ActionPerformed
+        // TODO add your handling code here:
+        suma4 = 4;
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText(Integer.toString(sumaRTS));
+    }//GEN-LAST:event_jCheckBox23ActionPerformed
+
+    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
+        // TODO add your handling code here:
+
 
     }//GEN-LAST:event_test2ActionPerformed
 
@@ -3129,199 +3119,199 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
         // TODO add your handling code here:
-        suma1=4;
+        suma1 = 4;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox9ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
         // TODO add your handling code here:
-        suma1=3;
+        suma1 = 3;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
         // TODO add your handling code here:
-        suma1=2;
+        suma1 = 2;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox11ActionPerformed
 
     private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
         // TODO add your handling code here:
-        suma1=1;
+        suma1 = 1;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox12ActionPerformed
 
     private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
         // TODO add your handling code here:
-        suma2=5;
+        suma2 = 5;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox13ActionPerformed
 
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
-        suma2=4;
+        suma2 = 4;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox14ActionPerformed
 
     private void jCheckBox38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox38ActionPerformed
         // TODO add your handling code here:
-        suma2=2;
+        suma2 = 2;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox38ActionPerformed
 
     private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
         // TODO add your handling code here:
-        suma2=1;
+        suma2 = 1;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox16ActionPerformed
 
     private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
         // TODO add your handling code here:
-        suma3=6;
+        suma3 = 6;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox17ActionPerformed
 
     private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
         // TODO add your handling code here:
-        suma3=5;
+        suma3 = 5;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox18ActionPerformed
 
     private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
         // TODO add your handling code here:
-        suma3=4;
+        suma3 = 4;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox19ActionPerformed
 
     private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
         // TODO add your handling code here:
-        suma3=3;
+        suma3 = 3;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox20ActionPerformed
 
     private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
         // TODO add your handling code here:
-        suma2=5;
+        suma2 = 5;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox21ActionPerformed
 
     private void jCheckBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox22ActionPerformed
         // TODO add your handling code here:
-        suma3=1;
+        suma3 = 1;
         sumaGCS = suma1 + suma2 + suma3;
         jLabel61.setText(Integer.toString(sumaGCS));
     }//GEN-LAST:event_jCheckBox22ActionPerformed
 
     private void jCheckBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox24ActionPerformed
         // TODO add your handling code here:
-        suma4=3;
-       sumaRTS = suma4 + suma5 + suma6;
+        suma4 = 3;
+        sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox24ActionPerformed
 
     private void jCheckBox25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox25ActionPerformed
         // TODO add your handling code here:
-        suma4=2;
+        suma4 = 2;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox25ActionPerformed
 
     private void jCheckBox26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox26ActionPerformed
         // TODO add your handling code here:
-        suma4=1;
+        suma4 = 1;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox26ActionPerformed
 
     private void jCheckBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox27ActionPerformed
         // TODO add your handling code here:
-        suma4=0;
+        suma4 = 0;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox27ActionPerformed
 
     private void jCheckBox28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox28ActionPerformed
         // TODO add your handling code here:
-        suma5=4;
+        suma5 = 4;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox28ActionPerformed
 
     private void jCheckBox29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox29ActionPerformed
         // TODO add your handling code here:
-        suma5=3;
+        suma5 = 3;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox29ActionPerformed
 
     private void jCheckBox30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox30ActionPerformed
         // TODO add your handling code here:
-        suma5=2;
+        suma5 = 2;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox30ActionPerformed
 
     private void jCheckBox31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox31ActionPerformed
         // TODO add your handling code here:
-        suma5=1;
+        suma5 = 1;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox31ActionPerformed
 
     private void jCheckBox32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox32ActionPerformed
         // TODO add your handling code here:
-        suma5=0;
+        suma5 = 0;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox32ActionPerformed
 
     private void jCheckBox33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox33ActionPerformed
         // TODO add your handling code here:
-        suma6=4;
+        suma6 = 4;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox33ActionPerformed
 
     private void jCheckBox34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox34ActionPerformed
         // TODO add your handling code here:
-        suma6=3;
+        suma6 = 3;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox34ActionPerformed
 
     private void jCheckBox35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox35ActionPerformed
         // TODO add your handling code here:
-        suma6=2;
+        suma6 = 2;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox35ActionPerformed
 
     private void jCheckBox36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox36ActionPerformed
         // TODO add your handling code here:
-        suma6=1;
+        suma6 = 1;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox36ActionPerformed
 
     private void jCheckBox37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox37ActionPerformed
         // TODO add your handling code here:
-        suma6=0;
+        suma6 = 0;
         sumaRTS = suma4 + suma5 + suma6;
         jLabel72.setText(Integer.toString(sumaRTS));
-        
+
     }//GEN-LAST:event_jCheckBox37ActionPerformed
 
     private void jCheckBox164ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox164ActionPerformed
@@ -3363,18 +3353,16 @@ public class MainWindow extends javax.swing.JFrame {
 
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
-                
-                 //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
+
+                //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
-                        
+
                     }
                 });
-               
-                
-                
+
                 dialog.setVisible(true);        ///do tego miejsca jest logowanie
             }
         });
