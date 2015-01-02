@@ -45,22 +45,40 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
-        buttonGroup5 = new javax.swing.ButtonGroup();
-        buttonGroup6 = new javax.swing.ButtonGroup();
-        buttonGroup7 = new javax.swing.ButtonGroup();
-        buttonGroup8 = new javax.swing.ButtonGroup();
-        buttonGroup9 = new javax.swing.ButtonGroup();
-        buttonGroup10 = new javax.swing.ButtonGroup();
-        buttonGroup11 = new javax.swing.ButtonGroup();
-        buttonGroup12 = new javax.swing.ButtonGroup();
-        buttonGroup13 = new javax.swing.ButtonGroup();
-        buttonGroup14 = new javax.swing.ButtonGroup();
-        buttonGroup15 = new javax.swing.ButtonGroup();
-        buttonGroup16 = new javax.swing.ButtonGroup();
+        bg_decyzja = new javax.swing.ButtonGroup();
+        bg_miejsce = new javax.swing.ButtonGroup();
+        bg_o_oczu = new javax.swing.ButtonGroup();
+        bg_r_slowna = new javax.swing.ButtonGroup();
+        bg_r_ruchowa = new javax.swing.ButtonGroup();
+        bg_cz_oddech = new javax.swing.ButtonGroup();
+        bg_rr_skurcz = new javax.swing.ButtonGroup();
+        bg_gcs = new javax.swing.ButtonGroup();
+        bg_dusznosc = new javax.swing.ButtonGroup();
+        bg_sinica = new javax.swing.ButtonGroup();
+        bg_bezdech = new javax.swing.ButtonGroup();
+        bg_szmer = new javax.swing.ButtonGroup();
+        bg_furczenie = new javax.swing.ButtonGroup();
+        bg_swisty = new javax.swing.ButtonGroup();
+        bg_trzeszczenie = new javax.swing.ButtonGroup();
+        bg_rzezenie = new javax.swing.ButtonGroup();
+        bg_brak_szmeru = new javax.swing.ButtonGroup();
+        bg_inne = new javax.swing.ButtonGroup();
+        bg_reakcja_1 = new javax.swing.ButtonGroup();
+        bg_reakcja_2 = new javax.swing.ButtonGroup();
+        bg_reakcja_3 = new javax.swing.ButtonGroup();
+        bg_szer_1 = new javax.swing.ButtonGroup();
+        bg_szer_2 = new javax.swing.ButtonGroup();
+        bg_szer_3 = new javax.swing.ButtonGroup();
+        bg_tetno = new javax.swing.ButtonGroup();
+        bg_obr_anat_1 = new javax.swing.ButtonGroup();
+        bg_obr_anat_2 = new javax.swing.ButtonGroup();
+        bg_obr_anat_3 = new javax.swing.ButtonGroup();
+        bg_obr_anat_4 = new javax.swing.ButtonGroup();
+        bg_obr_anat_5 = new javax.swing.ButtonGroup();
+        bg_obr_anat_6 = new javax.swing.ButtonGroup();
+        bg_skora = new javax.swing.ButtonGroup();
+        bg_wilgotnosc = new javax.swing.ButtonGroup();
+        bg_temp = new javax.swing.ButtonGroup();
         zapisz = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -407,7 +425,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel4.setText("MIEJSCE ZDARZENIA");
 
-        buttonGroup2.add(jCheckBox3);
+        bg_miejsce.add(jCheckBox3);
         jCheckBox3.setText("w domu");
         jCheckBox3.setIconTextGap(68);
         jCheckBox3.setName("1"); // NOI18N
@@ -417,7 +435,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(jCheckBox4);
+        bg_miejsce.add(jCheckBox4);
         jCheckBox4.setText("w miejscu publicznym");
         jCheckBox4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox4.setName("2"); // NOI18N
@@ -427,13 +445,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(jCheckBox5);
+        bg_miejsce.add(jCheckBox5);
         jCheckBox5.setText("w ruchu uliczno-drog");
         jCheckBox5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox5.setIconTextGap(6);
         jCheckBox5.setName("3"); // NOI18N
 
-        buttonGroup2.add(jCheckBox7);
+        bg_miejsce.add(jCheckBox7);
         jCheckBox7.setText("w rolnictwie");
         jCheckBox7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox7.setIconTextGap(49);
@@ -444,12 +462,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(jCheckBox8);
+        bg_miejsce.add(jCheckBox8);
         jCheckBox8.setText("w szkole");
         jCheckBox8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox8.setName("5"); // NOI18N
 
-        buttonGroup2.add(jCheckBox10);
+        bg_miejsce.add(jCheckBox10);
         jCheckBox10.setText("w pracy");
         jCheckBox10.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox10.setIconTextGap(67);
@@ -670,10 +688,10 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel17.setText("Decyzja podmiotu leczniczego:");
 
-        buttonGroup1.add(jCheckBox1);
+        bg_decyzja.add(jCheckBox1);
         jCheckBox1.setText("Przyjęcie pacjenta");
 
-        buttonGroup1.add(jCheckBox2);
+        bg_decyzja.add(jCheckBox2);
         jCheckBox2.setText("Odmowa przyjęcia");
 
         jLabel18.setText("Przekazanie pacjenta w IP/SOR / innym:");
@@ -833,7 +851,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "GLASGOW-COMA-SCALE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        buttonGroup3.add(jCheckBox12);
+        bg_o_oczu.add(jCheckBox12);
         jCheckBox12.setText("[1] brak");
         jCheckBox12.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
@@ -842,7 +860,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup3.add(jCheckBox11);
+        bg_o_oczu.add(jCheckBox11);
         jCheckBox11.setText("[2] na ból");
         jCheckBox11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
@@ -851,7 +869,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup3.add(jCheckBox6);
+        bg_o_oczu.add(jCheckBox6);
         jCheckBox6.setText("[3] na głos");
         jCheckBox6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
@@ -860,7 +878,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup3.add(jCheckBox9);
+        bg_o_oczu.add(jCheckBox9);
         jCheckBox9.setText("[4] spontanicznie");
         jCheckBox9.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
@@ -873,7 +891,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel26.setText("REAKCJA SŁOWNA");
 
-        buttonGroup4.add(jCheckBox13);
+        bg_r_slowna.add(jCheckBox13);
         jCheckBox13.setText("[5] zorientowany");
         jCheckBox13.setToolTipText("");
         jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
@@ -882,7 +900,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup4.add(jCheckBox14);
+        bg_r_slowna.add(jCheckBox14);
         jCheckBox14.setText("[4] splątany");
         jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -890,7 +908,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup4.add(jCheckBox15);
+        bg_r_slowna.add(jCheckBox15);
         jCheckBox15.setText("[3] niewłaściwe słowa");
         jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -898,7 +916,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup4.add(jCheckBox16);
+        bg_r_slowna.add(jCheckBox16);
         jCheckBox16.setText("[1] brak");
         jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -906,7 +924,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup5.add(jCheckBox17);
+        bg_r_ruchowa.add(jCheckBox17);
         jCheckBox17.setText("[6] wykonuje polecenia");
         jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -914,7 +932,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup5.add(jCheckBox18);
+        bg_r_ruchowa.add(jCheckBox18);
         jCheckBox18.setText("[5] lokalizacja bólu");
         jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -924,7 +942,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel31.setText("REAKCJA RUCHOWA");
 
-        buttonGroup5.add(jCheckBox19);
+        bg_r_ruchowa.add(jCheckBox19);
         jCheckBox19.setText("[4] ucieczka od bólu");
         jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -932,7 +950,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup5.add(jCheckBox20);
+        bg_r_ruchowa.add(jCheckBox20);
         jCheckBox20.setText("[3] zgięciowa");
         jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -940,7 +958,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup5.add(jCheckBox21);
+        bg_r_ruchowa.add(jCheckBox21);
         jCheckBox21.setText("[2] wyprostna");
         jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -948,7 +966,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup5.add(jCheckBox22);
+        bg_r_ruchowa.add(jCheckBox22);
         jCheckBox22.setText("[1] brak");
         jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -959,7 +977,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel32.setText("SUMA:");
 
-        buttonGroup4.add(jCheckBox38);
+        bg_r_slowna.add(jCheckBox38);
         jCheckBox38.setText("[2] niezrozumiałe dźwięki");
         jCheckBox38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1054,7 +1072,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel33.setText("CZ. ODDECHÓW");
 
-        buttonGroup6.add(jCheckBox23);
+        bg_cz_oddech.add(jCheckBox23);
         jCheckBox23.setText("[4] 10-29");
         jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1062,7 +1080,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup6.add(jCheckBox24);
+        bg_cz_oddech.add(jCheckBox24);
         jCheckBox24.setText("[3] >29");
         jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1070,7 +1088,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup6.add(jCheckBox25);
+        bg_cz_oddech.add(jCheckBox25);
         jCheckBox25.setText("[2] 6-9");
         jCheckBox25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1078,7 +1096,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup6.add(jCheckBox26);
+        bg_cz_oddech.add(jCheckBox26);
         jCheckBox26.setText("[1] 1-5");
         jCheckBox26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1086,7 +1104,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup6.add(jCheckBox27);
+        bg_cz_oddech.add(jCheckBox27);
         jCheckBox27.setText("[0] brak");
         jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1094,7 +1112,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup7.add(jCheckBox28);
+        bg_rr_skurcz.add(jCheckBox28);
         jCheckBox28.setText("[4] >89");
         jCheckBox28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1102,7 +1120,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup7.add(jCheckBox29);
+        bg_rr_skurcz.add(jCheckBox29);
         jCheckBox29.setText("[3] 76-89");
         jCheckBox29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1112,7 +1130,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel34.setText("RR SKURCZOWE");
 
-        buttonGroup7.add(jCheckBox30);
+        bg_rr_skurcz.add(jCheckBox30);
         jCheckBox30.setText("[2] 50-75");
         jCheckBox30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1120,7 +1138,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup7.add(jCheckBox31);
+        bg_rr_skurcz.add(jCheckBox31);
         jCheckBox31.setText("[1] 1-49");
         jCheckBox31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1128,7 +1146,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup7.add(jCheckBox32);
+        bg_rr_skurcz.add(jCheckBox32);
         jCheckBox32.setText("[0] 0");
         jCheckBox32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1138,7 +1156,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel35.setText("GCS");
 
-        buttonGroup8.add(jCheckBox33);
+        bg_gcs.add(jCheckBox33);
         jCheckBox33.setText("[4] 13-15");
         jCheckBox33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1146,7 +1164,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup8.add(jCheckBox34);
+        bg_gcs.add(jCheckBox34);
         jCheckBox34.setText("[3] 9-12");
         jCheckBox34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1154,7 +1172,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup8.add(jCheckBox35);
+        bg_gcs.add(jCheckBox35);
         jCheckBox35.setText("[2] 6-8");
         jCheckBox35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1162,7 +1180,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup8.add(jCheckBox36);
+        bg_gcs.add(jCheckBox36);
         jCheckBox36.setText("[1] 4-5");
         jCheckBox36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1170,7 +1188,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup8.add(jCheckBox37);
+        bg_gcs.add(jCheckBox37);
         jCheckBox37.setText("[0] 3");
         jCheckBox37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1767,7 +1785,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Obrażenia anatomiczne kwalifikujące do centrum urazowego", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        buttonGroup9.add(jCheckBox112);
         jCheckBox112.setText("<html>penetrujące rany głowy i tułowia lub urazy<br/> tępe z objawami uszkodzenia narządów<br/> wewnętrznych głowy, klatki piersiowej i brzucha</html>");
 
         jCheckBox113.setText("amputacja kończyny powyżej kolana lub łokcia");
@@ -2777,9 +2794,9 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
-        ButtonModel butmod = buttonGroup2.getSelection();
+        ButtonModel butmod = bg_miejsce.getSelection();
         if (butmod != null) {
-            Enumeration<AbstractButton> ab = buttonGroup2.getElements();
+            Enumeration<AbstractButton> ab = bg_miejsce.getElements();
             JCheckBox box = null;
             while (ab.hasMoreElements()) {
                 box = (JCheckBox) ab.nextElement();
@@ -2819,7 +2836,7 @@ public class MainWindow extends javax.swing.JFrame {
                 String p = imie + " " + nazwisko + " " + place;
                 jTextField5.setText(nazwisko);
 
-                Enumeration<AbstractButton> ab = buttonGroup2.getElements();
+                Enumeration<AbstractButton> ab = bg_miejsce.getElements();
                 JCheckBox box = null;
                 while (ab.hasMoreElements()) {
                     box = (JCheckBox) ab.nextElement();
@@ -2848,10 +2865,10 @@ public class MainWindow extends javax.swing.JFrame {
             }
             String miasto = jTextField25.getText();
             String pesel = jTextField11.getText();
-            String miejsce = Patient.wyszukaj(buttonGroup2);
-            String o_oczu = Patient.wyszukaj(buttonGroup3);
-            String r_slowna = Patient.wyszukaj(buttonGroup4);
-            String obr_anat_1 = Patient.wyszukaj(buttonGroup9);
+            String miejsce = Patient.wyszukaj(bg_miejsce);
+            String o_oczu = Patient.wyszukaj(bg_o_oczu);
+            String r_slowna = Patient.wyszukaj(bg_r_slowna);
+            String obr_anat_1 = Patient.wyszukaj(bg_dusznosc);
 
             Patient a = new Patient();
             a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
@@ -2892,10 +2909,10 @@ public class MainWindow extends javax.swing.JFrame {
                 jTextField5.setText(rs.getString("lname"));
                 jTextField11.setText(rs.getString("pesel"));
                 jDateChooser1.setDate(rs.getDate("bdate"));
-                Patient.zaznacz(rs.getString("place"), buttonGroup2);
-                Patient.zaznacz(rs.getString("o_oczu"), buttonGroup3);
-                Patient.zaznacz(rs.getString("r_slowna"), buttonGroup4);
-                Patient.zaznacz(rs.getString("obr_anat_1"), buttonGroup9);
+                Patient.zaznacz(rs.getString("place"), bg_miejsce);
+                Patient.zaznacz(rs.getString("o_oczu"), bg_o_oczu);
+                Patient.zaznacz(rs.getString("r_slowna"), bg_r_slowna);
+                Patient.zaznacz(rs.getString("obr_anat_1"), bg_dusznosc);
             }
 
         } catch (SQLException err) {
@@ -3229,22 +3246,40 @@ public class MainWindow extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup10;
-    private javax.swing.ButtonGroup buttonGroup11;
-    private javax.swing.ButtonGroup buttonGroup12;
-    private javax.swing.ButtonGroup buttonGroup13;
-    private javax.swing.ButtonGroup buttonGroup14;
-    private javax.swing.ButtonGroup buttonGroup15;
-    private javax.swing.ButtonGroup buttonGroup16;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.ButtonGroup buttonGroup5;
-    private javax.swing.ButtonGroup buttonGroup6;
-    private javax.swing.ButtonGroup buttonGroup7;
-    private javax.swing.ButtonGroup buttonGroup8;
-    private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.ButtonGroup bg_bezdech;
+    private javax.swing.ButtonGroup bg_brak_szmeru;
+    private javax.swing.ButtonGroup bg_cz_oddech;
+    private javax.swing.ButtonGroup bg_decyzja;
+    private javax.swing.ButtonGroup bg_dusznosc;
+    private javax.swing.ButtonGroup bg_furczenie;
+    private javax.swing.ButtonGroup bg_gcs;
+    private javax.swing.ButtonGroup bg_inne;
+    private javax.swing.ButtonGroup bg_miejsce;
+    private javax.swing.ButtonGroup bg_o_oczu;
+    private javax.swing.ButtonGroup bg_obr_anat_1;
+    private javax.swing.ButtonGroup bg_obr_anat_2;
+    private javax.swing.ButtonGroup bg_obr_anat_3;
+    private javax.swing.ButtonGroup bg_obr_anat_4;
+    private javax.swing.ButtonGroup bg_obr_anat_5;
+    private javax.swing.ButtonGroup bg_obr_anat_6;
+    private javax.swing.ButtonGroup bg_r_ruchowa;
+    private javax.swing.ButtonGroup bg_r_slowna;
+    private javax.swing.ButtonGroup bg_reakcja_1;
+    private javax.swing.ButtonGroup bg_reakcja_2;
+    private javax.swing.ButtonGroup bg_reakcja_3;
+    private javax.swing.ButtonGroup bg_rr_skurcz;
+    private javax.swing.ButtonGroup bg_rzezenie;
+    private javax.swing.ButtonGroup bg_sinica;
+    private javax.swing.ButtonGroup bg_skora;
+    private javax.swing.ButtonGroup bg_swisty;
+    private javax.swing.ButtonGroup bg_szer_1;
+    private javax.swing.ButtonGroup bg_szer_2;
+    private javax.swing.ButtonGroup bg_szer_3;
+    private javax.swing.ButtonGroup bg_szmer;
+    private javax.swing.ButtonGroup bg_temp;
+    private javax.swing.ButtonGroup bg_tetno;
+    private javax.swing.ButtonGroup bg_trzeszczenie;
+    private javax.swing.ButtonGroup bg_wilgotnosc;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
