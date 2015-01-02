@@ -19,6 +19,9 @@ import java.util.Locale;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -2844,14 +2847,30 @@ public class MainWindow extends javax.swing.JFrame {
 
                 /////tymczasowo wyłączam logowanie, bo nie chce mi się za każdym razem wpisywać
                 LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
-
+                dialog.setFocusable(true);
                  //Na ten moment System.exit, zeby sie nie dalo wlaczyc programu bez zalogowania
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
+                        
                     }
                 });
+                /*
+                dialog.addKeyListener(new java.awt.event.KeyAdapter() {
+                    @Override
+                    public void keyPressed(java.awt.event.KeyEvent e) {
+                        if (e.getKeyCode() == java.awt.event.KeyEvent.VK_1) {
+                            System.exit(0);
+                            
+                        }
+                    }
+
+                   
+                });
+                */
+                
+                
                 dialog.setVisible(true);        ///do tego miejsca jest logowanie
             }
         });

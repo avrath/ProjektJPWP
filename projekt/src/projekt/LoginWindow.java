@@ -30,7 +30,7 @@ public class LoginWindow extends javax.swing.JDialog {
     public LoginWindow(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-
+        
         // Close the dialog when Esc is pressed
         String cancelName = "cancel";
         InputMap inputMap = getRootPane().getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
@@ -144,6 +144,7 @@ public class LoginWindow extends javax.swing.JDialog {
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
         //doClose(RET_OK);
+        try{
         Authentication CurrentUser = new Authentication(getUsername(), getPassword());
         //if (Authentication.connect(getUsername(), getPassword())!=null) {
         if (CurrentUser.authenticate()) {
@@ -152,6 +153,8 @@ public class LoginWindow extends javax.swing.JDialog {
         } else {
             JOptionPane.showMessageDialog(LoginWindow.this, "Niepoprawny login i/lub hasło", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
             PassField.setText("");
+        }}catch (java.lang.NullPointerException err) {
+            System.out.println(err.getMessage());
         }
     }//GEN-LAST:event_okButtonActionPerformed
 
