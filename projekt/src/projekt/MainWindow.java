@@ -3125,7 +3125,7 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         SearchWindow dialog = new SearchWindow(new javax.swing.JFrame(), true);
         //SearchWindow.RET_OK;
-        ID = SearchWindow.getID();
+        
         
         /*
          dialog.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -3136,7 +3136,7 @@ public class MainWindow extends javax.swing.JFrame {
          });
          */
         dialog.setVisible(true);
-
+        ID = dialog.getID();
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
