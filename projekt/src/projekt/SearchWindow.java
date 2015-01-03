@@ -34,6 +34,15 @@ public class SearchWindow extends javax.swing.JDialog {
      * A return status code - returned if OK button has been pressed
      */
     public static final int RET_OK = 1;
+    private static int ID;
+
+    public static int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     /**
      * Creates new form SearchWindow
@@ -104,11 +113,11 @@ public class SearchWindow extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Imię", "Nazwisko", "Pesel", "Miasto"
+                "ID", "Imię", "Nazwisko", "Pesel", "Miasto"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true
+                true, false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -180,8 +189,10 @@ public class SearchWindow extends javax.swing.JDialog {
 
         try {
             int rowIndex = jTable1.getSelectedRow();
-            String ID = jTable1.getValueAt(rowIndex, 0).toString();
-
+            String Id = jTable1.getValueAt(rowIndex, 0).toString();
+            
+            setID(Integer.parseInt(Id));
+            System.out.println(ID);
             doClose(RET_OK);
             //System.out.println(ID);
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -225,7 +236,7 @@ public class SearchWindow extends javax.swing.JDialog {
                 String city = rs.getString("address_city");
 
                 //System.out.println( id_col + " " + first_name + " " + last_name + " " + job );
-                model.addRow(new Object[]{first_name, last_name, pesel, city});
+                model.addRow(new Object[]{id_col, first_name, last_name, pesel, city});
             }
         } catch (SQLException err) {
             System.out.println(err.getMessage());

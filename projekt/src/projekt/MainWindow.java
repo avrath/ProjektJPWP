@@ -2930,6 +2930,7 @@ public class MainWindow extends javax.swing.JFrame {
     private final ArrayList<JCheckBox> list_czynnosci = new ArrayList<>();
     private final ArrayList<JCheckBox> list_ekg = new ArrayList<>();
     private final ArrayList<JCheckBox> obr_anat = new ArrayList<>();
+    private int ID;
 
 
 
@@ -3116,13 +3117,16 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
         // TODO add your handling code here:
-
+        System.out.println(ID);
 
     }//GEN-LAST:event_test2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         SearchWindow dialog = new SearchWindow(new javax.swing.JFrame(), true);
+        //SearchWindow.RET_OK;
+        ID = SearchWindow.getID();
+        
         /*
          dialog.addWindowListener(new java.awt.event.WindowAdapter() {
          @Override
