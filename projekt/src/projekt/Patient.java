@@ -5,6 +5,10 @@
  */
 package projekt;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -203,6 +207,25 @@ public class Patient {
                 this.zalecenia_uwagi + "','" + this.zast_leki + "','" + this.icd10_1 + "','" + this.icd10_2 + "','" + this.icd10_3 + "','" + 
                 this.opis + "','" + zgon + "','" + this.ulica + "','" + this.ulica_nr + "','" + this.ulica_m +"');";
         return sql;
+    }
+    
+    public static String[] pobierz(int ID){
+        String[] dane = new String[74];
+        try{
+            Connection con = Authentication.getCon();
+            Statement stmt = con.createStatement();    
+            String sql = "SELECT * from pacients where ID="+ID+";";
+            ResultSet rs =stmt.executeQuery(sql);
+            while(rs.next()){
+                for (int i=2; i<75; i++){
+                    dane[i-2]=rs.getString(i);
+                    //System.out.println(dane[i-2]);
+                }
+            }
+        }catch(SQLException err){
+            System.out.println(err.getMessage());
+        }
+        return dane;
     }
 
     public static String wyszukaj(ButtonGroup group) {

@@ -21,6 +21,9 @@ import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -445,9 +448,6 @@ public class MainWindow extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        testowy = new javax.swing.JButton();
-        test2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -1894,22 +1894,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Obrażenia anatomiczne kwalifikujące do centrum urazowego", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        bg_obr_anat_1.add(jCheckBox112);
         jCheckBox112.setText("<html>penetrujące rany głowy i tułowia lub urazy<br/> tępe z objawami uszkodzenia narządów<br/> wewnętrznych głowy, klatki piersiowej i brzucha</html>");
 
-        bg_obr_anat_2.add(jCheckBox113);
         jCheckBox113.setText("amputacja kończyny powyżej kolana lub łokcia");
 
-        bg_obr_anat_5.add(jCheckBox114);
         jCheckBox114.setText("rozległe zmiażdżenia kończyn");
 
-        bg_obr_anat_3.add(jCheckBox115);
         jCheckBox115.setText("uszkodzienie rdzenia kręgowego");
 
-        bg_obr_anat_6.add(jCheckBox116);
         jCheckBox116.setText("<html>złamanie kończyny z <br/>uszkodzeniem naczyń i nerwów</html>");
 
-        bg_obr_anat_4.add(jCheckBox117);
         jCheckBox117.setText("<html>złamanie co najmniej<br/> dwóch proksymalnych<br/> kości długich kończyn lub miednicy</html>");
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
@@ -2824,27 +2818,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("Rozpoznanie i postępowanie", jPanel5);
 
-        jButton2.setText("szukaj");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        testowy.setText("testowy");
-        testowy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                testowyActionPerformed(evt);
-            }
-        });
-
-        test2.setText("test2");
-        test2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test2ActionPerformed(evt);
-            }
-        });
-
         jMenu1.setText("Menu");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2897,28 +2870,17 @@ public class MainWindow extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(510, Short.MAX_VALUE)
-                .addComponent(test2)
-                .addGap(31, 31, 31)
-                .addComponent(testowy)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(zapisz, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 859, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(zapisz)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2)
-                        .addComponent(testowy)
-                        .addComponent(test2)))
+                .addComponent(zapisz)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -3061,46 +3023,6 @@ public class MainWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_zapiszActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();
-            String sql = "Select * from pacients where fname='" + jTextField4.getText() + "'";
-            System.out.println(sql);
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                jTextField5.setText(rs.getString("lname"));
-                jTextField11.setText(rs.getString("pesel"));
-                jDateChooser1.setDate(rs.getDate("bdate"));
-                Patient.zaznacz(rs.getString("place"), bg_place);
-                Patient.zaznacz(rs.getString("o_oczu"), bg_o_oczu);
-                Patient.zaznacz(rs.getString("r_slowna"), bg_r_slowna);
-                Patient.zaznacz(rs.getString("obr_anat_1"), bg_dusznosc);
-            }
-
-        } catch (SQLException err) {
-            System.out.println(err.getMessage());
-        }
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void testowyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testowyActionPerformed
-        // TODO add your handling code here:
-        String ekg = new String();
-        String czynnosci = new String();
-        czynnosci = Patient.wyszukaj2(list_czynnosci);
-        ekg = Patient.wyszukaj2(list_ekg);
-
-        JOptionPane.showMessageDialog(MainWindow.this, "Przed zaznaczeniem", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
-        Patient.zaznacz2(list_czynnosci, czynnosci);
-        Patient.zaznacz2(list_ekg,ekg);
-
-        System.out.println("Wyswietlenie nacisnietych: " + ekg);
-        System.out.println("Wyswietlenie nacisnietych: " + czynnosci);
-
-    }//GEN-LAST:event_testowyActionPerformed
-
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
         // TODO add your handling code here:
         suma2 = 3;
@@ -3115,18 +3037,99 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox23ActionPerformed
 
-    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
-        // TODO add your handling code here:
-        System.out.println(ID);
-
-    }//GEN-LAST:event_test2ActionPerformed
-
+    private void wyszukiwanie(){
+        String[] dane = Patient.pobierz(ID);
+        jTextField4.setText(dane[0]);
+        jTextField5.setText(dane[1]);
+        jTextField11.setText(dane[3]);
+        jTextField25.setText(dane[4]);
+        Patient.zaznacz(dane[5], bg_place);
+        Patient.zaznacz(dane[6], bg_o_oczu);
+        Patient.zaznacz(dane[7], bg_r_slowna);
+        Patient.zaznacz(dane[8], bg_r_ruchowa);
+        Patient.zaznacz(dane[9], bg_cz_oddech);
+        Patient.zaznacz(dane[10], bg_rr_skurcz);
+        Patient.zaznacz(dane[11], bg_gcs);
+        Patient.zaznacz(dane[12], bg_dusznosc);
+        Patient.zaznacz(dane[13], bg_sinica);
+        Patient.zaznacz(dane[14], bg_bezdech);
+        Patient.zaznacz(dane[15], bg_szmer);
+        Patient.zaznacz(dane[16], bg_furczenie);
+        Patient.zaznacz(dane[17], bg_swisty);
+        Patient.zaznacz(dane[18], bg_trzeszczenie);
+        Patient.zaznacz(dane[19], bg_rzezenie);
+        Patient.zaznacz(dane[20], bg_brak_szmeru);
+        Patient.zaznacz(dane[21], bg_inne);
+        Patient.zaznacz(dane[22], bg_reakcja_1);
+        Patient.zaznacz(dane[23], bg_reakcja_2);
+        Patient.zaznacz(dane[24], bg_reakcja_3);
+        Patient.zaznacz(dane[25], bg_szer_1);
+        Patient.zaznacz(dane[26], bg_szer_2);
+        Patient.zaznacz(dane[27], bg_szer_3);
+        Patient.zaznacz(dane[28], bg_tetno);
+        Patient.zaznacz(dane[29], bg_wyglad);
+        Patient.zaznacz(dane[30], bg_wilgotnosc);
+        Patient.zaznacz(dane[31], bg_temp);
+        Patient.zaznacz(dane[32], bg_brzuch);
+        Patient.zaznacz(dane[33], bg_ocena_psych);
+        Patient.zaznacz(dane[34], bg_tony_serca);
+        Patient.zaznacz(dane[35], bg_zapach);
+        Patient.zaznacz(dane[36], bg_niedowlad);
+        Patient.zaznacz(dane[37], bg_konczyna_g);
+        Patient.zaznacz(dane[38], bg_konczyna_d);
+        Patient.zaznacz2(list_ekg,dane[39]);
+        Patient.zaznacz2(list_czynnosci,dane[40]);
+        Patient.zaznacz2(obr_anat,dane[41]);
+        Patient.zaznacz(dane[42],bg_decyzja);
+        jTextField9.setText(dane[43]);
+        jTextField1.setText(dane[44]);
+        jTextField2.setText(dane[45]);
+        jTextField3.setText(dane[46]);
+        jTextField10.setText(dane[47]);
+        jTextField21.setText(dane[50]);
+        jTextField23.setText(dane[51]);
+        jTextField24.setText(dane[52]);
+        jTextField22.setText(dane[53]);
+        jTextArea1.setText(dane[54]);
+        jTextField26.setText(dane[55]);
+        jTextField18.setText(dane[56]);
+        jTextField19.setText(dane[57]);
+        jTextField20.setText(dane[58]);
+        jTextField27.setText(dane[59]);
+        jTextField28.setText(dane[60]);
+        jTextField29.setText(dane[61]);
+        jTextArea2.setText(dane[62]);
+        jTextArea3.setText(dane[63]);
+        jTextArea4.setText(dane[64]);
+        jTextField15.setText(dane[65]);
+        jTextField13.setText(dane[66]);
+        jTextField14.setText(dane[67]);
+        jTextArea5.setText(dane[68]);
+        jTextField6.setText(dane[70]);
+        jTextField7.setText(dane[71]);
+        jTextField8.setText(dane[72]);
+ 
+        try{
+            if(!dane[2].equals("0001-01-01")){
+                jDateChooser1.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[2]));
+            }
+            if(!dane[48].equals("0001-01-01")){
+                jDateChooser2.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[48]));
+            }
+            if(!dane[49].equals("0001-01-01")){
+                jDateChooser3.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[49]));
+            }
+            if(!dane[69].equals("0001-01-01")){
+                jDateChooser4.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[69]));
+            }
+        }catch(ParseException err){
+            System.out.println(err.getMessage());
+        }
+    }
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         SearchWindow dialog = new SearchWindow(new javax.swing.JFrame(), true);
-        //SearchWindow.RET_OK;
-        
-        
         /*
          dialog.addWindowListener(new java.awt.event.WindowAdapter() {
          @Override
@@ -3137,6 +3140,9 @@ public class MainWindow extends javax.swing.JFrame {
          */
         dialog.setVisible(true);
         ID = dialog.getID();
+        if(dialog.getReturnStatus()==1){
+            wyszukiwanie();
+        }
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -3497,7 +3503,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_wilgotnosc;
     private javax.swing.ButtonGroup bg_wyglad;
     private javax.swing.ButtonGroup bg_zapach;
-    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox100;
@@ -3812,8 +3817,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JButton test2;
-    private javax.swing.JButton testowy;
     private javax.swing.JButton zapisz;
     // End of variables declaration//GEN-END:variables
 }

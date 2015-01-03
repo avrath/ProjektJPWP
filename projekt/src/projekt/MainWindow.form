@@ -173,17 +173,11 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="510" max="32767" attributes="0"/>
-              <Component id="test2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="testowy" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="zapisz" min="-2" pref="93" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Component id="jTabbedPane7" alignment="0" pref="0" max="32767" attributes="0"/>
+          <Component id="jTabbedPane7" alignment="0" pref="859" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -191,14 +185,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jTabbedPane7" min="-2" pref="655" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="zapisz" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="testowy" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="test2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="zapisz" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -2682,49 +2669,31 @@
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox112">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_1"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;penetruj&#x105;ce rany g&#x142;owy i tu&#x142;owia lub urazy&lt;br/&gt; t&#x119;pe z objawami uszkodzenia narz&#x105;d&#xf3;w&lt;br/&gt; wewn&#x119;trznych g&#x142;owy, klatki piersiowej i brzucha&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox113">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_2"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="amputacja ko&#x144;czyny powy&#x17c;ej kolana lub &#x142;okcia"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox114">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_5"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="rozleg&#x142;e zmia&#x17c;d&#x17c;enia ko&#x144;czyn"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox115">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_3"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="uszkodzienie rdzenia kr&#x119;gowego"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox116">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_6"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;z&#x142;amanie ko&#x144;czyny z &lt;br/&gt;uszkodzeniem naczy&#x144; i nerw&#xf3;w&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox117">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bg_obr_anat_4"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;z&#x142;amanie co najmniej&lt;br/&gt; dw&#xf3;ch proksymalnych&lt;br/&gt; ko&#x15b;ci d&#x142;ugich ko&#x144;czyn lub miednicy&lt;/html&gt;"/>
                   </Properties>
                 </Component>
@@ -4252,29 +4221,5 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="szukaj"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="testowy">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="testowy"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testowyActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="test2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="test2"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="test2ActionPerformed"/>
-      </Events>
-    </Component>
   </SubComponents>
 </Form>

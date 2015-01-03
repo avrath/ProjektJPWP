@@ -113,11 +113,11 @@ public class SearchWindow extends javax.swing.JDialog {
 
             },
             new String [] {
-                "ID", "Imię", "Nazwisko", "Pesel", "Miasto"
+                "Imię", "Nazwisko", "Pesel", "Miasto"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, true
+                false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -189,10 +189,8 @@ public class SearchWindow extends javax.swing.JDialog {
 
         try {
             int rowIndex = jTable1.getSelectedRow();
-            String Id = jTable1.getValueAt(rowIndex, 0).toString();
-            
+            String Id = jTable1.getValueAt(rowIndex, 0).toString();        
             setID(Integer.parseInt(Id));
-            System.out.println(ID);
             doClose(RET_OK);
             //System.out.println(ID);
         } catch (ArrayIndexOutOfBoundsException e) {
