@@ -73,6 +73,13 @@ public class MainWindow extends javax.swing.JFrame {
         list_ekg.add(jCheckBox162);
         list_ekg.add(jCheckBox163);
         list_ekg.add(jCheckBox164);
+        
+        obr_anat.add(jCheckBox112);
+        obr_anat.add(jCheckBox113);
+        obr_anat.add(jCheckBox114);
+        obr_anat.add(jCheckBox115);
+        obr_anat.add(jCheckBox116);
+        obr_anat.add(jCheckBox117);
     }
 
     /**
@@ -85,7 +92,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         bg_decyzja = new javax.swing.ButtonGroup();
-        bg_miejsce = new javax.swing.ButtonGroup();
+        bg_place = new javax.swing.ButtonGroup();
         bg_o_oczu = new javax.swing.ButtonGroup();
         bg_r_slowna = new javax.swing.ButtonGroup();
         bg_r_ruchowa = new javax.swing.ButtonGroup();
@@ -476,7 +483,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel4.setText("MIEJSCE ZDARZENIA");
 
-        bg_miejsce.add(jCheckBox3);
+        bg_place.add(jCheckBox3);
         jCheckBox3.setText("w domu");
         jCheckBox3.setIconTextGap(68);
         jCheckBox3.setName("1"); // NOI18N
@@ -486,7 +493,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        bg_miejsce.add(jCheckBox4);
+        bg_place.add(jCheckBox4);
         jCheckBox4.setText("w miejscu publicznym");
         jCheckBox4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox4.setName("2"); // NOI18N
@@ -496,13 +503,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        bg_miejsce.add(jCheckBox5);
+        bg_place.add(jCheckBox5);
         jCheckBox5.setText("w ruchu uliczno-drog");
         jCheckBox5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox5.setIconTextGap(6);
         jCheckBox5.setName("3"); // NOI18N
 
-        bg_miejsce.add(jCheckBox7);
+        bg_place.add(jCheckBox7);
         jCheckBox7.setText("w rolnictwie");
         jCheckBox7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox7.setIconTextGap(49);
@@ -513,12 +520,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        bg_miejsce.add(jCheckBox8);
+        bg_place.add(jCheckBox8);
         jCheckBox8.setText("w szkole");
         jCheckBox8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox8.setName("5"); // NOI18N
 
-        bg_miejsce.add(jCheckBox10);
+        bg_place.add(jCheckBox10);
         jCheckBox10.setText("w pracy");
         jCheckBox10.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox10.setIconTextGap(67);
@@ -2921,6 +2928,7 @@ public class MainWindow extends javax.swing.JFrame {
     private int suma1 = 0, suma2 = 0, suma3 = 0, suma4 = 0, suma5 = 0, suma6 = 0, sumaGCS = 0, sumaRTS = 0;
     private final ArrayList<JCheckBox> list_czynnosci = new ArrayList<>();
     private final ArrayList<JCheckBox> list_ekg = new ArrayList<>();
+    private final ArrayList<JCheckBox> obr_anat = new ArrayList<>();
 
 
 
@@ -2942,28 +2950,31 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
+        String imie = jTextField4.getText();
+        String nazwisko = jTextField5.getText();
+        Calendar data_ur = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser1.getDate() != null) {
+            data_ur = jDateChooser1.getCalendar();
+        }
+        String miasto = jTextField25.getText();
+        String pesel = jTextField11.getText();
+        String miejsce = Patient.wyszukaj(bg_place);
+        String o_oczu = Patient.wyszukaj(bg_o_oczu);
+        String r_slowna = Patient.wyszukaj(bg_r_slowna);
+        String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
+        
+
+        Patient a = new Patient();
+        //a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anatomiczne);
+        String sql = a.add();
+        System.out.println(sql);
         try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
-            String imie = jTextField4.getText();
-            String nazwisko = jTextField5.getText();
-            Calendar data_ur = new GregorianCalendar(1, 0, 1);
-            if (jDateChooser1.getDate() != null) {
-                data_ur = jDateChooser1.getCalendar();
-            }
-            String miasto = jTextField25.getText();
-            String pesel = jTextField11.getText();
-            String miejsce = Patient.wyszukaj(bg_miejsce);
-            String o_oczu = Patient.wyszukaj(bg_o_oczu);
-            String r_slowna = Patient.wyszukaj(bg_r_slowna);
-            String obr_anat_1 = Patient.wyszukaj(bg_dusznosc);
 
-            Patient a = new Patient();
-            a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anat_1);
-            String sql = a.add();
-            System.out.println(sql);
             stmt.execute(sql);
 //            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
+//            String sql = "alter table `pacients` add column (`cz_odech` varchar(30), `rr_skurcz` varchar(30), `gcs` varchar(30), `dusznosc` varchar(30), `sinica` varchar(30), `bezdech` varchar(30), `szmer` varchar(30), `furczenie` varchar(30), `swisty` varchar(30), `trzeszczenie` varchar(30), `rzezenie` varchar(30), `brak_szmeru` varchar(30), `inne` varchar(30), `reakcja_1` varchar(30), `reakcja_2` varchar(30), `reakcja_3` varchar(30), `szer_1` varchar(30), `szer_2` varchar(30), `szer_3` varchar(30), `tetno` varchar(30), `wyglad` varchar(30), `wilgotnosc` varchar(30), `temp` varchar(30), `brzuch`  varchar(30), `ocena_psych` varchar(30), `tony_serca` varchar(30), `zapach` varchar(30), `neidowlad`  varchar(30), `konczyna_g`  varchar(30), `konczyna_d`  varchar(30), `ekg` varchar(30), `czynnosci` varchar(30));";
 
         } catch (SQLException err) {
             System.out.println("We have occured an error: " + err.getMessage());
@@ -2983,7 +2994,7 @@ public class MainWindow extends javax.swing.JFrame {
                 jTextField5.setText(rs.getString("lname"));
                 jTextField11.setText(rs.getString("pesel"));
                 jDateChooser1.setDate(rs.getDate("bdate"));
-                Patient.zaznacz(rs.getString("place"), bg_miejsce);
+                Patient.zaznacz(rs.getString("place"), bg_place);
                 Patient.zaznacz(rs.getString("o_oczu"), bg_o_oczu);
                 Patient.zaznacz(rs.getString("r_slowna"), bg_r_slowna);
                 Patient.zaznacz(rs.getString("obr_anat_1"), bg_dusznosc);
@@ -3001,23 +3012,10 @@ public class MainWindow extends javax.swing.JFrame {
         String czynnosci = new String();
         czynnosci = Patient.wyszukaj2(list_czynnosci);
         ekg = Patient.wyszukaj2(list_ekg);
-        
-        String[] lista1 = ekg.split(",");
-        String[] lista2 = czynnosci.split(",");
-        System.out.println("ekg:");
-        for (int i = 0; i < lista1.length; i++) {
-            lista1[i] = lista1[i].trim();
-            System.out.println(lista1[i]);
-        }
-        System.out.println("czynnosci:");
-        for (int i = 0; i < lista2.length; i++) {
-            lista2[i] = lista2[i].trim();
-            System.out.println(lista2[i]);
-        }
-        
+
         JOptionPane.showMessageDialog(MainWindow.this, "Przed zaznaczeniem", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
-        Patient.zaznacz2(list_czynnosci, lista1);
-        Patient.zaznacz2(list_ekg,lista2);
+        Patient.zaznacz2(list_czynnosci, czynnosci);
+        Patient.zaznacz2(list_ekg,ekg);
 
         System.out.println("Wyswietlenie nacisnietych: " + ekg);
         System.out.println("Wyswietlenie nacisnietych: " + czynnosci);
@@ -3387,7 +3385,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_inne;
     private javax.swing.ButtonGroup bg_konczyna_d;
     private javax.swing.ButtonGroup bg_konczyna_g;
-    private javax.swing.ButtonGroup bg_miejsce;
     private javax.swing.ButtonGroup bg_niedowlad;
     private javax.swing.ButtonGroup bg_o_oczu;
     private javax.swing.ButtonGroup bg_obr_anat_1;
@@ -3397,6 +3394,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_obr_anat_5;
     private javax.swing.ButtonGroup bg_obr_anat_6;
     private javax.swing.ButtonGroup bg_ocena_psych;
+    private javax.swing.ButtonGroup bg_place;
     private javax.swing.ButtonGroup bg_r_ruchowa;
     private javax.swing.ButtonGroup bg_r_slowna;
     private javax.swing.ButtonGroup bg_reakcja_1;
