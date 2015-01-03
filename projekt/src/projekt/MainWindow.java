@@ -619,37 +619,38 @@ public class MainWindow extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField9)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel12)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel10))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(48, 48, 48)
-                                    .addComponent(jLabel11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField8))))
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField8))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                                .addComponent(jTextField25))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField4)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))))))
-                .addGap(0, 13, Short.MAX_VALUE))
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(2, 2, 2)))
+                .addGap(13, 13, 13))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -678,7 +679,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2950,22 +2951,99 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
-        String imie = jTextField4.getText();
-        String nazwisko = jTextField5.getText();
+    String imie = jTextField4.getText();
+    String nazwisko = jTextField5.getText();
+//    Calendar data_ur;
+    String pesel = jTextField11.getText();
+    String miasto = jTextField25.getText();
+    String miejsce_zdarzenia = Patient.wyszukaj(bg_place);
+    String otwieranie_oczu = Patient.wyszukaj(bg_o_oczu);
+    String reakcja_slowna = Patient.wyszukaj(bg_r_slowna);
+    String decyzja = Patient.wyszukaj(bg_decyzja);
+    String r_ruchowa = Patient.wyszukaj(bg_r_ruchowa);
+    String cz_oddech = Patient.wyszukaj(bg_cz_oddech);
+    String rr_skurcz = Patient.wyszukaj(bg_rr_skurcz);
+    String gcs = Patient.wyszukaj(bg_gcs);
+    String dusznosc = Patient.wyszukaj(bg_dusznosc);
+    String sinica = Patient.wyszukaj(bg_sinica);
+    String bezdech = Patient.wyszukaj(bg_bezdech);
+    String szmer = Patient.wyszukaj(bg_szmer);
+    String furczenie = Patient.wyszukaj(bg_furczenie);
+    String swisty = Patient.wyszukaj(bg_swisty);
+    String trzeszczenie = Patient.wyszukaj(bg_trzeszczenie);
+    String rzezenie = Patient.wyszukaj(bg_rzezenie);
+    String brak_szmeru = Patient.wyszukaj(bg_brak_szmeru);
+    String inne = Patient.wyszukaj(bg_inne);
+    String reakcja_1 = Patient.wyszukaj(bg_reakcja_1);
+    String reakcja_2 = Patient.wyszukaj(bg_reakcja_2);
+    String reakcja_3 = Patient.wyszukaj(bg_reakcja_3);
+    String szer_1 = Patient.wyszukaj(bg_szer_1);
+    String szer_2 = Patient.wyszukaj(bg_szer_2);
+    String szer_3 = Patient.wyszukaj(bg_szer_3);
+    String tetno = Patient.wyszukaj(bg_tetno);
+    String wyglad = Patient.wyszukaj(bg_wyglad);
+    String wilgotnosc = Patient.wyszukaj(bg_wilgotnosc);
+    String temp = Patient.wyszukaj(bg_temp);
+    String brzuch = Patient.wyszukaj(bg_brzuch);
+    String ocena_psych = Patient.wyszukaj(bg_ocena_psych);
+    String tony_serca = Patient.wyszukaj(bg_tony_serca);
+    String zapach = Patient.wyszukaj(bg_zapach);
+    String niedowlad = Patient.wyszukaj(bg_niedowlad);
+    String konczyna_g = Patient.wyszukaj(bg_konczyna_g);
+    String konczyna_d = Patient.wyszukaj(bg_konczyna_d);
+    String ekg = Patient.wyszukaj2(list_ekg);
+    String czynnosci = Patient.wyszukaj2(list_czynnosci);
+    String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
+    String dokument = jTextField9.getText();
+    String oznaczenie_dysp = jTextField1.getText();
+    String kod_zrm = jTextField2.getText();
+    String nr_zlec = jTextField3.getText();
+    String ident_nfz = jTextField10.getText();
+//    Calendar data_udziel_pom;
+//    Calendar przekaz_pacjenta;
+//    Calendar zgon_odstap;
+    String przekaz_godz = jTextField21.getText();
+    String przekaz_min = jTextField23.getText();
+    String zgon_odstap_min = jTextField24.getText();
+    String zgon_odstap_godz = jTextField22.getText();
+    String wywiad = jTextArea1.getText();
+    String saturacja = jTextField26.getText();
+    String cisnienie_1 = jTextField18.getText();
+    String cisnienie_2 = jTextField19.getText();
+    String tetno_min = jTextField20.getText();
+    String glukoza_1 = jTextField27.getText();
+    String glukzoa_2 = jTextField28.getText();
+    String inne_dokl = jTextField29.getText();
+    String rozpoznanie = jTextArea2.getText();
+    String zalecenia_uwagi = jTextArea3.getText();
+    String zast_leki = jTextArea4.getText();
+    String icd10_1 = jTextField15.getText();
+    String icd10_2 = jTextField13.getText();
+    String icd10_3 = jTextField14.getText();
+    String opis = jTextArea5.getText();
+    String ulica = jTextField6.getText();
+    String ulica_nr = jTextField7.getText();
+    String ulica_m = jTextField8.getText();
+    
         Calendar data_ur = new GregorianCalendar(1, 0, 1);
         if (jDateChooser1.getDate() != null) {
             data_ur = jDateChooser1.getCalendar();
-        }
-        String miasto = jTextField25.getText();
-        String pesel = jTextField11.getText();
-        String miejsce = Patient.wyszukaj(bg_place);
-        String o_oczu = Patient.wyszukaj(bg_o_oczu);
-        String r_slowna = Patient.wyszukaj(bg_r_slowna);
-        String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
+        } 
+                Calendar data_udziel_pom = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser2.getDate() != null) {
+            data_udziel_pom = jDateChooser2.getCalendar();
+        } 
+                Calendar przekaz_pacjenta = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser3.getDate() != null) {
+            przekaz_pacjenta = jDateChooser3.getCalendar();
+        } 
+                Calendar zgon_odstap = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser4.getDate() != null) {
+            zgon_odstap = jDateChooser4.getCalendar();
+        } 
         
-
         Patient a = new Patient();
-        //a.create(imie, nazwisko, miasto, miejsce, o_oczu, r_slowna, data_ur, pesel, obr_anatomiczne);
+        a.create(imie, nazwisko, data_ur, pesel, miasto, miejsce_zdarzenia, otwieranie_oczu, reakcja_slowna, decyzja, r_ruchowa, cz_oddech, rr_skurcz, gcs, dusznosc, sinica, bezdech, szmer, furczenie, swisty, trzeszczenie, rzezenie, brak_szmeru, inne, reakcja_1, reakcja_2, reakcja_3, szer_1, szer_2, szer_3, tetno, wyglad, wilgotnosc, temp, brzuch, ocena_psych, tony_serca, zapach, niedowlad, konczyna_g, konczyna_d, ekg, czynnosci, obr_anatomiczne, dokument, oznaczenie_dysp, kod_zrm, nr_zlec, ident_nfz, data_udziel_pom, przekaz_pacjenta, zgon_odstap, przekaz_godz, przekaz_min, zgon_odstap_min, zgon_odstap_godz, wywiad, saturacja, cisnienie_1, cisnienie_2, tetno_min, glukoza_1, glukzoa_2, inne_dokl, rozpoznanie, zalecenia_uwagi, zast_leki, icd10_1, icd10_2, icd10_3, opis, ulica, ulica_nr, ulica_m);
         String sql = a.add();
         System.out.println(sql);
         try {
