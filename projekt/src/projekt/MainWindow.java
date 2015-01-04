@@ -3167,6 +3167,85 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        bg_place.clearSelection();
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField11.setText("");
+        jTextField25.setText("");
+        bg_o_oczu.clearSelection();
+        bg_ocena_psych.clearSelection();
+        bg_r_slowna.clearSelection();
+        bg_r_ruchowa.clearSelection();
+        bg_cz_oddech.clearSelection();
+        bg_rr_skurcz.clearSelection();
+        bg_gcs.clearSelection();
+        bg_dusznosc.clearSelection();
+        bg_sinica.clearSelection();
+        bg_bezdech.clearSelection();
+        bg_szmer.clearSelection();
+        bg_furczenie.clearSelection();
+        bg_swisty.clearSelection();
+        bg_trzeszczenie.clearSelection();
+        bg_rzezenie.clearSelection();
+        bg_brak_szmeru.clearSelection();
+        bg_inne.clearSelection();
+        bg_reakcja_1.clearSelection();
+        bg_reakcja_2.clearSelection();
+        bg_reakcja_3.clearSelection();
+        bg_szer_1.clearSelection();
+        bg_szer_2.clearSelection();
+        bg_szer_3.clearSelection();
+        bg_tetno.clearSelection();
+        bg_wyglad.clearSelection();
+        bg_wilgotnosc.clearSelection();
+        bg_temp.clearSelection();
+        bg_brzuch.clearSelection();
+        bg_tony_serca.clearSelection();
+        bg_zapach.clearSelection();
+        bg_niedowlad.clearSelection();
+        bg_konczyna_g.clearSelection();
+        bg_konczyna_d.clearSelection();
+        for (JCheckBox box : list_ekg){
+            box.setSelected(false);
+        }
+        for (JCheckBox box : list_czynnosci){
+            box.setSelected(false);
+        }
+        for (JCheckBox box : obr_anat){
+            box.setSelected(false);
+        }
+        bg_decyzja.clearSelection();
+        jTextField9.setText("");
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField10.setText("");
+        jTextField21.setText("");
+        jTextField23.setText("");
+        jTextField24.setText("");
+        jTextField22.setText("");
+        jTextArea1.setText("");
+        jTextField26.setText("");
+        jTextField18.setText("");
+        jTextField19.setText("");
+        jTextField20.setText("");
+        jTextField27.setText("");
+        jTextField28.setText("");
+        jTextField29.setText("");
+        jTextArea2.setText("");
+        jTextArea3.setText("");
+        jTextArea4.setText("");
+        jTextField15.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextArea5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jDateChooser1.setCalendar(null);
+        jDateChooser2.setCalendar(null);
+        jDateChooser3.setCalendar(null);
+        jDateChooser4.setCalendar(null);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jCheckBox67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox67ActionPerformed

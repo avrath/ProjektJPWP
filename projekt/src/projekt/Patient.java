@@ -336,19 +336,6 @@ public class Patient {
         }
     }
 
-    public static void wyczysc(String name, ButtonGroup group) {
-        Enumeration<AbstractButton> ab = group.getElements();
-        JCheckBox box = new JCheckBox();
-        while (ab.hasMoreElements()) {
-            box = (JCheckBox) ab.nextElement();
-            if (box.getText().equals(name)) {
-                box.setSelected(false);
-//                        System.out.println("did it");
-                break;
-            }
-        }
-    }
-
     ///////////////////setery i getery
     public int getID() {
         return ID;
