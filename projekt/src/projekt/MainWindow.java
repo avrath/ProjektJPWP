@@ -61,7 +61,7 @@ public class MainWindow extends javax.swing.JFrame {
         list_czynnosci.add(jCheckBox61);
         list_czynnosci.add(jCheckBox62);
         list_czynnosci.add(jCheckBox63);
-        
+
         list_ekg.add(jCheckBox151);
         list_ekg.add(jCheckBox152);
         list_ekg.add(jCheckBox153);
@@ -76,7 +76,7 @@ public class MainWindow extends javax.swing.JFrame {
         list_ekg.add(jCheckBox162);
         list_ekg.add(jCheckBox163);
         list_ekg.add(jCheckBox164);
-        
+
         obr_anat.add(jCheckBox112);
         obr_anat.add(jCheckBox113);
         obr_anat.add(jCheckBox114);
@@ -448,6 +448,7 @@ public class MainWindow extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
+        update_patient = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -2818,6 +2819,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("Rozpoznanie i postępowanie", jPanel5);
 
+        update_patient.setText("Aktualizacja");
+        update_patient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_patientActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("Menu");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2871,6 +2879,8 @@ public class MainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(update_patient)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(zapisz, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 859, Short.MAX_VALUE)
@@ -2880,7 +2890,9 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(zapisz)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zapisz)
+                    .addComponent(update_patient))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2892,8 +2904,7 @@ public class MainWindow extends javax.swing.JFrame {
     private final ArrayList<JCheckBox> list_czynnosci = new ArrayList<>();
     private final ArrayList<JCheckBox> list_ekg = new ArrayList<>();
     private final ArrayList<JCheckBox> obr_anat = new ArrayList<>();
-    private int ID;
-
+    private int ID = 0;
 
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -2914,114 +2925,112 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
-    String imie = jTextField4.getText();
-    String nazwisko = jTextField5.getText();
-//    Calendar data_ur;
-    String pesel = jTextField11.getText();
-    String miasto = jTextField25.getText();
-    String miejsce_zdarzenia = Patient.wyszukaj(bg_place);
-    String otwieranie_oczu = Patient.wyszukaj(bg_o_oczu);
-    String reakcja_slowna = Patient.wyszukaj(bg_r_slowna);
-    String decyzja = Patient.wyszukaj(bg_decyzja);
-    String r_ruchowa = Patient.wyszukaj(bg_r_ruchowa);
-    String cz_oddech = Patient.wyszukaj(bg_cz_oddech);
-    String rr_skurcz = Patient.wyszukaj(bg_rr_skurcz);
-    String gcs = Patient.wyszukaj(bg_gcs);
-    String dusznosc = Patient.wyszukaj(bg_dusznosc);
-    String sinica = Patient.wyszukaj(bg_sinica);
-    String bezdech = Patient.wyszukaj(bg_bezdech);
-    String szmer = Patient.wyszukaj(bg_szmer);
-    String furczenie = Patient.wyszukaj(bg_furczenie);
-    String swisty = Patient.wyszukaj(bg_swisty);
-    String trzeszczenie = Patient.wyszukaj(bg_trzeszczenie);
-    String rzezenie = Patient.wyszukaj(bg_rzezenie);
-    String brak_szmeru = Patient.wyszukaj(bg_brak_szmeru);
-    String inne = Patient.wyszukaj(bg_inne);
-    String reakcja_1 = Patient.wyszukaj(bg_reakcja_1);
-    String reakcja_2 = Patient.wyszukaj(bg_reakcja_2);
-    String reakcja_3 = Patient.wyszukaj(bg_reakcja_3);
-    String szer_1 = Patient.wyszukaj(bg_szer_1);
-    String szer_2 = Patient.wyszukaj(bg_szer_2);
-    String szer_3 = Patient.wyszukaj(bg_szer_3);
-    String tetno = Patient.wyszukaj(bg_tetno);
-    String wyglad = Patient.wyszukaj(bg_wyglad);
-    String wilgotnosc = Patient.wyszukaj(bg_wilgotnosc);
-    String temp = Patient.wyszukaj(bg_temp);
-    String brzuch = Patient.wyszukaj(bg_brzuch);
-    String ocena_psych = Patient.wyszukaj(bg_ocena_psych);
-    String tony_serca = Patient.wyszukaj(bg_tony_serca);
-    String zapach = Patient.wyszukaj(bg_zapach);
-    String niedowlad = Patient.wyszukaj(bg_niedowlad);
-    String konczyna_g = Patient.wyszukaj(bg_konczyna_g);
-    String konczyna_d = Patient.wyszukaj(bg_konczyna_d);
-    String ekg = Patient.wyszukaj2(list_ekg);
-    String czynnosci = Patient.wyszukaj2(list_czynnosci);
-    String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
-    String dokument = jTextField9.getText();
-    String oznaczenie_dysp = jTextField1.getText();
-    String kod_zrm = jTextField2.getText();
-    String nr_zlec = jTextField3.getText();
-    String ident_nfz = jTextField10.getText();
-//    Calendar data_udziel_pom;
-//    Calendar przekaz_pacjenta;
-//    Calendar zgon_odstap;
-    String przekaz_godz = jTextField21.getText();
-    String przekaz_min = jTextField23.getText();
-    String zgon_odstap_min = jTextField24.getText();
-    String zgon_odstap_godz = jTextField22.getText();
-    String wywiad = jTextArea1.getText();
-    String saturacja = jTextField26.getText();
-    String cisnienie_1 = jTextField18.getText();
-    String cisnienie_2 = jTextField19.getText();
-    String tetno_min = jTextField20.getText();
-    String glukoza_1 = jTextField27.getText();
-    String glukzoa_2 = jTextField28.getText();
-    String inne_dokl = jTextField29.getText();
-    String rozpoznanie = jTextArea2.getText();
-    String zalecenia_uwagi = jTextArea3.getText();
-    String zast_leki = jTextArea4.getText();
-    String icd10_1 = jTextField15.getText();
-    String icd10_2 = jTextField13.getText();
-    String icd10_3 = jTextField14.getText();
-    String opis = jTextArea5.getText();
-    String ulica = jTextField6.getText();
-    String ulica_nr = jTextField7.getText();
-    String ulica_m = jTextField8.getText();
-    
-        Calendar data_ur = new GregorianCalendar(1, 0, 1);
-        if (jDateChooser1.getDate() != null) {
-            data_ur = jDateChooser1.getCalendar();
-        } 
-                Calendar data_udziel_pom = new GregorianCalendar(1, 0, 1);
-        if (jDateChooser2.getDate() != null) {
-            data_udziel_pom = jDateChooser2.getCalendar();
-        } 
-                Calendar przekaz_pacjenta = new GregorianCalendar(1, 0, 1);
-        if (jDateChooser3.getDate() != null) {
-            przekaz_pacjenta = jDateChooser3.getCalendar();
-        } 
-                Calendar zgon_odstap = new GregorianCalendar(1, 0, 1);
-        if (jDateChooser4.getDate() != null) {
-            zgon_odstap = jDateChooser4.getCalendar();
-        } 
-        
-        Patient a = new Patient();
-        a.create(imie, nazwisko, data_ur, pesel, miasto, miejsce_zdarzenia, otwieranie_oczu, reakcja_slowna, decyzja, r_ruchowa, cz_oddech, rr_skurcz, gcs, dusznosc, sinica, bezdech, szmer, furczenie, swisty, trzeszczenie, rzezenie, brak_szmeru, inne, reakcja_1, reakcja_2, reakcja_3, szer_1, szer_2, szer_3, tetno, wyglad, wilgotnosc, temp, brzuch, ocena_psych, tony_serca, zapach, niedowlad, konczyna_g, konczyna_d, ekg, czynnosci, obr_anatomiczne, dokument, oznaczenie_dysp, kod_zrm, nr_zlec, ident_nfz, data_udziel_pom, przekaz_pacjenta, zgon_odstap, przekaz_godz, przekaz_min, zgon_odstap_min, zgon_odstap_godz, wywiad, saturacja, cisnienie_1, cisnienie_2, tetno_min, glukoza_1, glukzoa_2, inne_dokl, rozpoznanie, zalecenia_uwagi, zast_leki, icd10_1, icd10_2, icd10_3, opis, ulica, ulica_nr, ulica_m);
-        String sql = a.add();
-        System.out.println(sql);
+        Patient pacjent = zapisz_dane();
+        String sql = pacjent.add();
+        ID = pacjent.getID();
+//        System.out.println(sql);
         try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
 
             stmt.execute(sql);
-//            String sql = "Create table IF NOT EXISTS pacients (ID int unique primary key auto_increment, fname varchar(30), lname varchar(30), bdate date, pesel varchar(12), place varchar(40), o_oczu varchar(40), r_slowna varchar(40) )";
-//            String sql = "alter table `pacients` add column (`cz_odech` varchar(30), `rr_skurcz` varchar(30), `gcs` varchar(30), `dusznosc` varchar(30), `sinica` varchar(30), `bezdech` varchar(30), `szmer` varchar(30), `furczenie` varchar(30), `swisty` varchar(30), `trzeszczenie` varchar(30), `rzezenie` varchar(30), `brak_szmeru` varchar(30), `inne` varchar(30), `reakcja_1` varchar(30), `reakcja_2` varchar(30), `reakcja_3` varchar(30), `szer_1` varchar(30), `szer_2` varchar(30), `szer_3` varchar(30), `tetno` varchar(30), `wyglad` varchar(30), `wilgotnosc` varchar(30), `temp` varchar(30), `brzuch`  varchar(30), `ocena_psych` varchar(30), `tony_serca` varchar(30), `zapach` varchar(30), `neidowlad`  varchar(30), `konczyna_g`  varchar(30), `konczyna_d`  varchar(30), `ekg` varchar(30), `czynnosci` varchar(30));";
-
         } catch (SQLException err) {
-            System.out.println("We have occured an error: " + err.getMessage());
+            System.out.println(err.getMessage());
         }
 
     }//GEN-LAST:event_zapiszActionPerformed
+    
+    private Patient zapisz_dane() {
+        Patient pacjent = new Patient();
+        String imie = jTextField4.getText();
+        String nazwisko = jTextField5.getText();
+        String pesel = jTextField11.getText();
+        String miasto = jTextField25.getText();
+        String miejsce_zdarzenia = Patient.wyszukaj(bg_place);
+        String otwieranie_oczu = Patient.wyszukaj(bg_o_oczu);
+        String reakcja_slowna = Patient.wyszukaj(bg_r_slowna);
+        String decyzja = Patient.wyszukaj(bg_decyzja);
+        String r_ruchowa = Patient.wyszukaj(bg_r_ruchowa);
+        String cz_oddech = Patient.wyszukaj(bg_cz_oddech);
+        String rr_skurcz = Patient.wyszukaj(bg_rr_skurcz);
+        String gcs = Patient.wyszukaj(bg_gcs);
+        String dusznosc = Patient.wyszukaj(bg_dusznosc);
+        String sinica = Patient.wyszukaj(bg_sinica);
+        String bezdech = Patient.wyszukaj(bg_bezdech);
+        String szmer = Patient.wyszukaj(bg_szmer);
+        String furczenie = Patient.wyszukaj(bg_furczenie);
+        String swisty = Patient.wyszukaj(bg_swisty);
+        String trzeszczenie = Patient.wyszukaj(bg_trzeszczenie);
+        String rzezenie = Patient.wyszukaj(bg_rzezenie);
+        String brak_szmeru = Patient.wyszukaj(bg_brak_szmeru);
+        String inne = Patient.wyszukaj(bg_inne);
+        String reakcja_1 = Patient.wyszukaj(bg_reakcja_1);
+        String reakcja_2 = Patient.wyszukaj(bg_reakcja_2);
+        String reakcja_3 = Patient.wyszukaj(bg_reakcja_3);
+        String szer_1 = Patient.wyszukaj(bg_szer_1);
+        String szer_2 = Patient.wyszukaj(bg_szer_2);
+        String szer_3 = Patient.wyszukaj(bg_szer_3);
+        String tetno = Patient.wyszukaj(bg_tetno);
+        String wyglad = Patient.wyszukaj(bg_wyglad);
+        String wilgotnosc = Patient.wyszukaj(bg_wilgotnosc);
+        String temp = Patient.wyszukaj(bg_temp);
+        String brzuch = Patient.wyszukaj(bg_brzuch);
+        String ocena_psych = Patient.wyszukaj(bg_ocena_psych);
+        String tony_serca = Patient.wyszukaj(bg_tony_serca);
+        String zapach = Patient.wyszukaj(bg_zapach);
+        String niedowlad = Patient.wyszukaj(bg_niedowlad);
+        String konczyna_g = Patient.wyszukaj(bg_konczyna_g);
+        String konczyna_d = Patient.wyszukaj(bg_konczyna_d);
+        String ekg = Patient.wyszukaj2(list_ekg);
+        String czynnosci = Patient.wyszukaj2(list_czynnosci);
+        String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
+        String dokument = jTextField9.getText();
+        String oznaczenie_dysp = jTextField1.getText();
+        String kod_zrm = jTextField2.getText();
+        String nr_zlec = jTextField3.getText();
+        String ident_nfz = jTextField10.getText();
+        String przekaz_godz = jTextField21.getText();
+        String przekaz_min = jTextField23.getText();
+        String zgon_odstap_min = jTextField24.getText();
+        String zgon_odstap_godz = jTextField22.getText();
+        String wywiad = jTextArea1.getText();
+        String saturacja = jTextField26.getText();
+        String cisnienie_1 = jTextField18.getText();
+        String cisnienie_2 = jTextField19.getText();
+        String tetno_min = jTextField20.getText();
+        String glukoza_1 = jTextField27.getText();
+        String glukzoa_2 = jTextField28.getText();
+        String inne_dokl = jTextField29.getText();
+        String rozpoznanie = jTextArea2.getText();
+        String zalecenia_uwagi = jTextArea3.getText();
+        String zast_leki = jTextArea4.getText();
+        String icd10_1 = jTextField15.getText();
+        String icd10_2 = jTextField13.getText();
+        String icd10_3 = jTextField14.getText();
+        String opis = jTextArea5.getText();
+        String ulica = jTextField6.getText();
+        String ulica_nr = jTextField7.getText();
+        String ulica_m = jTextField8.getText();
+
+        Calendar data_ur = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser1.getDate() != null) {
+            data_ur = jDateChooser1.getCalendar();
+        }
+        Calendar data_udziel_pom = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser2.getDate() != null) {
+            data_udziel_pom = jDateChooser2.getCalendar();
+        }
+        Calendar przekaz_pacjenta = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser3.getDate() != null) {
+            przekaz_pacjenta = jDateChooser3.getCalendar();
+        }
+        Calendar zgon_odstap = new GregorianCalendar(1, 0, 1);
+        if (jDateChooser4.getDate() != null) {
+            zgon_odstap = jDateChooser4.getCalendar();
+        }
+        pacjent.create(ID, imie, nazwisko, data_ur, pesel, miasto, miejsce_zdarzenia, otwieranie_oczu, reakcja_slowna, decyzja, r_ruchowa, cz_oddech, rr_skurcz, gcs, dusznosc, sinica, bezdech, szmer, furczenie, swisty, trzeszczenie, rzezenie, brak_szmeru, inne, reakcja_1, reakcja_2, reakcja_3, szer_1, szer_2, szer_3, tetno, wyglad, wilgotnosc, temp, brzuch, ocena_psych, tony_serca, zapach, niedowlad, konczyna_g, konczyna_d, ekg, czynnosci, obr_anatomiczne, dokument, oznaczenie_dysp, kod_zrm, nr_zlec, ident_nfz, data_udziel_pom, przekaz_pacjenta, zgon_odstap, przekaz_godz, przekaz_min, zgon_odstap_min, zgon_odstap_godz, wywiad, saturacja, cisnienie_1, cisnienie_2, tetno_min, glukoza_1, glukzoa_2, inne_dokl, rozpoznanie, zalecenia_uwagi, zast_leki, icd10_1, icd10_2, icd10_3, opis, ulica, ulica_nr, ulica_m);
+        return pacjent;
+    }
 
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
         // TODO add your handling code here:
@@ -3037,7 +3046,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel72.setText(Integer.toString(sumaRTS));
     }//GEN-LAST:event_jCheckBox23ActionPerformed
 
-    private void wyszukiwanie(){
+    private void wyszukiwanie() {
         String[] dane = Patient.pobierz(ID);
         jTextField4.setText(dane[0]);
         jTextField5.setText(dane[1]);
@@ -3077,10 +3086,10 @@ public class MainWindow extends javax.swing.JFrame {
         Patient.zaznacz(dane[36], bg_niedowlad);
         Patient.zaznacz(dane[37], bg_konczyna_g);
         Patient.zaznacz(dane[38], bg_konczyna_d);
-        Patient.zaznacz2(list_ekg,dane[39]);
-        Patient.zaznacz2(list_czynnosci,dane[40]);
-        Patient.zaznacz2(obr_anat,dane[41]);
-        Patient.zaznacz(dane[42],bg_decyzja);
+        Patient.zaznacz2(list_ekg, dane[39]);
+        Patient.zaznacz2(list_czynnosci, dane[40]);
+        Patient.zaznacz2(obr_anat, dane[41]);
+        Patient.zaznacz(dane[42], bg_decyzja);
         jTextField9.setText(dane[43]);
         jTextField1.setText(dane[44]);
         jTextField2.setText(dane[45]);
@@ -3108,25 +3117,25 @@ public class MainWindow extends javax.swing.JFrame {
         jTextField6.setText(dane[70]);
         jTextField7.setText(dane[71]);
         jTextField8.setText(dane[72]);
- 
-        try{
-            if(!dane[2].equals("0001-01-01")){
+
+        try {
+            if (!dane[2].equals("0001-01-01")) {
                 jDateChooser1.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[2]));
             }
-            if(!dane[48].equals("0001-01-01")){
+            if (!dane[48].equals("0001-01-01")) {
                 jDateChooser2.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[48]));
             }
-            if(!dane[49].equals("0001-01-01")){
+            if (!dane[49].equals("0001-01-01")) {
                 jDateChooser3.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[49]));
             }
-            if(!dane[69].equals("0001-01-01")){
+            if (!dane[69].equals("0001-01-01")) {
                 jDateChooser4.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(dane[69]));
             }
-        }catch(ParseException err){
+        } catch (ParseException err) {
             System.out.println(err.getMessage());
         }
     }
-    
+
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         SearchWindow dialog = new SearchWindow(new javax.swing.JFrame(), true);
@@ -3140,7 +3149,7 @@ public class MainWindow extends javax.swing.JFrame {
          */
         dialog.setVisible(true);
         ID = dialog.getID();
-        if(dialog.getReturnStatus()==1){
+        if (dialog.getReturnStatus() == 1) {
             wyszukiwanie();
         }
 
@@ -3403,6 +3412,20 @@ public class MainWindow extends javax.swing.JFrame {
     private void jCheckBox164ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox164ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox164ActionPerformed
+
+    private void update_patientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_patientActionPerformed
+        // TODO add your handling code here:
+        Patient pacjent = zapisz_dane();
+        String sql = pacjent.uaktualnij();
+        try {
+            Connection con = Authentication.getCon();
+            Statement stmt = con.createStatement();
+
+            stmt.execute(sql);
+        } catch (SQLException err) {
+            System.out.println(err.getMessage());
+        }
+    }//GEN-LAST:event_update_patientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3817,6 +3840,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton update_patient;
     private javax.swing.JButton zapisz;
     // End of variables declaration//GEN-END:variables
 }

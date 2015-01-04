@@ -113,11 +113,11 @@ public class SearchWindow extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Imię", "Nazwisko", "Pesel", "Miasto"
+                "ID", "Imię", "Nazwisko", "Pesel", "Miasto"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true
+                true, false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
