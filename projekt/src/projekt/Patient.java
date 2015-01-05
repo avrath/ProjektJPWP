@@ -17,6 +17,7 @@ import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -257,7 +258,8 @@ public class Patient {
                 }
             }
         }catch(SQLException err){
-            System.out.println(err.getMessage());
+            //System.out.println(err.getMessage());
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
         return dane;
     }
@@ -272,7 +274,8 @@ public class Patient {
                     ID=rs.getInt("id");
             }
         }catch(SQLException err){
-            System.out.println(err.getMessage());
+            //System.out.println(err.getMessage());
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }        
         return ID;
     }

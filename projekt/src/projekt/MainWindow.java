@@ -500,7 +500,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_place.add(jCheckBox3);
         jCheckBox3.setText("w domu");
-        jCheckBox3.setIconTextGap(68);
         jCheckBox3.setName("1"); // NOI18N
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -527,7 +526,6 @@ public class MainWindow extends javax.swing.JFrame {
         bg_place.add(jCheckBox7);
         jCheckBox7.setText("w rolnictwie");
         jCheckBox7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jCheckBox7.setIconTextGap(49);
         jCheckBox7.setName("6"); // NOI18N
         jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -543,7 +541,6 @@ public class MainWindow extends javax.swing.JFrame {
         bg_place.add(jCheckBox10);
         jCheckBox10.setText("w pracy");
         jCheckBox10.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jCheckBox10.setIconTextGap(67);
         jCheckBox10.setName("4"); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -554,18 +551,18 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jCheckBox7)
-                            .addComponent(jCheckBox5)
-                            .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4)
-                            .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jCheckBox10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jCheckBox8)
-                        .addGap(42, 42, 42))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jCheckBox7)
+                                .addComponent(jCheckBox5)
+                                .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel4)
+                                .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jCheckBox10))
+                        .addGap(42, 64, Short.MAX_VALUE))))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -579,9 +576,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox10))
+                .addComponent(jCheckBox10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -592,9 +589,9 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2967,12 +2964,15 @@ public class MainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(update_patient)
+                .addComponent(update_patient, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(zapisz, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(zapisz, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jTabbedPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 859, Short.MAX_VALUE)
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {update_patient, zapisz});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -3026,7 +3026,8 @@ public class MainWindow extends javax.swing.JFrame {
 
             stmt.execute(sql);
         } catch (SQLException err) {
-            System.out.println(err.getMessage());
+            //System.out.println(err.getMessage());
+            JOptionPane.showMessageDialog(MainWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
         }
     }//GEN-LAST:event_zapiszActionPerformed
@@ -3585,6 +3586,9 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void update_patientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_patientActionPerformed
         // TODO add your handling code here:
+        if (ID==0){
+            JOptionPane.showMessageDialog(MainWindow.this, "Ten pacjent nie istnieje jeszcze w bazie", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
+        } else{
         Patient pacjent = zapisz_dane();
         String sql = pacjent.uaktualnij();
         try {
@@ -3593,8 +3597,9 @@ public class MainWindow extends javax.swing.JFrame {
 
             stmt.execute(sql);
         } catch (SQLException err) {
-            System.out.println(err.getMessage());
-        }
+            JOptionPane.showMessageDialog(MainWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
+            //System.out.println(err.getMessage());
+        }}
     }//GEN-LAST:event_update_patientActionPerformed
 
     /**

@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,7 +34,8 @@ public class Authentication {
                 con = null;
             }
         } catch (SQLException err) {
-            System.out.println(err.getMessage());
+            //System.out.println(err.getMessage());
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
 
         }
     }
@@ -47,7 +49,8 @@ public class Authentication {
             con = DriverManager.getConnection(host, uName, uPass);
 
         } catch (SQLException err) {
-            System.out.println("An error occured: " + err);
+            //System.out.println("An error occured: " + err);
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
         if (con != null) {
             return con;

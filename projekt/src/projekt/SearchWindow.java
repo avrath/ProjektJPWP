@@ -237,7 +237,8 @@ public class SearchWindow extends javax.swing.JDialog {
                 model.addRow(new Object[]{id_col, first_name, last_name, pesel, city});
             }
         } catch (SQLException err) {
-            System.out.println(err.getMessage());
+            //System.out.println(err.getMessage());
+            JOptionPane.showMessageDialog(SearchWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
