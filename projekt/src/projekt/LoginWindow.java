@@ -118,7 +118,6 @@ public class LoginWindow extends javax.swing.JDialog {
                 PassField.setText("");
             }
         } catch (java.lang.NullPointerException err) {
-            JOptionPane.showMessageDialog(LoginWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_okButtonActionPerformed
 
