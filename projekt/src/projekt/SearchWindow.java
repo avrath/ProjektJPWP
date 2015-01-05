@@ -229,15 +229,18 @@ public class SearchWindow extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String sql = new String();
         if (jTextField1.getText().equals("") && jTextField2.getText().equals("")){
             JOptionPane.showMessageDialog(SearchWindow.this, "Nic nie zostało wpisane", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
         } else if (jTextField1.getText().equals("")){
-            
+            sql = "SELECT  * FROM pacients where address_city like '" + jTextField2.getText() + "%';";
             //TUTAJ PRZYPADEK GDY NAZWISKO NIE ZOSTALO WPISANE
         
-        } else {
-            
+        } else if (jTextField2.getText().equals("")) {
+            sql = "SELECT  * FROM pacients where lname like '" + jTextField1.getText() + "%';";
             //tutaj przypadek gdy miasto nie zostało wpisane
+        } else {
+            sql = "SELECT  * FROM pacients where lname like '" + jTextField1.getText() + "%' and address_city like '" + jTextField2.getText() + "%';";
         }
         
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
@@ -251,8 +254,8 @@ public class SearchWindow extends javax.swing.JDialog {
             }
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
-            String SQL = "SELECT * FROM pacients where lname='" + nazwisko + "';";
-            ResultSet rs = stmt.executeQuery(SQL);
+            //String SQL = "SELECT * FROM pacients where lname='" + nazwisko + "';";
+            ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 int id_col = rs.getInt("id");
                 String first_name = rs.getString("fname");
