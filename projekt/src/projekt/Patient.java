@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
@@ -179,14 +178,13 @@ public class Patient {
         return this;
     }
 
-
-    public String add() {
+    public void add() {
         setID(lastID() + 1);
         String bdata = this.data_ur.get(Calendar.YEAR) + "-" + (this.data_ur.get(Calendar.MONTH) + 1) + "-" + this.data_ur.get(Calendar.DATE);
         String data_udziel = this.data_udziel_pom.get(Calendar.YEAR) + "-" + (this.data_udziel_pom.get(Calendar.MONTH) + 1) + "-" + this.data_udziel_pom.get(Calendar.DATE);
         String przekaz = this.przekaz_pacjenta.get(Calendar.YEAR) + "-" + (this.przekaz_pacjenta.get(Calendar.MONTH) + 1) + "-" + this.przekaz_pacjenta.get(Calendar.DATE);
         String zgon = this.zgon_odstap.get(Calendar.YEAR) + "-" + (this.zgon_odstap.get(Calendar.MONTH) + 1) + "-" + this.zgon_odstap.get(Calendar.DATE);
-        
+
         String sql = "INSERT INTO `pacients`(`ID`, `fname`, `lname`, `bdate`, `pesel`, `address_city`, `place`, `o_oczu`, `r_slowna`, `r_ruchowa`,"
                 + " `cz_odech`, `rr_skurcz`, `gcs`, `dusznosc`, `sinica`, `bezdech`, `szmer`, `furczenie`, `swisty`, `trzeszczenie`, `rzezenie`,"
                 + " `brak_szmeru`, `inne`, `reakcja_1`, `reakcja_2`, `reakcja_3`, `szer_1`, `szer_2`, `szer_3`, `tetno`, `wyglad`, `wilgotnosc`,"
@@ -195,88 +193,102 @@ public class Patient {
                 + " `przekaz_pacjenta`, `przekaz_godz`, `przekaz_min`, `zgon_odstap_godz`, `zgon_odstap_min`, `wywiad`, `saturacja`,"
                 + " `cisnienie_1`, `cisnienie_2`, `tetno_min`, `glukoza_1`, `glukoza_2`, `inne_dokl`, `rozpoznanie`, `zalecenia_uwagi`, `zast_leki`,"
                 + " `icd10_1`, `icd10_2`, `icd10_3`, `opis`, `zgon_odstap`, `ulica`, `ulica_nr`, `ulica_m`) "
-                + "VALUES (" + this.ID + ",'" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.pesel + "','" + this.miasto + "','" + 
-                this.miejsce_zdarzenia + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "','" + this.r_ruchowa + "','" + 
-                this.cz_oddech + "','" + this.rr_skurcz + "','" + this.gcs + "','" + this.dusznosc + "','" + this.sinica + "','" + 
-                this.bezdech + "','" + this.szmer + "','" + this.furczenie + "','" + this.swisty + "','" + this.trzeszczenie + "','" + 
-                this.rzezenie + "','" + this.brak_szmeru + "','" + this.inne + "','" + this.reakcja_1 + "','" + 
-                this.reakcja_2 + "','" + this.reakcja_3 + "','" + this.szer_1 + "','" + this.szer_2 + "','" + this.szer_3 + "','" + this.tetno + "','" + 
-                this.wyglad + "','" + this.wilgotnosc + "','" + this.temp + "','" + this.brzuch + "','" + this.ocena_psych + "','" + 
-                this.tony_serca + "','" + this.zapach + "','" + this.niedowlad + "','" + this.konczyna_g + "','" + this.konczyna_d + "','" + 
-                this.ekg + "','" + this.czynnosci + "','" + this.obr_anatomiczne + "','" + this.decyzja + "','" + this.dokument + "','" + 
-                this.oznaczenie_dysp + "','" + this.kod_zrm + "','" + this.nr_zlec + "','" + this.ident_nfz + "','" + data_udziel + "','" + 
-                przekaz + "','" + this.przekaz_godz + "','" + this.przekaz_min + "','" + this.zgon_odstap_godz + "','" + 
-                this.zgon_odstap_min + "','" + this.wywiad + "','" + this.saturacja + "','" + this.cisnienie_1 + "','" + this.cisnienie_2 + "','" + 
-                this.tetno_min + "','" + this.glukoza_1 + "','" + this.glukzoa_2 + "','" + this.inne_dokl + "','" + this.rozpoznanie + "','" + 
-                this.zalecenia_uwagi + "','" + this.zast_leki + "','" + this.icd10_1 + "','" + this.icd10_2 + "','" + this.icd10_3 + "','" + 
-                this.opis + "','" + zgon + "','" + this.ulica + "','" + this.ulica_nr + "','" + this.ulica_m +"');";
-        return sql;
+                + "VALUES (" + this.ID + ",'" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.pesel + "','" + this.miasto + "','"
+                + this.miejsce_zdarzenia + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "','" + this.r_ruchowa + "','"
+                + this.cz_oddech + "','" + this.rr_skurcz + "','" + this.gcs + "','" + this.dusznosc + "','" + this.sinica + "','"
+                + this.bezdech + "','" + this.szmer + "','" + this.furczenie + "','" + this.swisty + "','" + this.trzeszczenie + "','"
+                + this.rzezenie + "','" + this.brak_szmeru + "','" + this.inne + "','" + this.reakcja_1 + "','"
+                + this.reakcja_2 + "','" + this.reakcja_3 + "','" + this.szer_1 + "','" + this.szer_2 + "','" + this.szer_3 + "','" + this.tetno + "','"
+                + this.wyglad + "','" + this.wilgotnosc + "','" + this.temp + "','" + this.brzuch + "','" + this.ocena_psych + "','"
+                + this.tony_serca + "','" + this.zapach + "','" + this.niedowlad + "','" + this.konczyna_g + "','" + this.konczyna_d + "','"
+                + this.ekg + "','" + this.czynnosci + "','" + this.obr_anatomiczne + "','" + this.decyzja + "','" + this.dokument + "','"
+                + this.oznaczenie_dysp + "','" + this.kod_zrm + "','" + this.nr_zlec + "','" + this.ident_nfz + "','" + data_udziel + "','"
+                + przekaz + "','" + this.przekaz_godz + "','" + this.przekaz_min + "','" + this.zgon_odstap_godz + "','"
+                + this.zgon_odstap_min + "','" + this.wywiad + "','" + this.saturacja + "','" + this.cisnienie_1 + "','" + this.cisnienie_2 + "','"
+                + this.tetno_min + "','" + this.glukoza_1 + "','" + this.glukzoa_2 + "','" + this.inne_dokl + "','" + this.rozpoznanie + "','"
+                + this.zalecenia_uwagi + "','" + this.zast_leki + "','" + this.icd10_1 + "','" + this.icd10_2 + "','" + this.icd10_3 + "','"
+                + this.opis + "','" + zgon + "','" + this.ulica + "','" + this.ulica_nr + "','" + this.ulica_m + "');";
+
+        try {
+            Connection con = Authentication.getCon();
+            Statement stmt = con.createStatement();
+
+            stmt.execute(sql);
+        } catch (SQLException err) {
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
+        }
     }
-    
-    public String uaktualnij(){
+
+    public void uaktualnij() {
         String bdata = this.data_ur.get(Calendar.YEAR) + "-" + (this.data_ur.get(Calendar.MONTH) + 1) + "-" + this.data_ur.get(Calendar.DATE);
         String data_udziel = this.data_udziel_pom.get(Calendar.YEAR) + "-" + (this.data_udziel_pom.get(Calendar.MONTH) + 1) + "-" + this.data_udziel_pom.get(Calendar.DATE);
         String przekaz = this.przekaz_pacjenta.get(Calendar.YEAR) + "-" + (this.przekaz_pacjenta.get(Calendar.MONTH) + 1) + "-" + this.przekaz_pacjenta.get(Calendar.DATE);
         String zgon = this.zgon_odstap.get(Calendar.YEAR) + "-" + (this.zgon_odstap.get(Calendar.MONTH) + 1) + "-" + this.zgon_odstap.get(Calendar.DATE);
-        
-        String sql = "UPDATE `pacients` SET `fname`='" + this.imie + "',`lname`='" + this.nazwisko + "',`bdate`='" + bdata + "',`pesel`='" +
-                this.pesel + "',`address_city`='" + this.miasto + "',`place`='" + this.miejsce_zdarzenia + "',`o_oczu`='" + 
-                this.otwieranie_oczu + "',`r_slowna`='" + this.reakcja_slowna + "',`r_ruchowa`='" + this.r_ruchowa + "',`cz_odech`='" + 
-                this.cz_oddech + "',`rr_skurcz`='" + this.rr_skurcz + "',`gcs`='" + this.gcs + "',`dusznosc`='" + this.dusznosc + "',`sinica`='" + 
-                this.sinica + "',`bezdech`='" + this.bezdech + "',`szmer`='" + this.szmer + "',`furczenie`='" + this.furczenie + "',`swisty`='" +
-                this.swisty + "',`trzeszczenie`='" + this.trzeszczenie + "',`rzezenie`='" + this.rzezenie + "',`brak_szmeru`='" +
-                this.brak_szmeru + "',`inne`='" + this.inne + "',`reakcja_1`='" + this.reakcja_1 + "',`reakcja_2`='" + this.reakcja_2 + "',`reakcja_3`='" +
-                this.reakcja_3 + "',`szer_1`='" + this.szer_1 + "',`szer_2`='" + this.szer_2 + "',`szer_3`='" + this.szer_3 + "',`tetno`='" +
-                this.tetno + "',`wyglad`='" + this.wyglad + "',`wilgotnosc`='" + this.wilgotnosc + "',`temp`='" + this.temp + "',`brzuch`='" +
-                this.brzuch + "',`ocena_psych`='" + this.ocena_psych + "',`tony_serca`='" + this.tony_serca + "',`zapach`='" + 
-                this.zapach + "',`niedowlad`='" + this.niedowlad + "',`konczyna_g`='" + this.konczyna_g + "',`konczyna_d`='" + 
-                this.konczyna_d + "',`ekg`='" + this.ekg + "',`czynnosci`='" + this.czynnosci + "',`obr_anatomiczne`='" + 
-                this.obr_anatomiczne + "',`decyzja`='" + this.decyzja + "',`dokument`='" + this.dokument + "',`oznaczenie_dysp`='" +
-                this.oznaczenie_dysp + "',`kod_zrm`='" + this.kod_zrm + "',`nr_zlec`='" + this.nr_zlec + "',`ident_nfz`='" + 
-                this.ident_nfz + "',`data_udziel_pom`='" + data_udziel + "',`przekaz_pacjenta`='" + przekaz + "',`przekaz_godz`='" + 
-                this.przekaz_godz + "',`przekaz_min`='" + this.przekaz_min + "',`zgon_odstap_godz`='" + this.zgon_odstap_godz + "',`zgon_odstap_min`='" +
-                this.zgon_odstap_min + "',`wywiad`='" + this.wywiad + "',`saturacja`='" + this.saturacja + "',`cisnienie_1`='" +
-                this.cisnienie_1 + "',`cisnienie_2`='" + this.cisnienie_2 + "',`tetno_min`='" + this.tetno_min + "',`glukoza_1`='" +
-                this.glukoza_1 + "',`glukoza_2`='" + this.glukzoa_2 + "',`inne_dokl`='" + this.inne_dokl + "',`rozpoznanie`='" + 
-                this.rozpoznanie + "',`zalecenia_uwagi`='" + this.zalecenia_uwagi + "',`zast_leki`='" + this.zalecenia_uwagi + "',`icd10_1`='" +
-                this.icd10_1 + "',`icd10_2`='" + this.icd10_2 + "',`icd10_3`='" + this.icd10_3 + "',`opis`='" + this.opis + "',`zgon_odstap`='" +
-                zgon + "',`ulica`='" + this.ulica + "',`ulica_nr`='" + this.ulica_nr + "',`ulica_m`='" + this.ulica_m + "' WHERE ID = " + this.ID + ";";
-        return sql;
-        
-    }
-    public static String[] pobierz(int ID){
-        String[] dane = new String[74];
-        try{
+
+        String sql = "UPDATE `pacients` SET `fname`='" + this.imie + "',`lname`='" + this.nazwisko + "',`bdate`='" + bdata + "',`pesel`='"
+                + this.pesel + "',`address_city`='" + this.miasto + "',`place`='" + this.miejsce_zdarzenia + "',`o_oczu`='"
+                + this.otwieranie_oczu + "',`r_slowna`='" + this.reakcja_slowna + "',`r_ruchowa`='" + this.r_ruchowa + "',`cz_odech`='"
+                + this.cz_oddech + "',`rr_skurcz`='" + this.rr_skurcz + "',`gcs`='" + this.gcs + "',`dusznosc`='" + this.dusznosc + "',`sinica`='"
+                + this.sinica + "',`bezdech`='" + this.bezdech + "',`szmer`='" + this.szmer + "',`furczenie`='" + this.furczenie + "',`swisty`='"
+                + this.swisty + "',`trzeszczenie`='" + this.trzeszczenie + "',`rzezenie`='" + this.rzezenie + "',`brak_szmeru`='"
+                + this.brak_szmeru + "',`inne`='" + this.inne + "',`reakcja_1`='" + this.reakcja_1 + "',`reakcja_2`='" + this.reakcja_2 + "',`reakcja_3`='"
+                + this.reakcja_3 + "',`szer_1`='" + this.szer_1 + "',`szer_2`='" + this.szer_2 + "',`szer_3`='" + this.szer_3 + "',`tetno`='"
+                + this.tetno + "',`wyglad`='" + this.wyglad + "',`wilgotnosc`='" + this.wilgotnosc + "',`temp`='" + this.temp + "',`brzuch`='"
+                + this.brzuch + "',`ocena_psych`='" + this.ocena_psych + "',`tony_serca`='" + this.tony_serca + "',`zapach`='"
+                + this.zapach + "',`niedowlad`='" + this.niedowlad + "',`konczyna_g`='" + this.konczyna_g + "',`konczyna_d`='"
+                + this.konczyna_d + "',`ekg`='" + this.ekg + "',`czynnosci`='" + this.czynnosci + "',`obr_anatomiczne`='"
+                + this.obr_anatomiczne + "',`decyzja`='" + this.decyzja + "',`dokument`='" + this.dokument + "',`oznaczenie_dysp`='"
+                + this.oznaczenie_dysp + "',`kod_zrm`='" + this.kod_zrm + "',`nr_zlec`='" + this.nr_zlec + "',`ident_nfz`='"
+                + this.ident_nfz + "',`data_udziel_pom`='" + data_udziel + "',`przekaz_pacjenta`='" + przekaz + "',`przekaz_godz`='"
+                + this.przekaz_godz + "',`przekaz_min`='" + this.przekaz_min + "',`zgon_odstap_godz`='" + this.zgon_odstap_godz + "',`zgon_odstap_min`='"
+                + this.zgon_odstap_min + "',`wywiad`='" + this.wywiad + "',`saturacja`='" + this.saturacja + "',`cisnienie_1`='"
+                + this.cisnienie_1 + "',`cisnienie_2`='" + this.cisnienie_2 + "',`tetno_min`='" + this.tetno_min + "',`glukoza_1`='"
+                + this.glukoza_1 + "',`glukoza_2`='" + this.glukzoa_2 + "',`inne_dokl`='" + this.inne_dokl + "',`rozpoznanie`='"
+                + this.rozpoznanie + "',`zalecenia_uwagi`='" + this.zalecenia_uwagi + "',`zast_leki`='" + this.zalecenia_uwagi + "',`icd10_1`='"
+                + this.icd10_1 + "',`icd10_2`='" + this.icd10_2 + "',`icd10_3`='" + this.icd10_3 + "',`opis`='" + this.opis + "',`zgon_odstap`='"
+                + zgon + "',`ulica`='" + this.ulica + "',`ulica_nr`='" + this.ulica_nr + "',`ulica_m`='" + this.ulica_m + "' WHERE ID = " + this.ID + ";";
+
+        try {
             Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();    
-            String sql = "SELECT * from pacients where ID="+ID+";";
-            ResultSet rs =stmt.executeQuery(sql);
-            while(rs.next()){
-                for (int i=2; i<75; i++){
-                    dane[i-2]=rs.getString(i);
-                    //System.out.println(dane[i-1]);
+            Statement stmt = con.createStatement();
+
+            stmt.execute(sql);
+        } catch (SQLException err) {
+            JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    public static String[] pobierz(int ID) {
+        String[] dane = new String[74];
+        try {
+            Connection con = Authentication.getCon();
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * from pacients where ID=" + ID + ";";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                for (int i = 2; i < 75; i++) {
+                    dane[i - 2] = rs.getString(i);
                 }
             }
-        }catch(SQLException err){
-            //System.out.println(err.getMessage());
+        } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
         return dane;
     }
-    public static int lastID(){
+
+    public static int lastID() {
         int ID = 0;
-        try{
+        try {
             Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();    
+            Statement stmt = con.createStatement();
             String sql = "SELECT id from pacients where ID=(SELECT max(id) from pacients);";
-            ResultSet rs =stmt.executeQuery(sql);
-            while(rs.next()){
-                    ID=rs.getInt("id");
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                ID = rs.getInt("id");
             }
-        }catch(SQLException err){
-            //System.out.println(err.getMessage());
+        } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
-        }        
+        }
         return ID;
     }
 
@@ -291,7 +303,6 @@ public class Patient {
                 if (box.isSelected()) {
                     break;
                 }
-
             }
             wybor = box.getText();
         }
@@ -303,10 +314,27 @@ public class Patient {
         for (JCheckBox checkbox : list) {
             if (checkbox.isSelected()) {
                 wybor += checkbox.getText() + ";";
-                //checkbox.setSelected(false);
             }
         }
         return wybor;
+    }
+
+    public static int suma(ButtonGroup group) {
+        int suma = 0;
+        ButtonModel butmod = group.getSelection();
+        String wybor = new String();
+        if (butmod != null) {
+            Enumeration<AbstractButton> ab = group.getElements();
+            JCheckBox box = null;
+            while (ab.hasMoreElements()) {
+                box = (JCheckBox) ab.nextElement();
+                if (box.isSelected()) {
+                    break;
+                }
+            }
+            suma = Integer.parseInt(box.getName());
+        }
+        return suma;
     }
 
     public static void zaznacz(String name, ButtonGroup group) {
@@ -317,12 +345,9 @@ public class Patient {
             box = (JCheckBox) ab.nextElement();
             if (box.getText().equals(name)) {
                 box.setSelected(true);
-//                        System.out.println("did it");
                 break;
             } else {
                 box.setSelected(false);
-//                        System.out.println(i);
-//                        i++;
             }
         }
 
@@ -343,11 +368,11 @@ public class Patient {
     public int getID() {
         return ID;
     }
-    
+
     public void setID(int ID) {
         this.ID = ID;
     }
-    
+
     public String getImie() {
         return imie;
     }
@@ -932,5 +957,4 @@ public class Patient {
         this.ulica_m = ulica_m;
     }
 
-    
 }

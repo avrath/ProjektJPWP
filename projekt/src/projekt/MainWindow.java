@@ -5,25 +5,12 @@
  */
 package projekt;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
 import java.util.Calendar;
-import java.util.Date;
 import javax.swing.JCheckBox;
-import java.util.Enumeration;
 import java.util.GregorianCalendar;
-import java.util.Locale;
-import javax.swing.AbstractButton;
-import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -935,6 +922,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_o_oczu.add(jCheckBox12);
         jCheckBox12.setText("[1] brak");
         jCheckBox12.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox12.setName("1"); // NOI18N
         jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox12ActionPerformed(evt);
@@ -944,6 +932,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_o_oczu.add(jCheckBox11);
         jCheckBox11.setText("[2] na ból");
         jCheckBox11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox11.setName("2"); // NOI18N
         jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox11ActionPerformed(evt);
@@ -953,6 +942,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_o_oczu.add(jCheckBox6);
         jCheckBox6.setText("[3] na głos");
         jCheckBox6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox6.setName("3"); // NOI18N
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox6ActionPerformed(evt);
@@ -962,6 +952,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_o_oczu.add(jCheckBox9);
         jCheckBox9.setText("[4] spontanicznie");
         jCheckBox9.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jCheckBox9.setName("4"); // NOI18N
         jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox9ActionPerformed(evt);
@@ -975,6 +966,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_r_slowna.add(jCheckBox13);
         jCheckBox13.setText("[5] zorientowany");
         jCheckBox13.setToolTipText("");
+        jCheckBox13.setName("5"); // NOI18N
         jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox13ActionPerformed(evt);
@@ -983,6 +975,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_slowna.add(jCheckBox14);
         jCheckBox14.setText("[4] splątany");
+        jCheckBox14.setName("4"); // NOI18N
         jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox14ActionPerformed(evt);
@@ -991,6 +984,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_slowna.add(jCheckBox15);
         jCheckBox15.setText("[3] niewłaściwe słowa");
+        jCheckBox15.setName("3"); // NOI18N
         jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox15ActionPerformed(evt);
@@ -999,6 +993,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_slowna.add(jCheckBox16);
         jCheckBox16.setText("[1] brak");
+        jCheckBox16.setName("1"); // NOI18N
         jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox16ActionPerformed(evt);
@@ -1007,6 +1002,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox17);
         jCheckBox17.setText("[6] wykonuje polecenia");
+        jCheckBox17.setName("6"); // NOI18N
         jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox17ActionPerformed(evt);
@@ -1015,6 +1011,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox18);
         jCheckBox18.setText("[5] lokalizacja bólu");
+        jCheckBox18.setName("5"); // NOI18N
         jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox18ActionPerformed(evt);
@@ -1025,6 +1022,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox19);
         jCheckBox19.setText("[4] ucieczka od bólu");
+        jCheckBox19.setName("4"); // NOI18N
         jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox19ActionPerformed(evt);
@@ -1033,6 +1031,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox20);
         jCheckBox20.setText("[3] zgięciowa");
+        jCheckBox20.setName("3"); // NOI18N
         jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox20ActionPerformed(evt);
@@ -1041,6 +1040,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox21);
         jCheckBox21.setText("[2] wyprostna");
+        jCheckBox21.setName("2"); // NOI18N
         jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox21ActionPerformed(evt);
@@ -1049,6 +1049,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_ruchowa.add(jCheckBox22);
         jCheckBox22.setText("[1] brak");
+        jCheckBox22.setName("1"); // NOI18N
         jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox22ActionPerformed(evt);
@@ -1060,6 +1061,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_r_slowna.add(jCheckBox38);
         jCheckBox38.setText("[2] niezrozumiałe dźwięki");
+        jCheckBox38.setName("2"); // NOI18N
         jCheckBox38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox38ActionPerformed(evt);
@@ -1155,6 +1157,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_cz_oddech.add(jCheckBox23);
         jCheckBox23.setText("[4] 10-29");
+        jCheckBox23.setName("4"); // NOI18N
         jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox23ActionPerformed(evt);
@@ -1163,6 +1166,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_cz_oddech.add(jCheckBox24);
         jCheckBox24.setText("[3] >29");
+        jCheckBox24.setName("3"); // NOI18N
         jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox24ActionPerformed(evt);
@@ -1171,6 +1175,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_cz_oddech.add(jCheckBox25);
         jCheckBox25.setText("[2] 6-9");
+        jCheckBox25.setName("2"); // NOI18N
         jCheckBox25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox25ActionPerformed(evt);
@@ -1179,6 +1184,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_cz_oddech.add(jCheckBox26);
         jCheckBox26.setText("[1] 1-5");
+        jCheckBox26.setName("1"); // NOI18N
         jCheckBox26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox26ActionPerformed(evt);
@@ -1187,6 +1193,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_cz_oddech.add(jCheckBox27);
         jCheckBox27.setText("[0] brak");
+        jCheckBox27.setName("0"); // NOI18N
         jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox27ActionPerformed(evt);
@@ -1195,6 +1202,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_rr_skurcz.add(jCheckBox28);
         jCheckBox28.setText("[4] >89");
+        jCheckBox28.setName("4"); // NOI18N
         jCheckBox28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox28ActionPerformed(evt);
@@ -1203,6 +1211,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_rr_skurcz.add(jCheckBox29);
         jCheckBox29.setText("[3] 76-89");
+        jCheckBox29.setName("3"); // NOI18N
         jCheckBox29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox29ActionPerformed(evt);
@@ -1213,6 +1222,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_rr_skurcz.add(jCheckBox30);
         jCheckBox30.setText("[2] 50-75");
+        jCheckBox30.setName("2"); // NOI18N
         jCheckBox30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox30ActionPerformed(evt);
@@ -1221,6 +1231,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_rr_skurcz.add(jCheckBox31);
         jCheckBox31.setText("[1] 1-49");
+        jCheckBox31.setName("1"); // NOI18N
         jCheckBox31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox31ActionPerformed(evt);
@@ -1229,6 +1240,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_rr_skurcz.add(jCheckBox32);
         jCheckBox32.setText("[0] 0");
+        jCheckBox32.setName("0"); // NOI18N
         jCheckBox32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox32ActionPerformed(evt);
@@ -1239,6 +1251,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_gcs.add(jCheckBox33);
         jCheckBox33.setText("[4] 13-15");
+        jCheckBox33.setName("4"); // NOI18N
         jCheckBox33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox33ActionPerformed(evt);
@@ -1247,6 +1260,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_gcs.add(jCheckBox34);
         jCheckBox34.setText("[3] 9-12");
+        jCheckBox34.setName("3"); // NOI18N
         jCheckBox34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox34ActionPerformed(evt);
@@ -1255,6 +1269,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_gcs.add(jCheckBox35);
         jCheckBox35.setText("[2] 6-8");
+        jCheckBox35.setName("2"); // NOI18N
         jCheckBox35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox35ActionPerformed(evt);
@@ -1263,6 +1278,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_gcs.add(jCheckBox36);
         jCheckBox36.setText("[1] 4-5");
+        jCheckBox36.setName("1"); // NOI18N
         jCheckBox36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox36ActionPerformed(evt);
@@ -1271,6 +1287,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         bg_gcs.add(jCheckBox37);
         jCheckBox37.setText("[0] 3");
+        jCheckBox37.setName("0"); // NOI18N
         jCheckBox37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox37ActionPerformed(evt);
@@ -3031,25 +3048,15 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void zapiszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapiszActionPerformed
         // TODO add your handling code here:
-        if (jTextField4.getText().equals("") && jTextField5.getText().equals("") ){
+        if (jTextField4.getText().equals("") && jTextField5.getText().equals("")) {
             JOptionPane.showMessageDialog(MainWindow.this, "Nie wpisano imienia i nazwiska pacjenta", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
-        } else{
-        Patient pacjent = zapisz_dane();
-        String sql = pacjent.add();
-        ID = pacjent.getID();
-//        System.out.println(sql);
-        try {
-            Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();
-
-            stmt.execute(sql);
-        } catch (SQLException err) {
-            //System.out.println(err.getMessage());
-            JOptionPane.showMessageDialog(MainWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
-        }
+        } else {
+            Patient pacjent = zapisz_dane();
+            pacjent.add();
+            ID = pacjent.getID();
         }
     }//GEN-LAST:event_zapiszActionPerformed
-    
+
     private Patient zapisz_dane() {
         Patient pacjent = new Patient();
         String imie = jTextField4.getText();
@@ -3244,6 +3251,16 @@ public class MainWindow extends javax.swing.JFrame {
         } catch (ParseException err) {
             System.out.println(err.getMessage());
         }
+        suma1 = Patient.suma(bg_o_oczu);
+        suma2 = Patient.suma(bg_r_slowna);
+        suma3 = Patient.suma(bg_r_ruchowa);
+        sumaGCS = suma1 + suma2 + suma3;
+        jLabel61.setText(Integer.toString(sumaGCS));
+        suma4 = Patient.suma((bg_cz_oddech));
+        suma5 = Patient.suma(bg_rr_skurcz);
+        suma6 = Patient.suma(bg_gcs);
+        sumaRTS = suma4 + suma5 + suma6;
+        jLabel72.setText((Integer.toString(sumaRTS)));
     }
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -3315,13 +3332,13 @@ public class MainWindow extends javax.swing.JFrame {
         bg_niedowlad.clearSelection();
         bg_konczyna_g.clearSelection();
         bg_konczyna_d.clearSelection();
-        for (JCheckBox box : list_ekg){
+        for (JCheckBox box : list_ekg) {
             box.setSelected(false);
         }
-        for (JCheckBox box : list_czynnosci){
+        for (JCheckBox box : list_czynnosci) {
             box.setSelected(false);
         }
-        for (JCheckBox box : obr_anat){
+        for (JCheckBox box : obr_anat) {
             box.setSelected(false);
         }
         bg_decyzja.clearSelection();
@@ -3604,20 +3621,12 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void update_patientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_patientActionPerformed
         // TODO add your handling code here:
-        if (ID==0){
+        if (ID == 0) {
             JOptionPane.showMessageDialog(MainWindow.this, "Ten pacjent nie istnieje jeszcze w bazie", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
-        } else{
-        Patient pacjent = zapisz_dane();
-        String sql = pacjent.uaktualnij();
-        try {
-            Connection con = Authentication.getCon();
-            Statement stmt = con.createStatement();
-
-            stmt.execute(sql);
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(MainWindow.this, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
-            //System.out.println(err.getMessage());
-        }}
+        } else {
+            Patient pacjent = zapisz_dane();
+            pacjent.uaktualnij();
+        }
     }//GEN-LAST:event_update_patientActionPerformed
 
     /**
@@ -3653,10 +3662,8 @@ public class MainWindow extends javax.swing.JFrame {
             public void run() {
                 new MainWindow().setVisible(true);
 
-                
                 LoginWindow dialog = new LoginWindow(new javax.swing.JFrame(), true);
 
-                
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -3665,7 +3672,7 @@ public class MainWindow extends javax.swing.JFrame {
                     }
                 });
 
-                dialog.setVisible(true);        
+                dialog.setVisible(true);
             }
         });
 
