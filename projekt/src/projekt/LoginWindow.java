@@ -68,6 +68,7 @@ public class LoginWindow extends javax.swing.JDialog {
         PassField = new javax.swing.JPasswordField();
 
         setTitle("Panel logowania");
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 closeDialog(evt);
