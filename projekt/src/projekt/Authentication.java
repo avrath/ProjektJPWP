@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projekt;
 
 import java.sql.Connection;
@@ -12,18 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author M
- */
 public class Authentication {
 
-    private final String password, username;
     private static Connection con = null;
 
     public Authentication(String username, String password) {
-        this.password = password;
-        this.username = username;
         con = getCon();
         try {
             Statement stmt = con.createStatement();
@@ -34,7 +22,6 @@ public class Authentication {
                 con = null;
             }
         } catch (SQLException err) {
-            //System.out.println(err.getMessage());
             JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
 
         }
@@ -49,7 +36,6 @@ public class Authentication {
             con = DriverManager.getConnection(host, uName, uPass);
 
         } catch (SQLException err) {
-            //System.out.println("An error occured: " + err);
             JOptionPane.showMessageDialog(null, err.getMessage(), "Komunikat", JOptionPane.WARNING_MESSAGE);
         }
         if (con != null) {

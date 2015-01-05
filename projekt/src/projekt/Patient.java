@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projekt;
 
 import java.sql.Connection;
@@ -18,10 +13,6 @@ import javax.swing.ButtonModel;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author p
- */
 public class Patient {
 
     /////elementy składowe klasy
