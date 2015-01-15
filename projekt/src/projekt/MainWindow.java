@@ -3253,8 +3253,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void wyczysc_dane(){    
         bg_place.clearSelection();
         jTextField4.setText("");
         jTextField5.setText("");
@@ -3334,6 +3333,10 @@ public class MainWindow extends javax.swing.JFrame {
         jDateChooser2.setCalendar(null);
         jDateChooser3.setCalendar(null);
         jDateChooser4.setCalendar(null);
+}
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        wyczysc_dane();
+    
     }//GEN-LAST:event_jMenuItem2ActionPerformed
     private void jCheckBox67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox67ActionPerformed
     }//GEN-LAST:event_jCheckBox67ActionPerformed
@@ -3508,6 +3511,7 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(MainWindow.this, "Ten pacjent nie istnieje jeszcze w bazie", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
         } else {
             Patient pacjent = zapisz_dane();
+            wyczysc_dane();
             pacjent.uaktualnij();
         }
     }//GEN-LAST:event_update_patientActionPerformed
