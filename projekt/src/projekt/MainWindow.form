@@ -109,6 +109,9 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+F"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/projekt/search14.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Szukaj..."/>
               </Properties>
               <Events>
@@ -120,6 +123,9 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+D"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/projekt/erase14.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kasuj dane"/>
               </Properties>
               <Events>
@@ -130,6 +136,9 @@
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Q"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/projekt/exit14.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Wyjd&#x17a;"/>
               </Properties>
@@ -148,6 +157,9 @@
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+I"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/projekt/info14.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="O programie"/>
               </Properties>
