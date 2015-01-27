@@ -90,8 +90,10 @@ public class Patient {
     private String ulica;
     private String ulica_nr;
     private String ulica_m;
+    private String objawy;
+    private String objawy_inne;
 
-    public Patient create(int ID, String imie, String nazwisko, Calendar data_ur, String pesel, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, String decyzja, String r_ruchowa, String cz_oddech, String rr_skurcz, String gcs, String dusznosc, String sinica, String bezdech, String szmer, String furczenie, String swisty, String trzeszczenie, String rzezenie, String brak_szmeru, String inne, String reakcja_1, String reakcja_2, String reakcja_3, String szer_1, String szer_2, String szer_3, String tetno, String wyglad, String wilgotnosc, String temp, String brzuch, String ocena_psych, String tony_serca, String zapach, String niedowlad, String konczyna_g, String konczyna_d, String ekg, String czynnosci, String obr_anatomiczne, String dokument, String oznaczenie_dysp, String kod_zrm, String nr_zlec, String ident_nfz, Calendar data_udziel_pom, Calendar przekaz_pacjenta, Calendar zgon_odstap, String przekaz_godz, String przekaz_min, String zgon_odstap_min, String zgon_odstap_godz, String wywiad, String saturacja, String cisnienie_1, String cisnienie_2, String tetno_min, String glukoza_1, String glukzoa_2, String inne_dokl, String rozpoznanie, String zalecenia_uwagi, String zast_leki, String icd10_1, String icd10_2, String icd10_3, String opis, String ulica, String ulica_nr, String ulica_m) {
+    public Patient create(int ID, String imie, String nazwisko, Calendar data_ur, String pesel, String miasto, String miejsce_zdarzenia, String otwieranie_oczu, String reakcja_slowna, String decyzja, String r_ruchowa, String cz_oddech, String rr_skurcz, String gcs, String dusznosc, String sinica, String bezdech, String szmer, String furczenie, String swisty, String trzeszczenie, String rzezenie, String brak_szmeru, String inne, String reakcja_1, String reakcja_2, String reakcja_3, String szer_1, String szer_2, String szer_3, String tetno, String wyglad, String wilgotnosc, String temp, String brzuch, String ocena_psych, String tony_serca, String zapach, String niedowlad, String konczyna_g, String konczyna_d, String ekg, String czynnosci, String obr_anatomiczne, String dokument, String oznaczenie_dysp, String kod_zrm, String nr_zlec, String ident_nfz, Calendar data_udziel_pom, Calendar przekaz_pacjenta, Calendar zgon_odstap, String przekaz_godz, String przekaz_min, String zgon_odstap_min, String zgon_odstap_godz, String wywiad, String saturacja, String cisnienie_1, String cisnienie_2, String tetno_min, String glukoza_1, String glukzoa_2, String inne_dokl, String rozpoznanie, String zalecenia_uwagi, String zast_leki, String icd10_1, String icd10_2, String icd10_3, String opis, String ulica, String ulica_nr, String ulica_m, String objawy, String objawy_inne) {
         this.ID = ID;
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -166,6 +168,8 @@ public class Patient {
         this.ulica = ulica;
         this.ulica_nr = ulica_nr;
         this.ulica_m = ulica_m;
+        this.objawy = objawy;
+        this.objawy_inne = objawy_inne;
         return this;
     }
 
@@ -183,7 +187,7 @@ public class Patient {
                 + " `obr_anatomiczne`, `decyzja`, `dokument`, `oznaczenie_dysp`, `kod_zrm`, `nr_zlec`, `ident_nfz`, `data_udziel_pom`,"
                 + " `przekaz_pacjenta`, `przekaz_godz`, `przekaz_min`, `zgon_odstap_godz`, `zgon_odstap_min`, `wywiad`, `saturacja`,"
                 + " `cisnienie_1`, `cisnienie_2`, `tetno_min`, `glukoza_1`, `glukoza_2`, `inne_dokl`, `rozpoznanie`, `zalecenia_uwagi`, `zast_leki`,"
-                + " `icd10_1`, `icd10_2`, `icd10_3`, `opis`, `zgon_odstap`, `ulica`, `ulica_nr`, `ulica_m`) "
+                + " `icd10_1`, `icd10_2`, `icd10_3`, `opis`, `zgon_odstap`, `ulica`, `ulica_nr`, `ulica_m`, `objawy`, `objawy_inne`) "
                 + "VALUES (" + this.ID + ",'" + this.imie + "','" + this.nazwisko + "','" + bdata + "','" + this.pesel + "','" + this.miasto + "','"
                 + this.miejsce_zdarzenia + "','" + this.otwieranie_oczu + "','" + this.reakcja_slowna + "','" + this.r_ruchowa + "','"
                 + this.cz_oddech + "','" + this.rr_skurcz + "','" + this.gcs + "','" + this.dusznosc + "','" + this.sinica + "','"
@@ -198,7 +202,8 @@ public class Patient {
                 + this.zgon_odstap_min + "','" + this.wywiad + "','" + this.saturacja + "','" + this.cisnienie_1 + "','" + this.cisnienie_2 + "','"
                 + this.tetno_min + "','" + this.glukoza_1 + "','" + this.glukzoa_2 + "','" + this.inne_dokl + "','" + this.rozpoznanie + "','"
                 + this.zalecenia_uwagi + "','" + this.zast_leki + "','" + this.icd10_1 + "','" + this.icd10_2 + "','" + this.icd10_3 + "','"
-                + this.opis + "','" + zgon + "','" + this.ulica + "','" + this.ulica_nr + "','" + this.ulica_m + "');";
+                + this.opis + "','" + zgon + "','" + this.ulica + "','" + this.ulica_nr + "','" + this.ulica_m + "','" + this.objawy + "','"
+                + this.objawy_inne + "');";
 
         try {
             Connection con = Authentication.getCon();
@@ -237,7 +242,8 @@ public class Patient {
                 + this.glukoza_1 + "',`glukoza_2`='" + this.glukzoa_2 + "',`inne_dokl`='" + this.inne_dokl + "',`rozpoznanie`='"
                 + this.rozpoznanie + "',`zalecenia_uwagi`='" + this.zalecenia_uwagi + "',`zast_leki`='" + this.zalecenia_uwagi + "',`icd10_1`='"
                 + this.icd10_1 + "',`icd10_2`='" + this.icd10_2 + "',`icd10_3`='" + this.icd10_3 + "',`opis`='" + this.opis + "',`zgon_odstap`='"
-                + zgon + "',`ulica`='" + this.ulica + "',`ulica_nr`='" + this.ulica_nr + "',`ulica_m`='" + this.ulica_m + "' WHERE ID = " + this.ID + ";";
+                + zgon + "',`ulica`='" + this.ulica + "',`ulica_nr`='" + this.ulica_nr + "',`ulica_m`='" + this.ulica_m + "',`objawy`='" 
+                + this.objawy + "',`objawy_inne`='" + this.objawy_inne + "' WHERE ID = " + this.ID + ";";
 
         try {
             Connection con = Authentication.getCon();
@@ -250,14 +256,14 @@ public class Patient {
     }
 
     public static String[] pobierz(int ID) {
-        String[] dane = new String[74];
+        String[] dane = new String[77];
         try {
             Connection con = Authentication.getCon();
             Statement stmt = con.createStatement();
             String sql = "SELECT * from pacients where ID=" + ID + ";";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                for (int i = 2; i < 75; i++) {
+                for (int i = 2; i < 77; i++) {
                     dane[i - 2] = rs.getString(i);
                 }
             }
@@ -946,6 +952,22 @@ public class Patient {
 
     public void setUlica_m(String ulica_m) {
         this.ulica_m = ulica_m;
+    }
+
+    public String getObjawy() {
+        return objawy;
+    }
+
+    public void setObjawy(String objawy) {
+        this.objawy = objawy;
+    }
+
+    public String getObjawy_inne() {
+        return objawy_inne;
+    }
+
+    public void setObjawy_inne(String objawy_inne) {
+        this.objawy_inne = objawy_inne;
     }
 
 }

@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import sun.security.util.Length;
 
 public class MainWindow extends javax.swing.JFrame {
 
@@ -58,6 +59,21 @@ public class MainWindow extends javax.swing.JFrame {
         obr_anat.add(jCheckBox115);
         obr_anat.add(jCheckBox116);
         obr_anat.add(jCheckBox117);
+        
+        objawy.add(jCheckBox165);
+        objawy.add(jCheckBox166);
+        objawy.add(jCheckBox167);
+        objawy.add(jCheckBox168);
+        objawy.add(jCheckBox169);
+        objawy.add(jCheckBox170);
+        objawy.add(jCheckBox171);
+        objawy.add(jCheckBox172);
+        objawy.add(jCheckBox173);
+        objawy.add(jCheckBox174);
+        
+        objawy_inne.add(jCheckBox175);
+        objawy_inne.add(jCheckBox176);
+        objawy_inne.add(jCheckBox177);
     }
 
     @SuppressWarnings("unchecked")
@@ -3004,6 +3020,8 @@ public class MainWindow extends javax.swing.JFrame {
     private final ArrayList<JCheckBox> list_czynnosci = new ArrayList<>();
     private final ArrayList<JCheckBox> list_ekg = new ArrayList<>();
     private final ArrayList<JCheckBox> obr_anat = new ArrayList<>();
+    private final ArrayList<JCheckBox> objawy = new ArrayList<>();
+    private final ArrayList<JCheckBox> objawy_inne = new ArrayList<>(); 
     private int ID = 0;
 
 
@@ -3069,6 +3087,8 @@ public class MainWindow extends javax.swing.JFrame {
         String ekg = Patient.wyszukaj2(list_ekg);
         String czynnosci = Patient.wyszukaj2(list_czynnosci);
         String obr_anatomiczne = Patient.wyszukaj2(obr_anat);
+        String objaw = Patient.wyszukaj2(objawy);
+        String objaw_inne = Patient.wyszukaj2(objawy_inne);
         String dokument = jTextField9.getText();
         String oznaczenie_dysp = jTextField1.getText();
         String kod_zrm = jTextField2.getText();
@@ -3113,7 +3133,7 @@ public class MainWindow extends javax.swing.JFrame {
         if (jDateChooser4.getDate() != null) {
             zgon_odstap = jDateChooser4.getCalendar();
         }
-        pacjent.create(ID, imie, nazwisko, data_ur, pesel, miasto, miejsce_zdarzenia, otwieranie_oczu, reakcja_slowna, decyzja, r_ruchowa, cz_oddech, rr_skurcz, gcs, dusznosc, sinica, bezdech, szmer, furczenie, swisty, trzeszczenie, rzezenie, brak_szmeru, inne, reakcja_1, reakcja_2, reakcja_3, szer_1, szer_2, szer_3, tetno, wyglad, wilgotnosc, temp, brzuch, ocena_psych, tony_serca, zapach, niedowlad, konczyna_g, konczyna_d, ekg, czynnosci, obr_anatomiczne, dokument, oznaczenie_dysp, kod_zrm, nr_zlec, ident_nfz, data_udziel_pom, przekaz_pacjenta, zgon_odstap, przekaz_godz, przekaz_min, zgon_odstap_min, zgon_odstap_godz, wywiad, saturacja, cisnienie_1, cisnienie_2, tetno_min, glukoza_1, glukzoa_2, inne_dokl, rozpoznanie, zalecenia_uwagi, zast_leki, icd10_1, icd10_2, icd10_3, opis, ulica, ulica_nr, ulica_m);
+        pacjent.create(ID, imie, nazwisko, data_ur, pesel, miasto, miejsce_zdarzenia, otwieranie_oczu, reakcja_slowna, decyzja, r_ruchowa, cz_oddech, rr_skurcz, gcs, dusznosc, sinica, bezdech, szmer, furczenie, swisty, trzeszczenie, rzezenie, brak_szmeru, inne, reakcja_1, reakcja_2, reakcja_3, szer_1, szer_2, szer_3, tetno, wyglad, wilgotnosc, temp, brzuch, ocena_psych, tony_serca, zapach, niedowlad, konczyna_g, konczyna_d, ekg, czynnosci, obr_anatomiczne, dokument, oznaczenie_dysp, kod_zrm, nr_zlec, ident_nfz, data_udziel_pom, przekaz_pacjenta, zgon_odstap, przekaz_godz, przekaz_min, zgon_odstap_min, zgon_odstap_godz, wywiad, saturacja, cisnienie_1, cisnienie_2, tetno_min, glukoza_1, glukzoa_2, inne_dokl, rozpoznanie, zalecenia_uwagi, zast_leki, icd10_1, icd10_2, icd10_3, opis, ulica, ulica_nr, ulica_m, objaw, objaw_inne);
         return pacjent;
     }
 
@@ -3130,7 +3150,8 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox23ActionPerformed
 
     private void wyszukiwanie() {
-        String[] dane = Patient.pobierz(ID);
+        wyczysc_dane();
+        String[] dane = Patient.pobierz(ID); 
         jTextField4.setText(dane[0]);
         jTextField5.setText(dane[1]);
         jTextField11.setText(dane[3]);
@@ -3172,6 +3193,8 @@ public class MainWindow extends javax.swing.JFrame {
         Patient.zaznacz2(list_ekg, dane[39]);
         Patient.zaznacz2(list_czynnosci, dane[40]);
         Patient.zaznacz2(obr_anat, dane[41]);
+        Patient.zaznacz2(objawy, dane[73]);
+        Patient.zaznacz2(objawy_inne, dane[74]);
         Patient.zaznacz(dane[42], bg_decyzja);
         jTextField9.setText(dane[43]);
         jTextField1.setText(dane[44]);
@@ -3299,6 +3322,12 @@ public class MainWindow extends javax.swing.JFrame {
             box.setSelected(false);
         }
         for (JCheckBox box : obr_anat) {
+            box.setSelected(false);
+        }
+        for (JCheckBox box : objawy) {
+            box.setSelected(false);
+        }
+        for (JCheckBox box : objawy_inne) {
             box.setSelected(false);
         }
         bg_decyzja.clearSelection();
@@ -3511,7 +3540,6 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(MainWindow.this, "Ten pacjent nie istnieje jeszcze w bazie", "Komunikat", JOptionPane.INFORMATION_MESSAGE);
         } else {
             Patient pacjent = zapisz_dane();
-            wyczysc_dane();
             pacjent.uaktualnij();
         }
     }//GEN-LAST:event_update_patientActionPerformed
